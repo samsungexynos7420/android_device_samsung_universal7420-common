@@ -258,6 +258,14 @@
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,2097152,4194304,262144,524288,1048576</string>
 
+    <!-- Flag indicating whether strict threshold is used, or lenient threshold is used,
+            when evaluating RSRP for LTE antenna bar display
+           0. Strict threshold
+           1. Lenient threshold
+           2. Custom threshold
+    -->
+    <integer name="config_LTE_RSRP_threshold_type">2</integer>
+
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
          Here are a few of them:
