@@ -109,6 +109,9 @@
      <!-- Whether the device supports wireless charging or not -->
     <bool name="config_deviceSupportsWirelessCharging">true</bool>
 
+    <!-- Default values for LiveDisplay -->
+    <integer name="config_defaultLiveDisplayMode">0</integer>
+
      <!-- Whether to notify fingerprint client of successful cancelled authentication
          (needed for some older vendor fingerprint HAL implementations) -->
     <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
