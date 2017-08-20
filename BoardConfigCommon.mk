@@ -168,10 +168,6 @@ GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
 BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
-# Mediaserver-shim
-TARGET_LD_SHIM_LIBS += \
-	/system/bin/mediaserver|/vendor/lib/libstagefright_shim.so
-
 # Networking
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 
@@ -211,9 +207,12 @@ BOARD_USES_WFD := true
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Shims
-TARGET_LD_SHIM_LIBS := \
-    /system/lib64/libexynoscamera.so|/system/lib64/libexynoscamera_shim.so \
-    /system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so
+TARGET_LD_SHIM_LIBS += \
+	/system/lib64/libexynoscamera.so|/system/lib64/libexynoscamera_shim.so \
+	/system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so \
+	/system/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so \
+	/system/lib64/libbauthserver.so|/vendor/lib64/libbauthtzcommon_shim.so
+	/system/bin/mediaserver|/vendor/lib/libstagefright_shim.so
 
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI          := true
