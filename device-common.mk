@@ -274,6 +274,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.samsung \
     android.hardware.sensors@1.0-service
 
+# Stagefright-shims
+PRODUCT_PACKAGES += \
+    libstagefright_shim
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.3-service.samsung  

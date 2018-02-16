@@ -168,6 +168,10 @@ GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
 BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
+# Mediaserver-shim
+TARGET_LD_SHIM_LIBS += \
+	/system/bin/mediaserver|/vendor/lib/libstagefright_shim.so
+
 # Networking
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 
