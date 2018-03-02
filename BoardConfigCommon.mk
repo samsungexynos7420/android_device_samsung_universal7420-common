@@ -163,6 +163,9 @@ TARGET_LD_SHIM_LIBS += \
 	/vendor/lib/libexynoscamera.so|/vendor/lib/libexynoscamera_shim.so \
 	/vendor/lib64/libexynoscamera.so|/vendor/lib64/libexynoscamera_shim.so
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
+
 # Use these flags if the board has a ext4 partition larger than 2gb
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_HAS_LARGE_FILESYSTEM := true
