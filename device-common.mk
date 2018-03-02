@@ -143,6 +143,11 @@ PRODUCT_HOST_PACKAGES += \
 PRODUCT_PACKAGES += \
 	vendor.lineage.fastcharge@1.0-service.samsung
 
+# Filesystem tools for resizing system partitions
+PRODUCT_PACKAGES += \
+	e2fsck_static \
+	resize2fs_static
+
 # Fingerprint
 PRODUCT_PACKAGES += \
 	android.hardware.biometrics.fingerprint@2.3-service.samsung

@@ -174,6 +174,9 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 # SECComp filters
 BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
+
 # Use these flags if the board has a ext4 partition larger than 2gb
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_HAS_LARGE_FILESYSTEM := true
