@@ -434,6 +434,9 @@ static int mixer_init(struct audio_device *adev)
     struct mixer *mixer;
     struct audio_route *audio_route;
     char mixer_path[PATH_MAX];
+#ifdef MIXER_PATHS_FILE_ROUTINE
+    char dynamic_mixer_path[PATH_MAX];
+#endif
     struct mixer_card *mixer_card;
     int ret = 0;
 
@@ -456,6 +459,19 @@ static int mixer_init(struct audio_device *adev)
                 }
             } while (mixer == NULL);
 
+#ifdef MIXER_PATHS_FILE_ROUTINE
+            if (MIXER_PATHS_FILE_ROUTINE(dynamic_mixer_path)) {
+                sprintf(mixer_path, dynamic_mixer_path, card);
+                if (access(mixer_path, F_OK) == -1) {
+                    ALOGE("%s: Failed to open mixer paths from %s, retrying with default locations",
+                           __func__, mixer_path);
+					goto mixer_paths_def;
+                }
+                goto mixer_paths_done;
+            }
+#endif
+
+mixer_paths_def:
             sprintf(mixer_path, "/vendor/etc/mixer_paths_%d.xml", card);
             if (access(mixer_path, F_OK) == -1) {
                 ALOGW("%s: Failed to open mixer paths from %s, retrying with legacy location",
@@ -467,6 +483,7 @@ static int mixer_init(struct audio_device *adev)
                 }
             }
 
+mixer_paths_done:
             audio_route = audio_route_init(card, mixer_path);
             if (!audio_route) {
                 ALOGE("%s: Failed to init audio route controls for card %d, aborting.",

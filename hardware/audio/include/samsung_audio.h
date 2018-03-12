@@ -91,4 +91,29 @@
  */
 /* #define AUDIENCE_EARSMART_IC */
 
+/*
+ * Runtime mixer paths file selection routine
+ *
+ * Example:
+ *
+ *     static bool device_mixer_paths_file_routine(char *path)
+ *
+ *     @argument  path    sprintf-input used instead of default one
+ *
+ *     @returns   true if a custom path was found, false if the default one
+ *                should be used
+ */
+// #define MIXER_PATHS_FILE_ROUTINE
+
+/*
+ * Runtime audience support detection
+ *
+ * Example:
+ *
+ *     static bool device_audio_supports_audience()
+ *
+ *     @returns   true if audience-support should be enabled, false otherwise
+ */
+// #define AUDIENCE_SUPPORTED
+
 #endif // SAMSUNG_AUDIO_H
