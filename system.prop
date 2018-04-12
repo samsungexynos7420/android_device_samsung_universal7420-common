@@ -15,6 +15,7 @@ debug.stagefright.omx_default_rank.sw-audio=1
 
 # LMK
 ro.lmk.log_stats=true
+ro.lmk.use_minfree_levels=true
 ro.lmk.use_psi=false
 
 # Miracast (Wireless Display)
