@@ -210,6 +210,11 @@ BOARD_USES_WFD := true
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib64/libexynoscamera.so|/system/lib64/libexynoscamera_shim.so \
+    /system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so
+
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI          := true
 BOARD_WLAN_DEVICE                := bcmdhd

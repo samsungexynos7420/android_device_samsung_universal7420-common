@@ -274,8 +274,9 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.samsung \
     android.hardware.sensors@1.0-service
 
-# Stagefright-shims
+# Shims
 PRODUCT_PACKAGES += \
+    libexynoscamera_shim
     libstagefright_shim
 
 # Vibrator
