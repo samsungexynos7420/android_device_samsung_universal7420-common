@@ -111,6 +111,12 @@ TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 # Keymaster
 BOARD_USES_TRUST_KEYMASTER := true
 
+# LED
+RED_LED_PATH := "/sys/class/leds/led_r/brightness"
+GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
+BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
+BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
+
 # Platform
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
