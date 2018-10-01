@@ -132,7 +132,7 @@ PRODUCT_PACKAGES += \
 # Livedisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.samsung-exynos
-    
+
 # Media profile
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs.xml \
@@ -152,9 +152,13 @@ PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-impl \
     android.hardware.media.omx@1.0-service
     
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-service.exynos
+
 # Properties 
 TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
-    
+
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
