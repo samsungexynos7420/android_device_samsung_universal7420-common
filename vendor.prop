@@ -4,6 +4,7 @@ aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
 af.fast_track_multiplier=1
 ro.vendor.audio_hal.force_voice_config=wide
+ro.config.media_vol_steps=25
 
 # Bluetooth props
 bluetooth.device.class_of_device?=90,2,12
