@@ -152,11 +152,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libexynoscamera_shim
 
-# Configstore
-PRODUCT_PACKAGES += \
-	android.hardware.configstore@1.0-impl \
-	android.hardware.configstore@1.0-service
-
 # Debugging
 -include $(COMMON_PATH)/system_prop_debug.mk
 
