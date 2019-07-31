@@ -225,6 +225,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="complexity" range="0-8"  default="5" />
             <Feature name="bitrate-modes" value="CQ" />
         </MediaCodec>
+        <MediaCodec name="OMX.google.opus.decoder" type="audio/opus" update="true" rank="100"/>
     </Decoders>
 
     <Encoders>
