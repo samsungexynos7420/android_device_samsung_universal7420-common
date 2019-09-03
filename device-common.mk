@@ -69,6 +69,8 @@ PRODUCT_PACKAGES += \
     tinymix \
     android.hardware.audio@2.0-impl:32 \
     android.hardware.audio.effect@2.0-impl:32
+
+TARGET_EXCLUDES_AUDIOFX := true
     
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
