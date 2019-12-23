@@ -95,6 +95,10 @@ PRODUCT_PACKAGES += \
 # DTB
 PRODUCT_HOST_PACKAGES += \
 	dtbhtoolExynos
+	
+# Fingerprint
+PRODUCT_PACKAGES += \
+	android.hardware.biometrics.fingerprint@2.1-service.samsung
 
 # DRM
 PRODUCT_PACKAGES += \
