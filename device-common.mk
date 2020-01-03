@@ -169,6 +169,10 @@ TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# SamsungDoze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.samsung \
