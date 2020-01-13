@@ -183,6 +183,10 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_MODEM_TYPE := ss333
 BOARD_PROVIDES_LIBRIL := true
 
+# Root extra folders
+BOARD_ROOT_EXTRA_FOLDERS += efs
+TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/config.fs
+
 # Seccomp filters
 BOARD_SECCOMP_POLICY += device/samsung/universal7420-common/seccomp
 
