@@ -47,7 +47,15 @@ on init
     
     # Set HW revision (should be ro.revision on note fe)
     setprop ro.boot.hardware.revision ${ro.boot.hw_rev}
-    
+
+on late-fs
+    # Start services for Boot Animation
+    start servicemanager
+    start surfaceflinger
+    start bootanim
+    # Mount RW partitions which need run fsck
+    mount_all /vendor/etc/fstab.samsungexynos7420 --late
+
 on post-fs-data
     mkdir /data/media 0770 media_rw media_rw
     setprop vold.post_fs_data_done 1
@@ -289,7 +297,7 @@ on boot
     chown system radio /sys/class/sec/switch/afc_disable
 
 on fs
-    mount_all /vendor/etc/fstab.samsungexynos7420
+    mount_all /vendor/etc/fstab.samsungexynos7420 --early
     # Enable swap
     swapon_all /vendor/etc/fstab.samsungexynos7420
     
