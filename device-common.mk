@@ -142,6 +142,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     memtrack.exynos5 \
     android.hardware.memtrack@1.0-impl
+
+# OMX
+PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-impl \
+    android.hardware.media.omx@1.0-service
     
 # Properties 
 TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
