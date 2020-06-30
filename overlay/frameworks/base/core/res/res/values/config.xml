@@ -248,6 +248,9 @@
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,2097152,4194304,262144,524288,1048576</string>
 
+     <!-- True if the firmware supports p2p MAC randomization -->
+    <bool name="config_wifi_p2p_mac_randomization_supported">false</bool>
+
     <!-- Flag indicating whether strict threshold is used, or lenient threshold is used,
             when evaluating RSRP for LTE antenna bar display
            0. Strict threshold
