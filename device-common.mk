@@ -60,6 +60,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AdvancedDisplay 
 
+# Atrace HAL
+PRODUCT_PACKAGES += \
+	android.hardware.atrace@1.0-service.universal7420
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.universal7420_32 \
