@@ -59,6 +59,9 @@ vendor/firmware/bcm4358A3_V0083.0138.hcd:vendor/firmware/bcm4358A3_V0083.0138_se
 vendor/firmware/bcm4358A3_V0083.0138.hcd:vendor/firmware/bcm4358A3_V0083.0138_semco3rd.hcd|e3f2205f0afa2d269f1bad80e27806919c3f39f4
 vendor/firmware/bcm4358A3_V0083.0138_wisol.hcd|e3f2205f0afa2d269f1bad80e27806919c3f39f4
 
+# Prebuilt libaudioroute.so to work around https://android.googlesource.com/platform/system/media/+/fbbc93cb34e36b2b28e2e440e9f5e0c4d1472b8d
+lib/libaudioroute.so|46fcafe8de5c4fe078ad9e9e613bc260fd137106
+
 # Camera
 
 lib/hw/camera.exynos5.so:vendor/lib/hw/camera.exynos5.so
