@@ -235,6 +235,20 @@ PRODUCT_PACKAGES += \
 # Properties 
 TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
 
+# Radio
+PRODUCT_PACKAGES += \
+	libxml2 \
+	libprotobuf-cpp-full \
+	libreference-ril \
+	libril \
+	libsecril-client \
+	libsecril-client-sap \
+	libsecnativefeature \
+	android.hardware.radio@1.0 \
+	android.hardware.radio.deprecated@1.0 \
+	modemloader \
+	rild
+
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl

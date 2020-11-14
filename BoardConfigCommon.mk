@@ -179,6 +179,9 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
+# Radio
+BOARD_PROVIDES_LIBRIL := true
+
 # Seccomp filters
 BOARD_SECCOMP_POLICY += device/samsung/universal7420-common/seccomp
 
