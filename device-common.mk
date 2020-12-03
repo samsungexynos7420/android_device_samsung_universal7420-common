@@ -165,6 +165,10 @@ PRODUCT_PACKAGES += \
 # Debugging
 # -include $(COMMON_PATH)/system_prop_debug.mk
 
+# ConfigStore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # DRM
 PRODUCT_PACKAGES += \
 	android.hardware.drm@1.0-impl \
