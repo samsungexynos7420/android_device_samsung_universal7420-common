@@ -144,6 +144,10 @@ media/slow_charging_usb.spi
 media/temperature_limit_usb.spi
 media/water_protection_usb.spi
 
+# Neural Networks
+vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-armnn
+vendor/etc/init/android.hardware.neuralnetworks@1.1-service-armnn.rc
+
 # Protobuf vendor variant - from N975FXXU6ZTK6
 vendor/lib/libprotobuf-cpp-full-3.9.1.so|4290c27525874cb687d072dcfe20244e65685f2a
 vendor/lib64/libprotobuf-cpp-full-3.9.1.so|b9613d7b25ffd6ab31f7aa32a904aa6f5f4f9cdf
