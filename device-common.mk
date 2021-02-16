@@ -199,6 +199,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl
 
+# NFC
+PRODUCT_PACKAGES += \
+	libnfc-nci \
+	libnfc_nci_jni \
+	NfcNci \
+	Tag \
+	com.android.nfc_extras \
+	android.hardware.nfc@1.0-impl \
+	android.hardware.nfc@1.0-service
+
 # OMX
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-impl \
