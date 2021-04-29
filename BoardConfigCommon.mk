@@ -119,6 +119,9 @@ BOARD_HDMI_INCAPABLE := true
 # HWCServices - requires framework support
 BOARD_USES_HWC_SERVICES := true
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
 #  ION
 TARGET_USES_ION := true
 
