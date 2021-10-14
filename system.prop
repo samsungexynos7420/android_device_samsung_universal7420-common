@@ -2,6 +2,9 @@
 ro.chipname=exynos7420
 ro.arch=exynos7420
 
+# BPF
+ro.kernel.ebpf.supported=false
+
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 
