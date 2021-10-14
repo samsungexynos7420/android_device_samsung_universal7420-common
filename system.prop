@@ -23,6 +23,7 @@ ro.nfc.sec_hal=true
 ro.nfc.fw_dl_on_boot=false
 
 # HWC
+debug.renderengine.backend=threaded
 debug.sf.latch_unsignaled=1
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
