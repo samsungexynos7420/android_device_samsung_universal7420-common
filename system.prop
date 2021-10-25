@@ -34,7 +34,12 @@ ro.sf.blurs_are_expensive=1
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.zygote.disable_gl_preload=1
 
+# Skia
+# (b/183612348): Enable skia reduceOpsTaskSplitting
+renderthread.skia.reduceopstasksplitting=true
+
 # USB
 ro.adb.nonblocking_ffs=0
 persist.adb.nonblocking_ffs=0
 sys.usb.ffs.aio_compat=1
+
