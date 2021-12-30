@@ -162,7 +162,9 @@ TARGET_LD_SHIM_LIBS += \
 	/system/bin/mediaserver|/vendor/lib/libstagefright_shim.so
 
 # System prop
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 # Vendor security patch level
 VENDOR_SECURITY_PATCH := 2018-06-01
