@@ -151,6 +151,9 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 # SECComp filters
 BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
+# SELinux
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Shims
 TARGET_LD_SHIM_LIBS += \
 	/vendor/lib/libsec-ril.so|/vendor/lib/libcutils_shim.so \
