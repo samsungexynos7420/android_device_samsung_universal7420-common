@@ -21,3 +21,5 @@ allow lhd sysfs_sec_gps:lnk_file r_file_perms;
 allow lhd gps_data_file:dir rw_dir_perms;
 allow lhd gps_data_file:file create_file_perms;
 allow lhd gps_data_file:fifo_file create_file_perms;
+
+dontaudit lhd system_data_file:dir search;
