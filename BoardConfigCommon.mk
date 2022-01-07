@@ -171,6 +171,9 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 # SECComp filters
 BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
+# SELinux
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
