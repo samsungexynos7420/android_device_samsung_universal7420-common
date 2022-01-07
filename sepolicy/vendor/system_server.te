@@ -63,10 +63,11 @@ get_prop(system_server, bluetooth_prop)
 get_prop(system_server, exported_camera_prop);
 get_prop(system_server, userspace_reboot_exported_prop)
 get_prop(system_server, userspace_reboot_config_prop)
-get_prop(system_server, vendor_radio_prop)
 
 allow system_server proc_dt_firmware:dir search;
 
 unix_socket_connect(system_server, property, gpsd)
+
+get_prop(system_server, build_bootimage_prop)
 
 dontaudit system_server persist_block_device:blk_file { getattr ioctl open read write };
