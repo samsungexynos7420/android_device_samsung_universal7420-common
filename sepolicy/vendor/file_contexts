@@ -44,9 +44,6 @@
 /data/nfc(/.*)?                   u:object_r:nfc_data_file:s0
 /data/vendor/nfc(/.*)?            u:object_r:nfc_vendor_data_file:s0
 
-# Radio
-/data/misc/radio(/.*)?            u:object_r:radio_data_file:s0
-
 # Wi-fi
 /data/misc/conn/\.cid\.info        u:object_r:wifi_data_file:s0
 /data/misc/conn/\.wifiver\.info    u:object_r:wifi_data_file:s0
