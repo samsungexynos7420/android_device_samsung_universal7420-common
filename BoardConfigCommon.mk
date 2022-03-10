@@ -99,6 +99,7 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_RAMDISK_USE_XZ := true
 TARGET_KERNEL_CLANG_COMPILE := false
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
+BOARD_USES_FULL_RECOVERY_IMAGE := false
 
 # LED
 RED_LED_PATH := "/sys/class/leds/led_r/brightness"
