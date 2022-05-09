@@ -278,7 +278,10 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-	android.hardware.power@1.0-service.exynos
+	android.hardware.power-service.samsung-libperfmgr
+
+PRODUCT_COPY_FILES += \
+	$(COMMON_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -335,8 +338,12 @@ PRODUCT_PACKAGES += \
 	android.hardware.sensors@1.0-impl.samsung \
 	android.hardware.sensors@1.0-service
 
-# Soong
-PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+	$(COMMON_PATH) \
+	hardware/google/interfaces \
+	hardware/google/pixel \
+	hardware/samsung/aidl/power-libperfmgr
 
 # Stagefright-shims
 PRODUCT_PACKAGES += \
