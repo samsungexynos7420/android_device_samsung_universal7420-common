@@ -100,7 +100,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sys.sdcardfs=1 \
-	ro.sys.sdcardfs.legacy-mounting=1
 
 #
 # Vendor Security Patch Level
