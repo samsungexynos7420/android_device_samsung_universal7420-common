@@ -269,6 +269,9 @@ on boot
     chmod 0640 /dev/fmradio
     chown system system /dev/fmradio
 
+    # Fastcharge switch
+    chown system radio /sys/class/sec/switch/afc_disable
+
 on fs
     mount_all /fstab.samsungexynos7420
 
@@ -593,7 +596,6 @@ on fs
     chown system radio /sys/class/sec/switch/uart_en
     chown system radio /sys/class/sec/switch/otg_test
     chown system radio /sys/class/sec/switch/apo_factory
-    chown system radio /sys/class/sec/switch/afc_disable
     chown system radio /sys/class/sec/switch/wireless
 
     # GPIO DVS
