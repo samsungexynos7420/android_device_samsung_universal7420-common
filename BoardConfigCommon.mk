@@ -132,6 +132,9 @@ BOARD_USES_TRUST_KEYMASTER := true
 TARGET_LD_SHIM_LIBS += \
     /system/bin/mediaserver|/vendor/lib/libstagefright_shim.so
 
+# MEMFD
+TARGET_HAS_MEMFD_BACKPORT := true
+
 # Networking
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 
@@ -213,3 +216,4 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/dhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/etc/wifi/bcmdhd_sta.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/etc/wifi/bcmdhd_apsta.bin"
 WIFI_BAND                        := 802_11_ABG
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
