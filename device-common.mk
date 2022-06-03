@@ -204,6 +204,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.renderscript@1.0-impl
 
+# Ril - Shim
+PRODUCT_PACKAGES += \
+	libcutils_shim
+
 # SamsungDoze
 PRODUCT_PACKAGES += \
 	SamsungDoze
