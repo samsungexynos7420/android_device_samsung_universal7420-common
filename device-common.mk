@@ -160,7 +160,8 @@ PRODUCT_PACKAGES += \
 # GNSS
 PRODUCT_PACKAGES += \
 	android.hardware.gnss@1.0-impl.universal7420 \
-	android.hardware.gnss@1.0-service.universal7420
+	android.hardware.gnss@1.0-service.universal7420 \
+	gpsd_shim
 
 # Graphics
 PRODUCT_PACKAGES += \
