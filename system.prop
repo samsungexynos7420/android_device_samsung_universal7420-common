@@ -10,6 +10,7 @@ ro.sf.blurs_are_expensive=1
 ro.zygote.disable_gl_preload=1
 debug.renderengine.backend=threaded
 debug.sf.latch_unsignaled=1
+debug.sf.predict_hwc_composition_strategy=0
 
 # LMKD
 ro.lmk.log_stats=true
