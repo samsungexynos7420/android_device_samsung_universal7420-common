@@ -23,6 +23,7 @@ on init
 
     symlink /data/app /factory
 
+    setprop ro.boot.hardware.revision ${ro.boot.hw_rev}
 on post-fs-data
     setprop vold.post_fs_data_done 1
 
