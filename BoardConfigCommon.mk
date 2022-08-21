@@ -42,6 +42,7 @@ TARGET_NR_CPUS := 8
 # Kernel
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+TARGET_KERNEL_CLANG_COMPILE    := false
 
 # Audio
 TARGET_AUDIOHAL_VARIANT := samsung
