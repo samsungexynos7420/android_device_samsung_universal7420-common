@@ -125,3 +125,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # System
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.binary_xml=false
+
+# BPF
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.kernel.ebpf.supported=false
