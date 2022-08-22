@@ -141,6 +141,7 @@ BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 
+SELINUX_IGNORE_NEVERALLOWS := true
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 # Keymaster
 BOARD_USES_TRUST_KEYMASTER := true
