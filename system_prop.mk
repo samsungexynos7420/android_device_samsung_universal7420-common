@@ -77,7 +77,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #
 PRODUCT_PROPERTY_OVERRIDES += \
 	debug.hwc.force_gpu=0 \
-	debug.sf.latch_unsignaled=1
+	debug.sf.latch_unsignaled=1 \
+	debug.renderengine.backend=gles
 
 #
 # Graphics
