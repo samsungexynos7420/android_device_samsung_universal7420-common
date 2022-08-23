@@ -278,6 +278,8 @@ on fs
 # Permissions for TouchScreen
     chown system radio /sys/class/sec/tsp/cmd
     chown system system /sys/class/sec/tsp/input/enabled
+    chown system radio /sys/class/sec/tsp/cmd_list
+    chmod 0664  /sys/class/sec/tsp/cmd_list
 
 # Permissions for ZEROFLTE PowerHAL
     chown system system /sys/class/input/input0/enabled
@@ -294,7 +296,9 @@ on fs
     chown system radio /sys/class/sec/sec_touchkey/keyboard_mode
     chown system radio /sys/class/sec/sec_touchkey/boost_level
     chown system radio /sys/class/sec/sec_touchkey/tkey_int_ctrl
+    chmod 0660 /sys/class/sec_touchkey/input/enabled
     chown system system /sys/class/sec/sec_touchkey/input/enabled
+    chmod 664 /sys/class/sec/sec_touchkey/input/enabled
 
 # Permissions for gpio_keys
     chown radio system /sys/class/sec/sec_key/wakeup_keys
