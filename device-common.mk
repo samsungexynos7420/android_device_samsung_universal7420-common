@@ -252,9 +252,9 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 PRODUCT_PACKAGES += \
 	libstagefright_shim
 
-# Touch
-#PRODUCT_PACKAGES += \
-#	vendor.lineage.touch@1.0-service.samsung
+# Touch features
+PRODUCT_PACKAGES += \
+	vendor.lineage.touch@1.0-service.samsung
 
 # Trust
 PRODUCT_PACKAGES += \
