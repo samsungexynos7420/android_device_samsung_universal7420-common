@@ -400,6 +400,9 @@ on fs
 
 # SENSORS
 # Fingerprint_sensor
+	chmod 0660 /dev/vfsspi
+    chown system system /dev/vfsspi
+
     chown system radio /sys/class/fingerprint/fingerprint/type_check
     chown system radio /sys/class/fingerprint/fingerprint/name
     chown system radio /sys/class/fingerprint/fingerprint/vendor
