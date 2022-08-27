@@ -78,7 +78,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	debug.hwc.force_gpu=0 \
 	debug.sf.latch_unsignaled=1 \
-	debug.renderengine.backend=gles
+	debug.renderengine.backend=gles \
+	ro.hardware.egl=mali \
+	ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 #
 # Graphics
@@ -86,7 +88,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=196610 \
 	debug.hwui.use_buffer_age=false \
-	ro.sf.lcd_density=480 \
 	sys.use_fifo_ui=1
 
 #
@@ -123,13 +124,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.adb.nonblocking_ffs=0 \
 	sys.usb.ffs.aio_compat=1
 
+
 # System
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.binary_xml=false
 
+
 # BPF
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.ebpf.supported=false
+
 
 # SoC
 PRODUCT_PROPERTY_OVERRIDES += \
