@@ -92,6 +92,7 @@
 #
 
 /(vendor|system/vendor)/bin/hw/android\.hardware\.atrace@1\.0-service\.universal7420      u:object_r:hal_atrace_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.audio\.service\.universal7420           u:object_r:hal_audio_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@1\.0-service\.universal7420        u:object_r:hal_gnss_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software       u:object_r:hal_gatekeeper_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.1-service-armnn       u:object_r:hal_neuralnetworks_default_exec:s0
