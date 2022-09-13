@@ -258,8 +258,8 @@ PRODUCT_PACKAGES += \
 	libstagefright_shim
 
 # Touch
-#PRODUCT_PACKAGES += \
-#	vendor.lineage.touch@1.0-service.samsung
+PRODUCT_PACKAGES += \
+	vendor.lineage.touch@1.0-service.samsung
 
 # Trust
 PRODUCT_PACKAGES += \
