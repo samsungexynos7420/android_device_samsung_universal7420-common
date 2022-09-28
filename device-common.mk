@@ -251,7 +251,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-	android.hardware.sensors@1.0-impl.samsung
+	android.hardware.sensors@1.0-impl.samsung \
+	android.hardware.sensors@1.0-service
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
