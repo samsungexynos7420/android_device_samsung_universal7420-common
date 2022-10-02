@@ -177,12 +177,6 @@ PRODUCT_COPY_FILES += \
 	frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
-# Mobicore
-PRODUCT_PACKAGES += \
-    mcDriverDaemon \
-    libMcClient \
-    libMcRegistry
-
 # NFC
 PRODUCT_PACKAGES += \
 	libnfc-nci \
