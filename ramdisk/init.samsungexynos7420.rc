@@ -116,6 +116,8 @@ on post-fs-data
 # Vibrations
     chown system system /sys/class/timed_output/vibrator/enable
     chown system system /sys/class/timed_output/vibrator/intensity
+    chmod 0660 /sys/class/timed_output/vibrator/enable
+    chmod 0660 /sys/class/timed_output/vibrator/intensity
 
 # permission for CHARGING
    chown system radio /sys/class/power_supply/battery/batt_discharging_check
