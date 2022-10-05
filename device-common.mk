@@ -87,7 +87,6 @@ PRODUCT_PACKAGES += \
 	gralloc.exynos7420 \
 	hwcomposer.universal7420 \
 	libcsc \
-	libfimg \
 	libexynosscaler \
 	libexynosgscaler \
 	libhwc2on1adapter \
@@ -251,7 +250,6 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-	android.hardware.media.omx@1.0-impl \
 	android.hardware.media.omx@1.0-service
 
 # Permissions
@@ -392,7 +390,6 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-	android.hardware.usb@1.0-impl \
 	android.hardware.usb@1.0-service.basic
 
 # VNDK prebuilts
@@ -409,16 +406,13 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
 	hostapd \
-	libnetcmdiface \
 	libwpa_client \
 	macloader \
 	wificond \
 	wifiloader \
-	wifilogd \
-	wlutil \
 	wpa_supplicant \
 	wpa_supplicant.conf \
-	android.hardware.wifi@1.0-impl \
+	android.hardware.wifi@1.0 \
 	android.hardware.wifi@1.0-service
 
 PRODUCT_COPY_FILES += \
