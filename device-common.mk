@@ -233,7 +233,6 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-	android.hardware.media.omx@1.0-impl \
 	android.hardware.media.omx@1.0-service
 
 # Permissions
@@ -396,12 +395,9 @@ PRODUCT_PACKAGES += \
 	macloader \
 	wificond \
 	wifiloader \
-	wifilogd \
-	wlutil \
 	TetheringConfigOverlay \
 	wpa_supplicant \
 	wpa_supplicant.conf \
-	android.hardware.wifi@1.0-impl \
 	android.hardware.wifi@1.0-service.legacy
 
 # call the proprietary setup
