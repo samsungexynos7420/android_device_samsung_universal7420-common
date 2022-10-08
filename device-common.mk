@@ -20,7 +20,7 @@ COMMON_PATH := device/samsung/universal7420-common
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    device/samsung/universal7420-common/overlay/hardware/samsung/AdvancedDisplay
+    device/samsung/universal7420-common/overlay/hardware/samsung/AdvancedDisplay    
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -204,7 +204,8 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
 	libhidltransport \
-	libhwbinder
+	libhwbinder \
+	vndservicemanager
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
