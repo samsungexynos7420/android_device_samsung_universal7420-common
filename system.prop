@@ -6,6 +6,7 @@ dalvik.vm.dex2oat64.enabled=true
 
 # HWC
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.sf.blurs_are_expensive=1
 ro.zygote.disable_gl_preload=1
 debug.sf.latch_unsignaled=1
 
