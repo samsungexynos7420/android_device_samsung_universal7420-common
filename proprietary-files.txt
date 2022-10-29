@@ -60,8 +60,8 @@ vendor/firmware/bcm4358A3_V0083.0138.hcd:vendor/firmware/bcm4358A3_V0083.0138_se
 vendor/firmware/bcm4358A3_V0083.0138_wisol.hcd|e3f2205f0afa2d269f1bad80e27806919c3f39f4
 
 # Camera
-lib/hw/camera.exynos5.so
-lib64/hw/camera.exynos5.so
+lib/hw/camera.vendor.exynos5.so
+lib64/hw/camera.vendor.exynos5.so
 lib/libexynoscamera.so
 lib64/libexynoscamera.so
 lib/libexynoscamera3.so
