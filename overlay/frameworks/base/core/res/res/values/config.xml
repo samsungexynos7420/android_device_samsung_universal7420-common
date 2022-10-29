@@ -396,6 +396,14 @@ Add a comment to this line
      screen directly in front of the sensor. -->
     <dimen name="physical_fingerprint_sensor_center_screen_location_y">2560px</dimen>
 
+    <!-- AOSP SystemInfo -->
+    <string name="config_sysCPUTemp">/sys/class/thermal/thermal_zone0/temp</string>
+    <string name="config_sysBatteryTemp">/sys/class/power_supply/battery/temp</string>
+    <string name="config_sysGPUFreq">/sys/kernel/gpu/gpu_clock</string>
+    <string name="config_sysGPULoad">/sys/kernel/gpu/gpu_busy</string>
+    <integer name="config_sysCPUTempMultiplier">1000</integer>
+    <integer name="config_sysBatteryTempMultiplier">10</integer>
+    
     <!-- Whether to post reset runnable for all clients. Needed for some older
         vendor fingerprint HAL implementations. -->
     <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
