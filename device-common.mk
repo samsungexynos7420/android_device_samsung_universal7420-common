@@ -188,6 +188,11 @@ PRODUCT_PACKAGES += \
 	android.hardware.nfc@1.0-impl \
 	android.hardware.nfc@1.0-service
 
+# OMX
+PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-impl \
+    android.hardware.media.omx@1.0-service
+    
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
