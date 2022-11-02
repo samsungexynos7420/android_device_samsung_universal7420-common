@@ -77,10 +77,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # HWC
 #
 PRODUCT_PROPERTY_OVERRIDES += \
-	debug.sf.latch_unsignaled=1 \
+	ro.hardware.egl=mali \
 	debug.renderengine.backend=gles \
 	ro.vendor.winupdate=1 \
-	ro.hardware.egl=mali \
 	ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 #
