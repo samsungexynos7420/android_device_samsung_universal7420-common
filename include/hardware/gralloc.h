@@ -258,11 +258,6 @@ typedef struct gralloc_module_t {
     int (*unlock)(struct gralloc_module_t const* module,
             buffer_handle_t handle);
 
-#ifdef EXYNOS4_ENHANCEMENTS
-    int (*getphys) (struct gralloc_module_t const* module,
-            buffer_handle_t handle, void** paddr);
-#endif
-
     /* reserved for future use */
     int (*perform)(struct gralloc_module_t const* module,
             int operation, ... );
@@ -380,32 +375,32 @@ typedef struct gralloc_module_t {
 typedef struct alloc_device_t {
     struct hw_device_t common;
 
-    /*
+    /* 
      * (*alloc)() Allocates a buffer in graphic memory with the requested
      * parameters and returns a buffer_handle_t and the stride in pixels to
      * allow the implementation to satisfy hardware constraints on the width
-     * of a pixmap (eg: it may have to be multiple of 8 pixels).
+     * of a pixmap (eg: it may have to be multiple of 8 pixels). 
      * The CALLER TAKES OWNERSHIP of the buffer_handle_t.
      *
      * If format is HAL_PIXEL_FORMAT_YCbCr_420_888, the returned stride must be
      * 0, since the actual strides are available from the android_ycbcr
      * structure.
-     *
+     * 
      * Returns 0 on success or -errno on error.
      */
-
+    
     int (*alloc)(struct alloc_device_t* dev,
             int w, int h, int format, int usage,
             buffer_handle_t* handle, int* stride);
 
     /*
-     * (*free)() Frees a previously allocated buffer.
+     * (*free)() Frees a previously allocated buffer. 
      * Behavior is undefined if the buffer is still mapped in any process,
      * but shall not result in termination of the program or security breaches
      * (allowing a process to get access to another process' buffers).
      * THIS FUNCTION TAKES OWNERSHIP of the buffer_handle_t which becomes
-     * invalid after the call.
-     *
+     * invalid after the call. 
+     * 
      * Returns 0 on success or -errno on error.
      */
     int (*free)(struct alloc_device_t* dev,
@@ -429,7 +424,7 @@ static inline int gralloc_open(const struct hw_module_t* module,
 #ifdef __cplusplus
             GRALLOC_HARDWARE_GPU0, reinterpret_cast<struct hw_device_t**>(device));
 #else
-            GRALLOC_HARDWARE_GPU0, (struct hw_device_t**)device);
+            GRALLOC_HARDWARE_GPU0, TO_HW_DEVICE_T_OPEN(device));
 #endif
 }
 
@@ -472,3 +467,4 @@ static inline const char* map_usage_to_memtrack(uint32_t usage) {
 __END_DECLS
 
 #endif  // ANDROID_GRALLOC_INTERFACE_H
+
