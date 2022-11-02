@@ -77,9 +77,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # HWC
 #
 PRODUCT_PROPERTY_OVERRIDES += \
-	debug.hwc.force_gpu=0 \
 	debug.sf.latch_unsignaled=1 \
 	debug.renderengine.backend=gles \
+	ro.vendor.winupdate=1 \
 	ro.hardware.egl=mali \
 	ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
@@ -87,9 +87,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 #
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.opengles.version=196610 \
-	debug.hwui.use_buffer_age=false \
-	sys.use_fifo_ui=1
+	ro.opengles.version=196610
 
 #
 # Audio
