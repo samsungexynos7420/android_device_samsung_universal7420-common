@@ -350,6 +350,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
 	$(COMMON_PATH) \
+	hardware/samsung \
 	hardware/google/interfaces \
 	hardware/google/pixel \
 	hardware/samsung/aidl/power-libperfmgr
