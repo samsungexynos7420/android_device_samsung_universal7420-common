@@ -124,6 +124,7 @@ PRODUCT_PACKAGES += \
 # GNSS/GPS
 PRODUCT_PACKAGES += \
 	android.hardware.gnss@1.0-impl.universal7420 \
+	android.hardware.gnss@1.0-service \
 	gpsd_shim
 
 # Graphics
