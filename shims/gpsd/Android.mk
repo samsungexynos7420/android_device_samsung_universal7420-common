@@ -5,7 +5,7 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := \
     gps_symbols.cpp
 
-LOCAL_SHARED_LIBRARIES := libbinder libssl
+LOCAL_SHARED_LIBRARIES := libsensor libutils
 
 LOCAL_MODULE := gpsd_shim
 LOCAL_VENDOR_MODULE := true
