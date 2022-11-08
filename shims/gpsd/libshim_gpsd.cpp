@@ -1,9 +1,13 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
 
 namespace android {
+
+    // android::SensorManager::getSensorList(android::Sensor const* const**) const
+    extern "C" void _ZNK7android13SensorManager13getSensorListEPPKPKNS_6SensorE();
+    extern "C" void _ZNK7android13SensorManager13getSensorListEPPKPKNS_6SensorE(){};
+
     //android::String16::String16(char const*)
     extern "C" void _ZN7android8String16C1EPKc(void **str16P, const char *str);
 

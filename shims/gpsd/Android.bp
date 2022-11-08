@@ -1,0 +1,17 @@
+cc_library_shared {
+    name: "libshim_gpsd",
+    proprietary: true,
+
+    srcs: [
+	"libshim_gpsd.cpp",
+    ],
+
+    shared_libs: [
+	"liblog",
+        "libcutils",
+	"libgui",
+        "libbinder",
+	"libutils",
+        "libsensor",
+    ],
+}
