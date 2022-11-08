@@ -417,4 +417,7 @@ Add a comment to this line
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
     in hardware. -->
     <bool name="config_setColorTransformAccelerated">false</bool>
+    
+    <!-- The device supports freeform window management -->
+    <bool name="config_freeformWindowManagement">true</bool>
 </resources>
