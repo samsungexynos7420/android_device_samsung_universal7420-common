@@ -131,6 +131,10 @@ PRODUCT_PACKAGES += \
 	android.hardware.gnss@1.0-service \
 	gpsd_shim
 
+# Additional native libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
 # Graphics
 PRODUCT_PACKAGES += \
 	android.hardware.graphics.allocator@2.0-impl \
