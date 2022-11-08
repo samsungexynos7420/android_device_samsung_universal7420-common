@@ -78,8 +78,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hardware.egl=mali \
-	debug.renderengine.backend=threaded \
+	ro.hardware.vulkan=mali \
+	debug.renderengine.backend=vulkan \
 	debug.slsi_platform=1 \
+	debug.sf.latch_unsignaled=1 \
+	debug.hwc.winupdate=1 \
 	ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 #
