@@ -36,23 +36,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.dex2oat64.enabled=true
 
 #
-# Ril
-#
-PRODUCT_PROPERTY_OVERRIDES += \
-	persist.radio.add_power_save=1 \
-	persist.radio.apm_sim_not_pwdn=1 \
-	vendor.rild.libpath=/system/vendor/lib64/libsec-ril.so \
-	vendor.rild.libpath2=/system/vendor/lib64/libsec-ril-dsds.so \
-	telephony.lteOnGsmDevice=1 \
-	telephony.lteOnCdmaDevice=0 \
-	ro.telephony.default_network=9 \
-	ro.use_data_netmgrd=false \
-	persist.data.netmgrd.qos.enable=false \
-	ro.ril.hsxpa=1 \
-	ro.ril.telephony.mqanelements=6 \
-	ro.ril.gprsclass=10
-
-#
 # OMX
 #
 PRODUCT_PROPERTY_OVERRIDES += \
