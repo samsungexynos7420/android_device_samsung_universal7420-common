@@ -110,6 +110,28 @@
             "ResetOnInit": true
         },
         {
+            "Name": "GPUMaxFreq",
+            "Path": "/sys/kernel/gpu/gpu_max_clock",
+            "Values": [
+                "772",
+                "700",
+                "600",
+                "544"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "GPUMinFreq",
+            "Path": "/sys/kernel/gpu/gpu_min_clock",
+            "Values": [
+                "420",
+                "350",
+                "266"
+            ],
+            "ResetOnInit": true
+        },
+        {
             "Name": "TouchscreenEnable",
             "Path": "/sys/class/sec/tsp/input/enabled",
             "Values": [
@@ -295,6 +317,12 @@
             "Value": "1104000"
         },
         {
+            "PowerHint": "SUSTAINED_PERFORMANCE",
+            "Node": "GPUMaxFreq",
+            "Duration": 0,
+            "Value": "544"
+        },
+        {
             "PowerHint": "VR_MODE",
             "Node": "PowerHALMainState",
             "Duration": 0,
@@ -317,6 +345,18 @@
             "Node": "PowerHALRenderingState",
             "Duration": 0,
             "Value": "EXPENSIVE_RENDERING"
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "420"
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "GPUMaxFreq",
+            "Duration": 0,
+            "Value": "544"
         },
         {
             "PowerHint": "LOW_POWER",
