@@ -21,6 +21,26 @@
             "ResetOnInit": true
         },
         {
+            "Name": "CPUHotplugBigCore5",
+            "Path": "/sys/devices/system/cpu/cpu5/online",
+            "Values": [
+                "1",
+                "0"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "CPUHotplugBigCore6",
+            "Path": "/sys/devices/system/cpu/cpu6/online",
+            "Values": [
+                "1",
+                "0"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
             "Name": "CPUBigClusterBoost",
             "Path": "/sys/devices/system/cpu/cpu4/cpufreq/interactive/boost",
             "Values": [
@@ -132,15 +152,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "TouchscreenEnable",
-            "Path": "/sys/class/sec/tsp/input/enabled",
-            "Values": [
-                "1",
-                "0"
-            ],
-            "ResetOnInit": true
-        },
-        {
             "Name": "PowerHALMainState",
             "Path": "vendor.powerhal.state",
             "Values": [
@@ -172,36 +183,6 @@
         }
     ],
     "Actions": [
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "CPUBigClusterMinFreq",
-            "Duration": 0,
-            "Value": "1400000"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "CPULittleClusterMinFreq",
-            "Duration": 0,
-            "Value": "700000"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "CPUBigClusterIOIsBusy",
-            "Duration": 0,
-            "Value": "1"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "CPULittleClusterIOIsBusy",
-            "Duration": 0,
-            "Value": "1"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "CPUBoostPulse",
-            "Duration": 0,
-            "Value": "1"
-        },
         {
             "PowerHint": "LAUNCH",
             "Node": "CPUBigClusterBoost",
@@ -335,12 +316,6 @@
             "Value": "VR_SUSTAINED_PERFORMANCE"
         },
         {
-            "PowerHint": "INTERACTIVE",
-            "Node": "TouchscreenEnable",
-            "Duration": 0,
-            "Value": "1"
-        },
-        {
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "PowerHALRenderingState",
             "Duration": 0,
@@ -382,6 +357,18 @@
             "Duration": 0,
             "Value": "200000"
         },
+        {
+            "PowerHint": "LOW_POWER",
+            "Node": "CPUHotplugBigCore5",
+            "Duration": 0,
+            "Value": "0"
+        },
+        {
+            "PowerHint": "LOW_POWER",
+            "Node": "CPUHotplugBigCore6",
+            "Duration": 0,
+            "Value": "0"
+        }
     ]
 }
 
