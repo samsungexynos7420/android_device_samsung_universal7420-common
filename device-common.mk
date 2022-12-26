@@ -60,6 +60,10 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
 	frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
+# AdvancedDisplay (MDNIE)
+PRODUCT_PACKAGES += \
+	AdvancedDisplay
+
 # Audio
 PRODUCT_PACKAGES += \
 	audio.primary.universal7420_32 \
@@ -91,6 +95,16 @@ PRODUCT_PACKAGES += \
 	android.hardware.bluetooth@1.0-service \
 	libbt-vendor
 
+# BSP
+PRODUCT_PACKAGES += \
+	memtrack.exynos5 \
+	gralloc.exynos5 \
+	hwcomposer.exynos5 \
+	libfimg \
+	libhwc2on1adapter \
+	libhwc2onfbadapter \
+	libion
+
 # Camera
 PRODUCT_PACKAGES += \
 	android.hardware.camera.provider@2.4-impl \
@@ -116,7 +130,7 @@ PRODUCT_HOST_PACKAGES += \
 
 # FastCharge
 PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.samsung
+	vendor.lineage.fastcharge@1.0-service.samsung
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -131,12 +145,7 @@ PRODUCT_PACKAGES += \
 	android.hardware.graphics.allocator@2.0-impl \
 	android.hardware.graphics.allocator@2.0-service \
 	android.hardware.graphics.composer@2.1-service \
-	android.hardware.graphics.mapper@2.0-impl \
-	gralloc.exynos5 \
-	hwcomposer.exynos5 \
-	libfimg \
-	libhwc2on1adapter \
-	libion
+	android.hardware.graphics.mapper@2.0-impl
 
 # Health
 PRODUCT_PACKAGES += \
@@ -150,7 +159,7 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service.software
+	android.hardware.gatekeeper@1.0-service.software
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -167,7 +176,6 @@ PRODUCT_PACKAGES += \
 
 # Memory
 PRODUCT_PACKAGES += \
-	memtrack.exynos5 \
 	android.hardware.memtrack@1.0-impl
 
 # Media profile
