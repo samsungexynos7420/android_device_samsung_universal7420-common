@@ -90,6 +90,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=640 \
 
 #
+# SLSI
+#
+PRODUCT_PROPERTY_OVERRIDES += \
+	debug.slsi_platform=1
+
+#
 # Audio
 #
 PRODUCT_PROPERTY_OVERRIDES += \
