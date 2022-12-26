@@ -76,6 +76,8 @@ CHARGING_ENABLED_PATH := "/sys/class/power_supply/battery/batt_lp_charging"
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.samsungexynos7420.recovery
 
+# Display
+TARGET_SCREEN_DENSITY := 560
 
 # Device Tree
 BOARD_USES_DT := true

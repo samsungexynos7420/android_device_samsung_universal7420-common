@@ -89,8 +89,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=196610 \
-	ro.hardware.egl=mali \
-	ro.sf.lcd_density=640 \
+	ro.hardware.egl=mali
 
 #
 # SLSI
