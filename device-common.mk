@@ -71,7 +71,9 @@ PRODUCT_PACKAGES += \
 	android.hardware.audio@2.0-impl:32 \
 	android.hardware.audio.effect@2.0-impl:32 \
 	android.hardware.bluetooth.audio@2.0-impl:32 \
-	audio.bluetooth.default \
+	audio.bluetooth.default
+	
+TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_COPY_FILES += \
 	frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
