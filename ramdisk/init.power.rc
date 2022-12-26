@@ -7,13 +7,6 @@ on init
     chmod 0660 /sys/kernel/hmp/down_threshold
 
 on boot
-
-    # cpusets
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 0-4
-    write /dev/cpuset/system-background/cpus 0-4
-    write /dev/cpuset/top-app/cpus 4-7
-
     # Change permission for dvfshelper
     chown radio system /sys/power/cpufreq_table
     chmod 0664 /sys/power/cpufreq_table
@@ -59,12 +52,21 @@ on boot
     chown system system /dev/cpuset/foreground/cpus
     chown system system /dev/cpuset/background/cpus
     chown system system /dev/cpuset/system-background/cpus
+    chown system system /dev/cpuset/restricted/cpus
     chown system system /dev/cpuset/top-app/cpus
     chmod 0664 /dev/cpuset/cpus
     chmod 0664 /dev/cpuset/foreground/cpus
     chmod 0664 /dev/cpuset/background/cpus
     chmod 0664 /dev/cpuset/system-background/cpus
     chmod 0664 /dev/cpuset/top-app/cpus
+    chmod 666 /dev/cpuset/restricted/cpus
+    
+    # cpusets
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/background/cpus 0-4
+    write /dev/cpuset/system-background/cpus 0-4
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/restricted/cpus 0-3
 
     chown radio system /sys/devices/platform/exynos7-devfreq-mif/devfreq/exynos7-devfreq-mif/available_frequencies
     chmod 0664 /sys/devices/platform/exynos7-devfreq-mif/devfreq/exynos7-devfreq-mif/available_frequencies
