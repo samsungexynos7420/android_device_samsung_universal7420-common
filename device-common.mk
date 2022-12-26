@@ -238,7 +238,6 @@ PRODUCT_PACKAGES += \
 	fstab.samsungexynos7420 \
 	init.baseband.rc \
 	init.gps.rc \
-	init.zerofltexx.rc \
 	ueventd.samsungexynos7420.rc
 
 # RenderScript
