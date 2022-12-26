@@ -47,6 +47,12 @@ TARGET_AUDIOHAL_VARIANT := samsung
 USE_XML_AUDIO_POLICY_CONF := 1
 AUDIOSERVER_MULTILIB := 32
 
+# LED
+RED_LED_PATH := "/sys/class/leds/led_r/brightness"
+GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
+BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
+BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
+
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
@@ -66,7 +72,6 @@ TARGET_NO_BOOTLOADER := true
 
 # Charger
 WITH_LINEAGE_CHARGER := false
-BACKLIGHT_PATH := /sys/devices/13900000.dsim/backlight/panel/brightness
 BOARD_BATTERY_DEVICE_NAME := battery
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
