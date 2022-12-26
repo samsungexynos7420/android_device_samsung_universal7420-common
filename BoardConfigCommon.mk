@@ -164,6 +164,7 @@ TARGET_SOC := exynos7420
 TARGET_SLSI_VARIANT := bsp
 
 # Radio
+BOARD_MODEM_TYPE := ss333
 BOARD_PROVIDES_LIBRIL := true
 
 # Ril - Shim
