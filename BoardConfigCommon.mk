@@ -187,6 +187,10 @@ VENDOR_SECURITY_PATCH := 2018-06-01
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := system/vendor
 
+# Verity
+# Only needed for signing
+BOARD_AVB_ENABLE := false
+
 # WFD
 BOARD_USES_WFD := true
 
