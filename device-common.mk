@@ -117,6 +117,10 @@ PRODUCT_PACKAGES += \
 	android.hardware.camera.provider@2.4-impl \
 	android.hardware.camera.provider@2.4-service
 
+# Camera-Shim
+PRODUCT_PACKAGES += \
+	libexynoscamera_shim
+
 # Configstore
 PRODUCT_PACKAGES += \
 	android.hardware.configstore@1.0-impl \
@@ -142,6 +146,10 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
 	android.hardware.biometrics.fingerprint@2.1-service.samsung
+
+# Fingerprint-Shim
+PRODUCT_PACKAGES += \
+	libbauthtzcommon_shim
 
 # GNSS
 PRODUCT_PACKAGES += \
