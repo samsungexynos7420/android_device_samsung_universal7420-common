@@ -13,7 +13,7 @@
 
 # System partitions
 /dev/block/platform/15570000.ufs/by-name/SYSTEM               /system        ext4      ro,noatime,noauto_da_alloc,discard,data=ordered,errors=panic                                       wait
-/dev/block/platform/15570000.ufs/by-name/EFS                  /efs           ext4      noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered,no_sehash_xattr,errors=panic                             wait,check,recoveryonly
+/dev/block/platform/15570000.ufs/by-name/EFS                  /efs           ext4      noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered,errors=panic                             wait,check,recoveryonly
 
 # User partitions
 /dev/block/platform/15570000.ufs/by-name/CACHE                /cache         ext4      noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered,errors=panic                             wait,check
