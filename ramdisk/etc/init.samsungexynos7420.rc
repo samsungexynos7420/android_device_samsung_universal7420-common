@@ -1,9 +1,9 @@
-import init.samsungexynos7420.usb.rc
-import init.wifi.rc
-import init.baseband.rc
-import init.gps.rc
-import init.power.rc
-import init.battery.rc
+import /vendor/etc/init/hw/init.samsungexynos7420.usb.rc
+import /vendor/etc/init/hw/init.wifi.rc
+import /vendor/etc/init/hw/init.baseband.rc
+import /vendor/etc/init/hw/init.gps.rc
+import /vendor/etc/init/hw/init.power.rc
+import /vendor/etc/init/hw/init.battery.rc
 
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
@@ -36,7 +36,7 @@ on late-fs
     start surfaceflinger
     start bootanim
     # Mount RW partitions which need run fsck
-    mount_all /fstab.samsungexynos7420 --late
+    mount_all /vendor/etc/fstab.samsungexynos7420 --late
     
 on post-fs-data
     setprop vold.post_fs_data_done 1
@@ -282,7 +282,7 @@ on boot
     chown system radio /sys/class/sec/switch/afc_disable
 
 on fs
-    mount_all /fstab.samsungexynos7420  --early
+    mount_all /vendor/etc/fstab.samsungexynos7420  --early
     
     setprop sys.usb.ffs.aio_compat 1
     setprop persist.adb.nonblocking_ffs 0
@@ -290,7 +290,7 @@ on fs
     setprop sys.usb.mtp.device_type 2
 
     # Enable swap
-    swapon_all /fstab.samsungexynos7420
+    swapon_all /vendor/etc/fstab.samsungexynos7420
     write /proc/sys/vm/swappiness 100
 
 # Permissions for TouchScreen
