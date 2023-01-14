@@ -205,7 +205,8 @@ PRODUCT_PACKAGES += \
 
 # Memory
 PRODUCT_PACKAGES += \
-	android.hardware.memtrack@1.0-impl
+	android.hardware.memtrack@1.0-impl \
+	android.hardware.memtrack@1.0-service
 
 # Media profile
 PRODUCT_COPY_FILES += \
