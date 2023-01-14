@@ -229,6 +229,11 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# OMX
+PRODUCT_PACKAGES += \
+	android.hardware.media.omx@1.0-impl \
+	android.hardware.media.omx@1.0-service
+
 # Power
 PRODUCT_PACKAGES += \
 	android.hardware.power@1.0-service.exynos
