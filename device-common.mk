@@ -322,6 +322,7 @@ PRODUCT_PACKAGES += \
 	wifiloader \
 	wifilogd \
 	wlutil \
+	TetheringConfigOverlay \
 	wpa_supplicant \
 	wpa_supplicant.conf \
 	android.hardware.wifi@1.0-impl \
