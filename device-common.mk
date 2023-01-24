@@ -256,6 +256,11 @@ PRODUCT_PACKAGES += \
 	modemloader \
 	rild
 
+# Copy stock APN config as lineage one seams to be quite broken and outdated
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/ril/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml \
+	$(LOCAL_PATH)/configs/ril/spn-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/spn-conf.xml
+
 # Ramdisk
 PRODUCT_PACKAGES += \
 	init.battery.rc \
