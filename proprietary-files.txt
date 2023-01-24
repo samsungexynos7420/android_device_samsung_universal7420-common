@@ -134,6 +134,8 @@ lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
 # Sensors
 bin/gps.cer
+lib/hw/sensorhubs.universal7420.so
+lib64/hw/sensorhubs.universal7420.so
 lib/hw/sensors.universal7420.so
 lib64/hw/sensors.universal7420.so
 lib/libfloatingfeature.so
