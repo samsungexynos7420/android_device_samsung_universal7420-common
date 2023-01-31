@@ -331,6 +331,10 @@ on fs
     chown radio system /efs
     chmod 0771 /efs
 
+# DT2W
+    chown system system /sys/class/dt2w/enabled
+    chmod 0644 /sys/class/dt2w/enabled
+    
 # Fingerprint
     mkdir /dev/validity 0770 system system
 
