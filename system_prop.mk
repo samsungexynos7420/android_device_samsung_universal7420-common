@@ -47,8 +47,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.radio.add_power_save=1 \
 	persist.radio.apm_sim_not_pwdn=1 \
-	rild.libpath=/system/vendor/lib64/libsec-ril.so \
-	rild.libpath2=/system/vendor/lib64/libsec-ril-dsds.so \
+	ro.vendor.rild.libpath=/system/vendor/lib64/libsec-ril.so \
+	ro.vendor.rild.libpath2=/system/vendor/lib64/libsec-ril-dsds.so \
 	telephony.lteOnGsmDevice=1 \
 	telephony.lteOnCdmaDevice=0 \
 	ro.telephony.default_network=9 \
@@ -108,7 +108,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #
 PRODUCT_PROPERTY_OVERRIDES += \
 	af.fast_track_multiplier=1 \
-	audio_hal.force_voice_config=wide
+	ro.vendor.audio_hal.force_voice_config=wide
 
 #
 # Storage
