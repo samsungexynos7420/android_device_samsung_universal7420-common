@@ -136,3 +136,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.adb.nonblocking_ffs=0 \
 	persist.adb.nonblocking_ffs=0 \
 	sys.usb.ffs.aio_compat=1
+	
+# System
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.binary_xml=false
