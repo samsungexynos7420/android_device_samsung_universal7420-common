@@ -235,10 +235,6 @@ PRODUCT_PACKAGES += \
 	android.hardware.media.omx@1.0-impl \
 	android.hardware.media.omx@1.0-service
 
-# Power
-PRODUCT_PACKAGES += \
-	android.hardware.power@1.0-service.exynos
-
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
 
