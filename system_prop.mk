@@ -20,6 +20,12 @@
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.chipname=exynos7420 \
 	ro.arch=exynos7420
+	
+	
+# SoC
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.soc.manufacturer=Samsung \
+	ro.soc.model=Exynos 7420
 
 #
 # Dalvik
