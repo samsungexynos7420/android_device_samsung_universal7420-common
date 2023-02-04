@@ -30,7 +30,7 @@ chown gps system /sys/devices/platform/bbd.0/shmd
 
 # SensorHub (Location Hub)
 service lhd /system/bin/lhd /system/etc/lhd.conf
-    class main
+    class hal
     user gps
     group system inet net_raw
 

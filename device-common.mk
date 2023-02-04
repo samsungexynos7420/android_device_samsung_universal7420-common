@@ -78,17 +78,17 @@ PRODUCT_PACKAGES += \
 	audio.usb.default \
 	tinymix \
 	android.hardware.audio.service \
-	android.hardware.audio@6.0-impl:32 \
-	android.hardware.audio.effect@6.0-impl:32 \
-	android.hardware.bluetooth.audio@2.0-impl:32 \
+	android.hardware.audio@7.0-impl:32 \
+	android.hardware.audio.effect@7.0-impl:32 \
+	android.hardware.bluetooth.audio@2.1-impl:32 \
 	audio.bluetooth.default
 	
 TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_COPY_FILES += \
 	frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-	frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
-	frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+	frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration_7_0.xml \
+	frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
 	frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
 	frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
 	frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
@@ -162,6 +162,10 @@ PRODUCT_PACKAGES += \
 	android.hardware.gnss@1.0-impl.universal7420 \
 	android.hardware.gnss@1.0-service.universal7420 \
 	gpsd_shim
+	
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -297,6 +301,11 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 # Stagefright-shims
 PRODUCT_PACKAGES += \
 	libstagefright_shim
+
+# Task profiles
+PRODUCT_COPY_FILES += \
+	system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+	system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Touch
 PRODUCT_PACKAGES += \
