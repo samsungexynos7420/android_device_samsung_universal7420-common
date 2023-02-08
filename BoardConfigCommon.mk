@@ -88,9 +88,6 @@ TARGET_SCREEN_DENSITY := 560
 # Device Tree
 BOARD_USES_DT := true
 
-# DT2W
-TARGET_TAP_TO_WAKE_NODE := /sys/class/dt2w/enabled
-
 # FIMG2D
 BOARD_USES_SKIA_FIMGAPI := true
 BOARD_USES_FIMGAPI_V5X := true
