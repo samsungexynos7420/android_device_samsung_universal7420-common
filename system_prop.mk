@@ -107,20 +107,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Audio
 #
 PRODUCT_PROPERTY_OVERRIDES += \
+	aaudio.hw_burst_min_usec=2000 \
+	aaudio.mmap_exclusive_policy=2 \
+	aaudio.mmap_policy=2 \
 	af.fast_track_multiplier=1 \
 	ro.vendor.audio_hal.force_voice_config=wide
-
-#
-# Storage
-#
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sys.sdcardfs=1
 
 #
 # Vendor Security Patch Level
 #
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.lineage.build.vendor_security_patch=2019-01-01
+	ro.lineage.build.vendor_security_patch=2021-09-01
 
 #
 # Wi-Fi
