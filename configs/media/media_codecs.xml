@@ -82,6 +82,7 @@ Only the three quirks included above are recognized at this point:
         <Setting name="supports-multiple-secure-codecs" value="true" />
         <Setting name="supports-secure-with-non-secure-codec" value="true" />
         <Setting name="max-video-encoder-input-buffers" value="9" />
+        <Variant name="slow-cpu" enabled="true" />
     </Settings>
     <Decoders>
         <MediaCodec name="OMX.Exynos.mpeg4.dec" type="video/mp4v-es" >
