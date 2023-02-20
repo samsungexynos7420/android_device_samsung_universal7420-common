@@ -329,6 +329,10 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
 	android.hardware.vibrator-service.samsung
+	
+# VNDK Compatability 
+PRODUCT_PACKAGES += \
+	libutils-v32
 
 # Wifi
 PRODUCT_PACKAGES += \
