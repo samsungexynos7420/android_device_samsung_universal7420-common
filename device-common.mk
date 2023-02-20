@@ -333,8 +333,13 @@ PRODUCT_PACKAGES += \
 	android.hardware.vibrator-service.samsung
 	
 # VNDK Compatability 
-PRODUCT_PACKAGES += \
-	libutils-v32
+#PRODUCT_PACKAGES += \
+	#libutils-v32
+
+# HIDL
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so \
+    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v32.so
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -346,7 +351,19 @@ PRODUCT_PACKAGES += \
 	TetheringConfigOverlay \
 	wpa_supplicant \
 	wpa_supplicant.conf \
-	android.hardware.wifi@1.0-service.legacy
+	android.hardware.wifi@1.0-service
+	
+#hostpad
+PRODUCT_PACKAGES += \
+    android.hardware.wifi.hostapd@1.0
+
+#wifi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.4
+
+#supplicant
+PRODUCT_PACKAGES += \
+    android.hardware.wifi.supplicant@1.3
 
 # call Samsung LSI board support package
 $(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
