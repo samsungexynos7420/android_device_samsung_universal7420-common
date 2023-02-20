@@ -300,6 +300,12 @@ PRODUCT_PACKAGES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
 	$(LOCAL_PATH) \
+	hardware/samsung \
+	hardware/ril \
+	hardware/lineage/compat \
+	hardware/samsung_slsi/exynos \
+	hardware/samsung_slsi/exynos5 \
+	hardware/samsung_slsi/exynos7420 \
 	hardware/google/interfaces \
 	hardware/google/pixel \
 	hardware/samsung/aidl/power-libperfmgr
