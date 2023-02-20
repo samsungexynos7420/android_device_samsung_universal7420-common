@@ -128,8 +128,7 @@ PRODUCT_PACKAGES += \
 
 # Configstore
 PRODUCT_PACKAGES += \
-	android.hardware.configstore@1.0-impl \
-	android.hardware.configstore@1.0-service
+	disable_configstore
 
 # Debugging
 -include $(LOCAL_PATH)/system_prop_debug.mk
@@ -236,7 +235,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # OMX
 PRODUCT_PACKAGES += \
-	android.hardware.media.omx@1.0-impl \
 	android.hardware.media.omx@1.0-service
 
 # Power
@@ -328,7 +326,6 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-	android.hardware.usb@1.0-impl \
 	android.hardware.usb@1.0-service.basic
 
 # Vibrator
@@ -342,17 +339,13 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
 	hostapd \
-	libnetcmdiface \
 	libwpa_client \
 	macloader \
 	wificond \
 	wifiloader \
-	wifilogd \
-	wlutil \
 	TetheringConfigOverlay \
 	wpa_supplicant \
 	wpa_supplicant.conf \
-	android.hardware.wifi@1.0-impl \
 	android.hardware.wifi@1.0-service.legacy
 
 # call Samsung LSI board support package
