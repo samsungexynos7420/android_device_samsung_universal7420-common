@@ -62,10 +62,6 @@ vendor/firmware/bcm4358A3_V0083.0138_wisol.hcd|e3f2205f0afa2d269f1bad80e27806919
 # Camera
 lib/hw/camera.vendor.exynos5.so
 lib64/hw/camera.vendor.exynos5.so
-lib/libexynoscamera.so
-lib64/libexynoscamera.so
-lib/libexynoscamera3.so
-lib64/libexynoscamera3.so
 lib/libhwjpeg.so
 lib64/libhwjpeg.so
 lib/libuniplugin.so
@@ -89,10 +85,13 @@ vendor/firmware/setfile_4e6.bin
 vendor/firmware/setfile_6b2.bin
 vendor/firmware/setfile_imx240.bin
 
-# Graphics
-lib/egl/egl.cfg
-lib/egl/libGLES_android.so
-lib64/egl/libGLES_android.so
+# Camera - hexedited to work with r22p0 driver
+lib/libexynoscamera.so
+lib64/libexynoscamera.so
+lib/libexynoscamera3.so
+lib64/libexynoscamera3.so
+
+# Graphics - r22p0 driver taken from A810F
 vendor/lib/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_mali.so
 
@@ -104,7 +103,7 @@ lib64/hw/consumerir.exynos5.so
 etc/nfc/sec_s3fwrn5p_rfreg.bin
 vendor/firmware/nfc/sec_s3fwrn5p_firmware.bin
 
-# OMX - bsp built - taken from Exynos7420 vendor_zero-common nx-10.0
+# OMX - taken from A810F
 lib/libExynosOMX_Core.so
 lib/libExynosOMX_Resourcemanager.so
 lib/libstagefrighthw.so
@@ -180,43 +179,10 @@ etc/wifi/nvram_net.txt_wisol_a1:vendor/etc/wifi/nvram_net.txt_wisol_a1
 etc/wifi/nvram_net.txt_wisol_b85_a1:vendor/etc/wifi/nvram_net.txt_wisol_b85_a1
 etc/wifi/wpa_supplicant.conf:vendor/etc/wifi/wpa_supplicant.conf
 
-# BSP built HWC blobs - taken from Exynos7420 vendor_zero-common on github nx-10.0
-lib64/libexynosscaler.so
-lib64/libcsc.so
-lib64/libhwcutils.so
-lib64/hw/hwcomposer.exynos5.so
-lib64/libhdmi.so
-lib64/libcec.so
-lib64/libhwjpeg.so
-lib64/libexynosgscaler.so
-lib64/libexynosutils.so
-lib64/libfimg.so
-lib64/libexynoscamera3.so
-lib64/libexynosdisplay.so
-lib64/libexynosv4l2.so
-lib64/libmpp.so
-lib64/libion_exynos.so
-
-lib/libexynosscaler.so
-lib/libcsc.so
-lib/libhwcutils.so
-lib/hw/hwcomposer.exynos5.so
-lib/libhdmi.so
-lib/libcec.so
-lib/libhwjpeg.so
-lib/libstagefright_hdcp.so
-lib/libexynosgscaler.so
-lib/libexynosutils.so
-lib/libfimg.so
-lib/libexynoscamera3.so
-lib/libexynosdisplay.so
-lib/libexynosv4l2.so
-lib/libmpp.so
-lib/libion_exynos.so
-
 # AptX - from crosshatch - QP1A.190711.020
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
+# Cpboot daemon
 bin/cbd
 
 # Heart rate monitor
