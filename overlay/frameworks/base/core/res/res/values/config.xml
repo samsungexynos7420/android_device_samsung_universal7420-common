@@ -394,12 +394,6 @@ Add a comment to this line
         <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
         <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
 	</string-array>
-        
-    <!-- Indicates that AP mode MAC randomization is supported on this device -->
-    <bool translatable="false" name="config_wifi_ap_mac_randomization_supported">false</bool>
-    
-    <!-- Enable WPA2 to WPA3 auto-upgrade -->
-    <bool translatable="false" name="config_wifiSaeUpgradeEnabled">false</bool>
     
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
     in hardware. -->
