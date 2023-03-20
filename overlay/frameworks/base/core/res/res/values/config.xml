@@ -952,4 +952,8 @@ Add a comment to this line
          manager will disable alpha trasformation in animations where not
          strictly needed. -->
     <bool name="config_sf_limitedAlpha">true</bool>
+
+    <!-- Default value for whether a SFPS device is required to be interactive for 
+         fingerprint auth to unlock the device.  -->
+    <bool name="config_requireScreenOnToAuthEnabled">true</bool>
 </resources>
