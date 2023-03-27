@@ -417,7 +417,7 @@ PRODUCT_PACKAGES += \
 	wpa_supplicant \
 	wpa_supplicant.conf \
 	android.hardware.wifi@1.0 \
-	android.hardware.wifi@1.0-service
+	android.hardware.wifi-service
 
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/wifi/cred.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/cred.conf \
