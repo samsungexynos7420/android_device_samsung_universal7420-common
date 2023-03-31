@@ -91,6 +91,17 @@ lib64/libexynoscamera.so
 lib/libexynoscamera3.so
 lib64/libexynoscamera3.so
 
+# Gatekeeper - from A810FXXS2CTJ2
+vendor/lib/hw/gatekeeper.exynos7420.so:vendor/lib/hw/gatekeeper.universal7420.so
+vendor/lib64/hw/gatekeeper.exynos7420.so:vendor/lib64/hw/gatekeeper.universal7420.so
+
+# Keymaster - from A810FXXS2CTJ2
+lib64/vendor.samsung.security.skeymaster@3.0.so:vendor/lib64/vendor.samsung.security.skeymaster@3.0.so
+vendor/lib64/libkeymaster_mdfpp.so
+vendor/lib64/libkeymaster_helper.so
+vendor/lib64/libskeymaster.so
+vendor/lib64/hw/keystore.mdfpp.so
+
 # Graphics - r22p0 driver taken from A810F
 vendor/lib/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_mali.so

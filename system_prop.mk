@@ -14,22 +14,17 @@
 # limitations under the License.
 #
 
-#
 # Board
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.chipname=exynos7420 \
 	ro.arch=exynos7420
-	
 	
 # SoC
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.soc.manufacturer=Samsung \
 	ro.soc.model=Exynos 7420
 
-#
 # Dalvik
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.image-dex2oat-filter=speed \
 	dalvik.vm.dex2oat-filter=speed \
@@ -41,9 +36,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.heapmaxfree=8m \
 	dalvik.vm.dex2oat64.enabled=true
 
-#
 # Ril
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.radio.add_power_save=1 \
 	persist.radio.apm_sim_not_pwdn=1 \
@@ -58,54 +51,40 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.ril.telephony.mqanelements=6 \
 	ro.ril.gprsclass=10
 
-#
 # OMX
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	debug.stagefright.ccodec=0 \
 	debug.stagefright.omx_default_rank=0 \
 	debug.stagefright.omx_default_rank.sw-audio=1
 
-#
 # Miracast (Wireless Display)
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	wlan.wfd.hdcp=disable \
 	persist.debug.wfd.enable=1 \
 	persist.sys.wfd.virtual=0
 
-#
 # NFC
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.nfc.sec_hal=true \
 	ro.nfc.fw_dl_on_boot=false
 
-#
 # HWC
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	debug.sf.latch_unsignaled=1 \
 	debug.hwc.winupdate=1
 	debug.sf.disable_backpressure=1 \
 	ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
-#
 # Graphics
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=196610 \
 	ro.hardware.egl=mali
 
-#
 # SLSI
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	debug.slsi_platform=1
 
-#
 # Audio
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	aaudio.hw_burst_min_usec=2000 \
 	aaudio.mmap_exclusive_policy=2 \
@@ -113,22 +92,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	af.fast_track_multiplier=1 \
 	ro.vendor.audio_hal.force_voice_config=wide
 
-#
 # Vendor Security Patch Level
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.lineage.build.vendor_security_patch=2021-09-01
 
-#
 # Wi-Fi
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0 \
 	wifi.direct.interface=p2p-dev-wlan0
 
-#
 # USB
-#
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.adb.nonblocking_ffs=0 \
 	persist.adb.nonblocking_ffs=0 \
@@ -138,7 +111,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.binary_xml=false
 	
-
 # BPF
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.kernel.ebpf.supported=false
+
+# Gatekeeper
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.hardware.keystore=mdfpp
