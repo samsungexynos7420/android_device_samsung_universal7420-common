@@ -118,3 +118,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Gatekeeper
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hardware.keystore=mdfpp
+
+# VNDK
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.vndk.version=current
