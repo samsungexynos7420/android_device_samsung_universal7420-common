@@ -276,6 +276,9 @@ PRODUCT_PACKAGES += \
 	android.hardware.radio.deprecated@1.0 \
 	modemloader \
 	rild
+	
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/init/rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rild.rc
 
 # Ramdisk
 PRODUCT_PACKAGES += \
