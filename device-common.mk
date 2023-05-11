@@ -202,7 +202,7 @@ PRODUCT_PACKAGES += \
 	android.hardware.graphics.allocator@2.0-impl \
 	android.hardware.graphics.allocator@2.0-service \
 	android.hardware.graphics.composer@2.1-service \
-	android.hardware.graphics.mapper@2.0-impl
+	android.hardware.graphics.mapper@2.0-impl-2.1
 	
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/display/display_id_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_0.xml
