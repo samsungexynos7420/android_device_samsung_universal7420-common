@@ -327,10 +327,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	SamsungDoze
 
-# Seccomp filters
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
-
 # Sensors
 PRODUCT_PACKAGES += \
 	android.hardware.sensors@1.0-impl.samsung \

@@ -159,6 +159,9 @@ TARGET_LD_SHIM_LIBS += \
 BOARD_ROOT_EXTRA_FOLDERS += efs
 TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/config.fs
 
+# SECComp filters
+BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
+
 # Use these flags if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
