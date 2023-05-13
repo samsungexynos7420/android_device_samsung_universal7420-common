@@ -190,7 +190,6 @@ PRODUCT_PACKAGES += \
 	android.hardware.gnss@1.0-impl.universal7420 \
 	android.hardware.gnss@1.0-service.universal7420
 	
-
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf
 
@@ -220,13 +219,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.gatekeeper@1.0-service \
 	android.hardware.gatekeeper@1.0-impl
-
-# IRQs
-PRODUCT_PACKAGES += \
-	irqbalance
-
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/hardware/irqbalance/irqbalance.conf:system/vendor/etc/irqbalance.conf
 	
 # Keymaster
 PRODUCT_PACKAGES += \
