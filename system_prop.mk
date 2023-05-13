@@ -70,8 +70,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # HWC
 PRODUCT_PROPERTY_OVERRIDES += \
+	ro.vendor.winupdate=1 \
 	debug.sf.latch_unsignaled=1 \
-	debug.hwc.winupdate=1
 	debug.sf.disable_backpressure=1 \
 	ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
