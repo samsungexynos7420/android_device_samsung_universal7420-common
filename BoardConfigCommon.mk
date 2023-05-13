@@ -221,6 +221,9 @@ BOARD_USES_CEC := true
 TARGET_USES_UNIVERSAL_LIBHWJPEG := true
 USE_OPENGL_RENDERER := true
 
+# SECComp filters
+BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
+
 # Use these flags if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
