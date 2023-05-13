@@ -168,4 +168,5 @@ on charger
     copy /system/vendor/firmware/battery_data.dat /efs/Battery/battery_data.dat
     chmod 0400 /efs/Battery/battery_data.dat
     write /sys/class/power_supply/battery/batt_update_data "/efs/Battery/battery_data.dat"
-    class_start charger
+	mkdir /efs/lpm 0775 system system
+    class_start sec-charger

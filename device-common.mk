@@ -152,6 +152,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libexynoscamera_shim
 
+# Charger
+PRODUCT_PACKAGES += \
+	libsuspend
+	
 # Configstore
 PRODUCT_PACKAGES += \
 	disable_configstore
