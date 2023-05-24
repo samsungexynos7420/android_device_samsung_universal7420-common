@@ -14,13 +14,13 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/universal7420-common
+COMMON_PATH := device/samsung/universal7420-common
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_TOP := $(shell pwd)
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 # Architecture
 TARGET_ARCH := arm64
@@ -57,7 +57,7 @@ BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 TARGET_USES_64_BIT_BINDER := true
 
 # Bluetooth
-BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/configs/bluetooth/libbt_vndcfg.txt
+BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/configs/bluetooth/libbt_vndcfg.txt
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_SAMSUNG_BLUETOOTH := true
@@ -78,7 +78,7 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 CHARGING_ENABLED_PATH := "/sys/class/power_supply/battery/batt_lp_charging"
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/etc/fstab.samsungexynos7420.recovery
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/ramdisk/etc/fstab.samsungexynos7420.recovery
 
 # Display
 TARGET_SCREEN_DENSITY := 560
@@ -181,7 +181,7 @@ TARGET_LD_SHIM_LIBS += \
 
 # Root extra folders
 BOARD_ROOT_EXTRA_FOLDERS += efs
-TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Samsung OpenMAX Video
 BOARD_USE_STOREMETADATA := true
@@ -222,7 +222,7 @@ TARGET_USES_UNIVERSAL_LIBHWJPEG := true
 USE_OPENGL_RENDERER := true
 
 # SECComp filters
-BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
+BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
 # Use these flags if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
