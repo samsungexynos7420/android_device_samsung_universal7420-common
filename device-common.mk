@@ -17,7 +17,7 @@
 COMMON_PATH := device/samsung/universal7420-common
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     device/samsung/universal7420-common/overlay/hardware/samsung/AdvancedDisplay
@@ -244,9 +244,6 @@ PRODUCT_PACKAGES += \
 	com.android.nfc_extras \
 	android.hardware.nfc@1.0-impl \
 	android.hardware.nfc@1.0-service
-
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
 # OMX
 PRODUCT_PACKAGES += \
