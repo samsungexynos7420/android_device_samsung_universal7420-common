@@ -186,6 +186,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.gnss@1.0-impl.universal7420 \
 	android.hardware.gnss@1.0-service.universal7420
+	
+# Sensors
+PRODUCT_COPY_FILES += \
+	$(COMMON_PATH)/configs/sensors/gps.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.xml \
+	$(COMMON_PATH)/configs/sensors/lhd.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/lhd.conf
 
 # Graphics
 PRODUCT_PACKAGES += \
