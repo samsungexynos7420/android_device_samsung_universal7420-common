@@ -156,11 +156,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libexynoscamera_shim
 
-# Configstore
-PRODUCT_PACKAGES += \
-	android.hardware.configstore@1.0-impl \
-	android.hardware.configstore@1.0-service
-
 # Debugging
 -include $(COMMON_PATH)/system_prop_debug.mk
 
@@ -198,7 +193,7 @@ PRODUCT_COPY_FILES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
-	android.hardware.graphics.allocator@2.0-impl \
+	android.hardware.graphics.allocator@2.0-impl:64 \
 	android.hardware.graphics.allocator@2.0-service \
 	android.hardware.graphics.composer@2.1-service \
 	android.hardware.graphics.mapper@2.0-impl-2.1
@@ -219,7 +214,7 @@ PRODUCT_PACKAGES += \
 	
 # Keymaster
 PRODUCT_PACKAGES += \
-	android.hardware.keymaster@3.0-impl \
+	android.hardware.keymaster@3.0-impl:64 \
 	android.hardware.keymaster@3.0-service
 	
 # Lights
@@ -317,7 +312,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-	android.hardware.sensors@1.0-impl.samsung \
+	android.hardware.sensors@1.0-impl.samsung:64 \
 	android.hardware.sensors@1.0-service
 
 # Soong
