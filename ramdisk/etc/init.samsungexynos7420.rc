@@ -12,6 +12,7 @@ on early-init
     write /sys/block/zram0/comp_algorithm lz4
 
 on init
+    start watchdogd
     # RIL <-> audioserver comm
     chmod 0644 /proc/cmdline
 
@@ -43,6 +44,7 @@ on late-fs
     mount_all /vendor/etc/fstab.samsungexynos7420 --late
     
 on post-fs-data
+    mkdir /data/media 0770 media_rw media_rw
     setprop vold.post_fs_data_done 1
 
 # Permissions for audio
@@ -217,6 +219,8 @@ on boot
     # Set up kernel tracing, but disable it by default
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
     write /sys/kernel/debug/tracing/tracing_on 0
+    chmod 0755 /sys/kernel/debug/tracing
+    restorecon /sys/kernel/debug/tracing/trace_marker
 
     # ASV
     chown system system /d/asv_summary
@@ -284,6 +288,8 @@ on boot
 
 on fs
     mount_all /vendor/etc/fstab.samsungexynos7420  --early
+    # Enable swap
+    swapon_all /vendor/etc/fstab.samsungexynos7420
     
     # Start HW service manager early
     start hwservicemanager
@@ -293,8 +299,6 @@ on fs
     setprop ro.adb.nonblocking_ffs 0
     setprop sys.usb.mtp.device_type 2
 
-    # Enable swap
-    swapon_all /vendor/etc/fstab.samsungexynos7420
     write /proc/sys/vm/swappiness 100
 
 # Permissions for TouchScreen
