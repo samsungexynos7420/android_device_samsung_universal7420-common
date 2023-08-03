@@ -52,11 +52,9 @@ on late-fs
     start servicemanager
     start surfaceflinger
     start bootanim
-    
-    # Make sure HW service manager started and start required HAL services
-    wait_for_prop hwservicemanager.ready true
     start vendor.configstore-hal
     start vendor.gralloc-2-0
+    
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.samsungexynos7420 --late
     
