@@ -698,6 +698,11 @@ on property:ro.debuggable=1
     write /sys/module/kgdboc/parameters/kgdboc ttyFIQ1
     write /sys/module/fiq_debugger/parameters/kgdb_enable 1
 
+# Use dirty_bytes in case of 64-bit AP: 60/20MB
+on property:sys.boot_completed=1
+    write /proc/sys/vm/dirty_bytes 62914560
+    write /proc/sys/vm/dirty_background_bytes 20971520
+
 service charger /system/bin/charger
     class charger
     user system
