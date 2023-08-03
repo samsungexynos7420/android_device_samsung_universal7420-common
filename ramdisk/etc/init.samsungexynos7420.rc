@@ -15,6 +15,23 @@ on init
     start watchdogd
     # RIL <-> audioserver comm
     chmod 0644 /proc/cmdline
+    
+# [ SEC_SELINUX_PORTING_COMMON
+    # for audit message
+    chown system system /proc/avc_msg
+    chmod 0660 /proc/avc_msg
+# ] SEC_SELINUX_PORTING_COMMON
+
+    # Directory for putting things only root should see.
+    mkdir /mnt/secure 0700 root root
+## Samsung ODE >>>
+    # Create private mountpoint so we can MS_MOVE from staging
+    mount tmpfs tmpfs /mnt/secure mode=0700,uid=0,gid=0
+
+    # Directory for staging bindmounts
+    mkdir /mnt/secure/staging 0700 root root
+    restorecon_recursive /mnt/secure/staging
+## Samsung ODE <<<
 
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
@@ -46,6 +63,16 @@ on late-fs
 on post-fs-data
     mkdir /data/media 0770 media_rw media_rw
     setprop vold.post_fs_data_done 1
+    
+    # [ SEC_SELINUX_PORTING_COMMON
+    # sec_efs_file
+    mkdir /efs/sec_efs 0775 radio system
+# ] SEC_SELINUX_PORTING_COMMON
+
+# [ SEC_SELINUX_PORTING_COMMON
+    restorecon --recursive /efs
+    restorecon /sys/kernel/debug/tracing/trace_marker
+# ] SEC_SELINUX_PORTING_COMMON
 
 # Permissions for audio
     chown system radio /sys/class/audio/earjack/select_jack
