@@ -108,12 +108,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	audio_hal.force_voice_config=wide
 
 #
-# Storage
-#
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sys.sdcardfs=1
-
-#
 # Vendor Security Patch Level
 #
 PRODUCT_PROPERTY_OVERRIDES += \
