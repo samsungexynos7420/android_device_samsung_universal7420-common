@@ -15,13 +15,6 @@
 #
 
 #
-# Board
-#
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.chipname=exynos7420 \
-	ro.arch=exynos7420
-
-#
 # Dalvik
 #
 PRODUCT_PROPERTY_OVERRIDES += \
