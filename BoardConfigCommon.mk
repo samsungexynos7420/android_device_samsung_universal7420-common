@@ -231,6 +231,9 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := system/vendor
 
+# Vendor security patch level
+VENDOR_SECURITY_PATCH := 2018-06-01
+
 # WFD
 BOARD_USES_WFD := true
 
