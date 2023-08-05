@@ -61,9 +61,6 @@ ro.adb.nonblocking_ffs=0
 persist.adb.nonblocking_ffs=0
 sys.usb.ffs.aio_compat=1
 
-# Vendor Security Patch Level
-ro.lineage.build.vendor_security_patch=2018-06-01
-
 # Wireless Display
 wlan.wfd.hdcp=disable
 persist.debug.wfd.enable=1
