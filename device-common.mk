@@ -93,7 +93,8 @@ PRODUCT_PACKAGES += \
 	android.hardware.audio@6.0-impl:32 \
 	android.hardware.audio.effect@6.0-impl:32 \
 	android.hardware.bluetooth.audio@2.0-impl:32 \
-	audio.bluetooth.default
+	audio.bluetooth.default \
+	libtinycompress
 	
 TARGET_EXCLUDES_AUDIOFX := true
 
