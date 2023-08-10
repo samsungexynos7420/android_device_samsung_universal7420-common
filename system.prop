@@ -52,6 +52,7 @@ persist.data.netmgrd.qos.enable=false
 ro.ril.hsxpa=1
 ro.ril.telephony.mqanelements=6
 ro.ril.gprsclass=10
+ro.telephony.ril_class=SlteRIL
 
 # SLSI
 debug.slsi_platform=1
