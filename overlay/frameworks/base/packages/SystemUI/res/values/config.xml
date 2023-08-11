@@ -35,4 +35,7 @@
     <!-- Whether recents should use hardware layers for its taskviews. This flag can be enabled
     for devices where the java drawing of round rects may be slow -->
     <bool name="config_recents_use_hardware_layers">true</bool>
+    
+    <!-- Threshold in micro watts above which a charger is rated as "fast"; 2.16A @ 5V  -->
+    <integer name="config_chargingFastThreshold">10800000</integer>
 </resources>
