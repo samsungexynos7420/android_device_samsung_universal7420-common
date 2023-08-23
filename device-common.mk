@@ -189,6 +189,7 @@ PRODUCT_PACKAGES += \
 	
 # Sensors
 PRODUCT_COPY_FILES += \
+	$(COMMON_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.conf \
 	$(COMMON_PATH)/configs/sensors/gps.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.xml \
 	$(COMMON_PATH)/configs/sensors/lhd.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/lhd.conf
 
