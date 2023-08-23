@@ -1,0 +1,77 @@
+# Board
+ro.chipname=exynos7420
+ro.arch=exynos7420
+
+# Dalvik
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.dex2oat64.enabled=true
+
+# Ril
+persist.radio.add_power_save=1
+persist.radio.apm_sim_not_pwdn=1
+rild.libpath=/system/vendor/lib64/libsec-ril.so
+rild.libpath2=/system/vendor/lib64/libsec-ril-dsds.so
+telephony.lteOnGsmDevice=1
+telephony.lteOnCdmaDevice=0
+ro.telephony.default_network=9
+ro.use_data_netmgrd=false
+persist.data.netmgrd.qos.enable=false
+ro.ril.hsxpa=1
+ro.ril.telephony.mqanelements=6
+ro.ril.gprsclass=10
+
+# OMX
+debug.stagefright.ccodec=0
+debug.stagefright.omx_default_rank=0
+debug.stagefright.omx_default_rank.sw-audio=1
+
+# Miracast (Wireless Display)
+wlan.wfd.hdcp=disable
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
+
+# NFC
+ro.nfc.sec_hal=true
+ro.nfc.fw_dl_on_boot=false
+
+# HWC
+debug.sf.latch_unsignaled=1
+debug.hwc.winupdate=1
+debug.sf.disable_backpressure=1
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
+# Graphics
+ro.opengles.version=196610
+ro.hardware.egl=mali
+
+# SLSI
+debug.slsi_platform=1
+
+# Audio
+aaudio.hw_burst_min_usec=2000
+aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=2
+af.fast_track_multiplier=1
+audio_hal.force_voice_config=wide
+
+# Storage
+ro.sys.sdcardfs=1
+
+# Vendor Security Patch Level
+ro.lineage.build.vendor_security_patch=2018-06-01
+
+# Wi-Fi
+wifi.interface=wlan0
+wifi.direct.interface=p2p-dev-wlan0
+
+# USB
+ro.adb.nonblocking_ffs=0
+persist.adb.nonblocking_ffs=0
+sys.usb.ffs.aio_compat=1

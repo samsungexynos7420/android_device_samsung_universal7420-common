@@ -260,9 +260,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.power@1.0-service.exynos
 
-# Properties
--include $(COMMON_PATH)/system_prop.mk
-
 # Radio
 PRODUCT_PACKAGES += \
 	libxml2 \
