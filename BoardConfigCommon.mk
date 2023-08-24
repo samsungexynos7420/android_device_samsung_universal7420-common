@@ -145,7 +145,10 @@ TARGET_LD_SHIM_LIBS += \
 TARGET_HAS_MEMFD_BACKPORT := true
 
 # Manifest
-DEVICE_MANIFEST_FILE += $(LOCAL_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
+
+# Compatibility Matrix
+DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
 
 # Networking
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
