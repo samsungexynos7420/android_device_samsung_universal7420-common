@@ -12,15 +12,16 @@
 /dev/block/platform/15570000.ufs/by-name/OTA                  /misc          emmc      defaults                                                                                           defaults
 
 # System partitions
-/dev/block/platform/15570000.ufs/by-name/SYSTEM               /system        ext4      ro,noatime,noauto_da_alloc,discard,data=ordered,errors=panic                                       wait,recoveryonly
+/dev/block/platform/15570000.ufs/by-name/SYSTEM               /system        ext4      ro,errors=panic,noload					                                     wait,recoveryonly
 /dev/block/platform/15570000.ufs/by-name/EFS                  /efs           ext4      noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered,errors=panic                             wait,check,recoveryonly
 
 # User partitions
 /dev/block/platform/15570000.ufs/by-name/CACHE                /cache         ext4      noatime,nosuid,nodev,noauto_da_alloc,discard,data=ordered,errors=panic                             wait,check
-/dev/block/platform/15570000.ufs/by-name/USERDATA             /data          ext4      noatime,nosuid,nodev,noauto_da_alloc,discard,journal_async_commit,data=writeback,errors=panic      wait,check,encryptable=footer,latemount,reservedsize=128M
+/dev/block/platform/15570000.ufs/by-name/USERDATA             /data          ext4      noatime,nosuid,nodev,noauto_da_alloc,discard,journal_async_commit,errors=panic      wait,check,encryptable=/dev/block/platform/15570000.ufs/by-name/TOMBSTONES,latemount,reservedsize=128M
 
 # VOLD
+/dev/block/platform/15570000.ufs/by-name/HIDDEN           	/preload    ext4      defaults                                                                                                       voldmanaged=preload:auto
 /devices/15400000.usb/15400000.dwc3/xhci-hcd.2.auto/usb*      auto           auto      defaults                                                                                           voldmanaged=usbdisk:auto
 
 # ZRAM
-/dev/block/zram0                                        none        swap    defaults,discard                                                                zramsize=75%,max_comp_streams=8,swapprio=10,notrim
+/dev/block/zram0                                        none        swap    defaults,discard                                                                zramsize=50%,max_comp_streams=8,notrim
