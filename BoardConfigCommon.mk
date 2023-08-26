@@ -65,13 +65,6 @@ BOARD_HAVE_SAMSUNG_BLUETOOTH := true
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-# Charger
-WITH_LINEAGE_CHARGER := false
-BOARD_BATTERY_DEVICE_NAME := battery
-BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
-CHARGING_ENABLED_PATH := "/sys/class/power_supply/battery/batt_lp_charging"
-
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/ramdisk/etc/fstab.samsungexynos7420.recovery
 
