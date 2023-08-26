@@ -70,9 +70,14 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml \
 	frameworks/native/data/etc/android.software.picture_in_picture.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.picture_in_picture.xml
 
+# Adb
+PRODUCT_PRODUCT_PROPERTIES := \
+	persist.adb.nonblocking_ffs=0 \
+	ro.adb.nonblocking_ffs=0
+	
 # Additional native libraries
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+	$(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # AdvancedDisplay (MDNIE)
 PRODUCT_PACKAGES += \
@@ -240,7 +245,7 @@ PRODUCT_COPY_FILES += \
 
 # Network
 PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0
+	netutils-wrapper-1.0
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -284,6 +289,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	init.battery.rc \
 	init.power.rc \
+	init.samsung.rc \
 	init.samsungexynos7420.rc \
 	init.samsungexynos7420.usb.rc \
 	init.wifi.rc \

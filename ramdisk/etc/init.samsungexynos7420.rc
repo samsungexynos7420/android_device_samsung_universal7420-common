@@ -2,6 +2,7 @@ import /vendor/etc/init/hw/init.samsungexynos7420.usb.rc
 import /vendor/etc/init/hw/init.wifi.rc
 import /vendor/etc/init/hw/init.baseband.rc
 import /vendor/etc/init/hw/init.gps.rc
+import /vendor/etc/init/hw/init.samsung.rc
 import /vendor/etc/init/hw/init.power.rc
 import /vendor/etc/init/hw/init.battery.rc
 
@@ -12,8 +13,26 @@ on early-init
     write /sys/block/zram0/comp_algorithm lz4
 
 on init
+    start watchdogd
     # RIL <-> audioserver comm
     chmod 0644 /proc/cmdline
+    
+# [ SEC_SELINUX_PORTING_COMMON
+    # for audit message
+    chown system system /proc/avc_msg
+    chmod 0660 /proc/avc_msg
+# ] SEC_SELINUX_PORTING_COMMON
+
+    # Directory for putting things only root should see.
+    mkdir /mnt/secure 0700 root root
+## Samsung ODE >>>
+    # Create private mountpoint so we can MS_MOVE from staging
+    mount tmpfs tmpfs /mnt/secure mode=0700,uid=0,gid=0
+
+    # Directory for staging bindmounts
+    mkdir /mnt/secure/staging 0700 root root
+    restorecon_recursive /mnt/secure/staging
+## Samsung ODE <<<
 
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
@@ -26,6 +45,9 @@ on init
     
     write /proc/sys/vm/page-cluster 0
     
+    # HACK: Appears to fix issues with laggy UI (mm issue?)
+    write /proc/sys/vm/min_free_kbytes 131072
+    
     # Set HW revision (should be ro.revision on note fe)
     setprop ro.boot.hardware.revision ${ro.boot.hw_rev}
     
@@ -34,15 +56,29 @@ on late-fs
     start servicemanager
     start surfaceflinger
     start bootanim
-
+    
     start vendor.configstore-hal
     start vendor.gralloc-2-0
-
+    
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.samsungexynos7420 --late
     
 on post-fs-data
+    mkdir /data/media 0770 media_rw media_rw
     setprop vold.post_fs_data_done 1
+    
+    # [ SEC_SELINUX_PORTING_COMMON
+    # sec_efs_file
+    mkdir /efs/sec_efs 0775 radio system
+# ] SEC_SELINUX_PORTING_COMMON
+
+# [ SEC_SELINUX_PORTING_COMMON
+    restorecon --recursive /efs
+    restorecon /sys/kernel/debug/tracing/trace_marker
+# ] SEC_SELINUX_PORTING_COMMON
+
+# set RLIMIT_MEMLOCK to 64MB
+    setrlimit 13 40 40
 
 # Permissions for audio
     chown system radio /sys/class/audio/earjack/select_jack
@@ -65,7 +101,7 @@ on post-fs-data
     chown audioserver system /data/firmware
 
     # Permissions Camera
-    mkdir /data/camera 0770 media system
+    mkdir /data/camera 0770 cameraserver system
     chown system radio /sys/class/camera/rear/rear_camfw
     chown system radio /sys/class/camera/rear/rear_camfw_full
     chown system radio /sys/class/camera/rear/rear_checkfw_user
@@ -170,11 +206,6 @@ on post-fs-data
     chown system system /dev/android_ssusbcon
     chmod 0660 /dev/android_ssusbcon
 
-    # mobicore
-    mkdir /data/app/mcRegistry 0775 system system
-    mkdir /data/app/mcRegistry/TbStorage 0700 system system
-    mkdir /efs/TEE  0770 radio system
-
     # MTP permission
     chmod 0660 /dev/usb_mtp_gadget
     chown system mtp /dev/usb_mtp_gadget
@@ -216,19 +247,14 @@ on boot
     # Set up kernel tracing, but disable it by default
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
     write /sys/kernel/debug/tracing/tracing_on 0
+    chmod 0755 /sys/kernel/debug/tracing
+    restorecon /sys/kernel/debug/tracing/trace_marker
 
     # ASV
     chown system system /d/asv_summary
 
     chown bluetooth bluetooth /dev/ttySAC4
     chmod 0660 /dev/ttySAC4
-
-# mobicore
-    chmod 0660 /dev/s5p-smem
-    chmod 0660 /dev/t-base-tui
-    chown system system /dev/s5p-smem
-    chown system system /dev/t-base-tui
-    export MC_AUTH_TOKEN_PATH /efs
 
 # sem_daemon permission
     chown system system /efs/sec_efs/ssp_data
@@ -283,17 +309,15 @@ on boot
 
 on fs
     mount_all /vendor/etc/fstab.samsungexynos7420  --early
+    # Enable swap
+    swapon_all /vendor/etc/fstab.samsungexynos7420
     
     # Start HW service manager early
     start hwservicemanager
-
+    
     setprop sys.usb.ffs.aio_compat 1
-    setprop persist.adb.nonblocking_ffs 0
-    setprop ro.adb.nonblocking_ffs 0
     setprop sys.usb.mtp.device_type 2
 
-    # Enable swap
-    swapon_all /vendor/etc/fstab.samsungexynos7420
     write /proc/sys/vm/swappiness 100
 
 # Permissions for TouchScreen
@@ -422,55 +446,12 @@ on fs
     chown system radio /sys/class/fingerprint/fingerprint/name
     chown system radio /sys/class/fingerprint/fingerprint/vendor
 
-# Accelerometer_sensor
-    chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
-    chown system radio /sys/class/sensors/accelerometer_sensor/calibration
-    chown system radio /sys/class/sensors/accelerometer_sensor/reactive_alert
-    chown system radio /sys/class/sensors/accelerometer_sensor/vendor
-    chown system radio /sys/class/sensors/accelerometer_sensor/name
-    chown system radio /sys/class/sensors/accelerometer_sensor/selftest
-    chown system radio /sys/class/sensors/accelerometer_sensor/lowpassfilter
-
-# Proximity_sensor
-    chown system radio /sys/class/sensors/proximity_sensor/state
-    chown system radio /sys/class/sensors/proximity_sensor/raw_data
-    chown system radio /sys/class/sensors/proximity_sensor/prox_avg
-    chown system radio /sys/class/sensors/proximity_sensor/prox_cal
-    chown system radio /sys/class/sensors/proximity_sensor/vendor
-    chown system radio /sys/class/sensors/proximity_sensor/name
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_high
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_low
-    chown system radio /sys/class/sensors/proximity_sensor/barcode_emul_en
-    chown system radio /sys/class/sensors/proximity_sensor/prox_offset_pass
-    chown system radio /sys/class/sensors/proximity_sensor/prox_trim
-    chown system radio /sys/class/sensors/proximity_sensor/prox_probe
-
-# Light_sensor
-    chown system radio /sys/class/sensors/light_sensor/lux
-    chown system radio /sys/class/sensors/light_sensor/raw_data
-    chown system radio /sys/class/sensors/light_sensor/vendor
-    chown system radio /sys/class/sensors/light_sensor/name
-
-# Gyro_sensor
-    chown system radio /sys/class/sensors/gyro_sensor/power_on
-    chown system radio /sys/class/sensors/gyro_sensor/power_off
-    chown system radio /sys/class/sensors/gyro_sensor/temperature
-    chown system radio /sys/class/sensors/gyro_sensor/selftest
-    chown system radio /sys/class/sensors/gyro_sensor/selftest_dps
-    chown system radio /sys/class/sensors/gyro_sensor/vendor
-    chown system radio /sys/class/sensors/gyro_sensor/name
-
 # Barometer_sensor
     chown system radio /sys/class/sensors/barometer_sensor/sea_level_pressure
     chown system radio /sys/class/sensors/barometer_sensor/vendor
     chown system radio /sys/class/sensors/barometer_sensor/name
     chown system radio /sys/class/sensors/barometer_sensor/calibration
     chown system radio /sys/class/sensors/barometer_sensor/temperature
-
-# Magnetic_sensor
-    chown system radio /sys/class/sensors/magnetic_sensor/raw_data
-    chown system radio /sys/class/sensors/magnetic_sensor/vendor
-    chown system radio /sys/class/sensors/magnetic_sensor/name
 
 # HRM_sensor
     chown system radio /sys/class/sensors/hrm_sensor/name
@@ -630,43 +611,6 @@ on fs
     chown radio system /sys/class/secgpio_check/secgpio_check_all/gpiosleep_check
     chown radio system /sys/class/secgpio_check/secgpio_check_all/checked_sleepGPIO
 
-# Sensors permissions
-# Accelerometer_sensor
-    chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
-    chown system radio /sys/class/sensors/accelerometer_sensor/calibration
-    chown system radio /sys/class/sensors/accelerometer_sensor/reactive_alert
-    chown system radio /sys/class/sensors/accelerometer_sensor/selftest
-    chown system radio /sys/class/sensors/accelerometer_sensor/vendor
-    chown system radio /sys/class/sensors/accelerometer_sensor/name
-    chown system system /efs/calibration_data
-    chmod 0666 /efs/calibration_data
-# Proximity_sensor
-    chown system radio /sys/class/sensors/proximity_sensor/state
-    chown system radio /sys/class/sensors/proximity_sensor/raw_data
-    chown system radio /sys/class/sensors/proximity_sensor/prox_avg
-    chown system radio /sys/class/sensors/proximity_sensor/prox_cal
-    chown system radio /sys/class/sensors/proximity_sensor/prox_thresh
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_high
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_low
-    chown system radio /sys/class/sensors/proximity_sensor/vendor
-    chown system radio /sys/class/sensors/proximity_sensor/name
-# Light_sensor
-    chown system radio /sys/class/sensors/light_sensor/lux
-    chown system radio /sys/class/sensors/light_sensor/raw_data
-    chown system radio /sys/class/sensors/light_sensor/vendor
-    chown system radio /sys/class/sensors/light_sensor/name
-# Gyro_sensor
-    chown system radio /sys/class/sensors/gyro_sensor/power_on
-    chown system radio /sys/class/sensors/gyro_sensor/power_off
-    chown system radio /sys/class/sensors/gyro_sensor/temperature
-    chown system radio /sys/class/sensors/gyro_sensor/selftest
-    chown system radio /sys/class/sensors/gyro_sensor/selftest_dps
-    chown system radio /sys/class/sensors/gyro_sensor/vendor
-    chown system radio /sys/class/sensors/gyro_sensor/name
-# Magnetic_sensor
-    chown system radio /sys/class/sensors/magnetic_sensor/raw_data
-    chown system radio /sys/class/sensors/magnetic_sensor/vendor
-    chown system radio /sys/class/sensors/magnetic_sensor/name
 # MPL IIO
     chown system system /dev/invensense
     chown system system /sys/bus/iio/devices/invensense/buffer/enable
@@ -693,28 +637,22 @@ on shutdown
     chmod 600 /sys/class/power_supply/battery/batt_capacity_max
     copy /sys/class/power_supply/battery/batt_capacity_max /efs/Battery/prev_batt_capacity_max
 
-# MobiCore startup
-service mobicore /vendor/bin/mcDriverDaemon -r /vendor/app/FFFFFFFF000000000000000000000001.drbin -r /vendor/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin -r /vendor/app/mcRegistry/ffffffffd00000000000000000000016.tlbin
-    class core
-    user system
-    group system
-
 # on userdebug and eng builds, enable kgdb on the serial console
 on property:ro.debuggable=1
     write /sys/module/kgdboc/parameters/kgdboc ttyFIQ1
     write /sys/module/fiq_debugger/parameters/kgdb_enable 1
+    
+# Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
+service watchdogd /sbin/watchdogd 10 20
+    class core
+    seclabel u:r:watchdogd:s0
 
-# Use dirty_bytes in case of 64-bit AP: 60/20MB
 on property:sys.boot_completed=1
+# Use dirty_bytes in case of 64-bit AP: 60/20MB
     write /proc/sys/vm/dirty_bytes 62914560
     write /proc/sys/vm/dirty_background_bytes 20971520
-
-service charger /system/bin/charger
-    class charger
-    user system
-    group system graphics input
-    capabilities SYS_BOOT
-    seclabel u:r:charger:s0
-
-on property:sys.boot_completed=1
+    
     setprop sys.io.scheduler bfq
+    
+    #Reinit lmkd to reconfigure lmkd properties
+    setprop lmkd.reinit 1  
