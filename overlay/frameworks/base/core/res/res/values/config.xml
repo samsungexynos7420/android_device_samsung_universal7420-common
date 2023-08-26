@@ -976,5 +976,8 @@ Add a comment to this line
          running in WAL mode.
          Choices are: FULL, NORMAL, OFF. -->
     <string name="db_wal_sync_mode" translatable="false">NORMAL</string>
+    
+    <!--  Define Google play service package for FRP-->
+    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
 </resources>
