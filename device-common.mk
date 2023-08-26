@@ -159,7 +159,7 @@ PRODUCT_PACKAGES += \
 	libexynoscamera_shim
 
 # Debugging
--include $(COMMON_PATH)/system_prop_debug.mk
+# -include $(COMMON_PATH)/system_prop_debug.mk
 
 # DRM
 PRODUCT_PACKAGES += \
