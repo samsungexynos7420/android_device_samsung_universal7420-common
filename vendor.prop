@@ -16,6 +16,9 @@ ro.vendor.winupdate=1
 ro.hardware.egl=mali
 ro.opengles.version=196610
 
+# Keystore
+ro.hardware.keystore=mdfpp
+
 # Ril
 ro.debug_level=0x494d
 telephony.lteOnCdmaDevice=0
