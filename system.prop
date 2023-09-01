@@ -28,6 +28,9 @@ ro.zygote.disable_gl_preload=1
 debug.sf.latch_unsignaled=1
 debug.sf.disable_backpressure=1
 
+# Keystore
+ro.hardware.keystore=mdfpp
+
 # LMKD
 ro.lmk.log_stats=true
 ro.lmk.use_minfree_levels=true
