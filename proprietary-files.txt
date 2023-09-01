@@ -189,3 +189,14 @@ media/safety_timer_usb.spi
 media/slow_charging_usb.spi
 media/temperature_limit_usb.spi
 media/water_protection_usb.spi
+
+# Gatekeeper - from A810FXXS2CTJ2
+vendor/lib/hw/gatekeeper.exynos7420.so:vendor/lib/hw/gatekeeper.universal7420.so
+vendor/lib64/hw/gatekeeper.exynos7420.so:vendor/lib64/hw/gatekeeper.universal7420.so
+
+# Keymaster - from A810FXXS2CTJ2
+lib64/vendor.samsung.security.skeymaster@3.0.so:vendor/lib64/vendor.samsung.security.skeymaster@3.0.so
+vendor/lib64/libkeymaster_mdfpp.so
+vendor/lib64/libkeymaster_helper.so
+vendor/lib64/libskeymaster.so
+vendor/lib64/hw/keystore.mdfpp.so
