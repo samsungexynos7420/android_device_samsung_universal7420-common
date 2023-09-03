@@ -20,7 +20,7 @@ COMMON_PATH := device/samsung/universal7420-common
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    device/samsung/universal7420-common/overlay/hardware/samsung/AdvancedDisplay    
+	device/samsung/universal7420-common/overlay/hardware/samsung/AdvancedDisplay    
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -105,7 +105,7 @@ TARGET_EXCLUDES_AUDIOFX := true
 PRODUCT_COPY_FILES += \
 	frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
 	frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration_7_0.xml \
-    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
+	frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
 	frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
 	frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
 	frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
@@ -127,10 +127,13 @@ TARGET_SCREEN_WIDTH := 1440
 
 # BSP
 PRODUCT_PACKAGES += \
-	memtrack.exynos5 \
+	memtrack.universal7420 \
 	gralloc.exynos5 \
-	hwcomposer.exynos5 \
+	hwcomposer.universal7420 \
+	libcsc \
 	libfimg \
+	libexynosscaler \
+	libexynosgscaler \
 	libhwc2on1adapter \
 	libhwc2onfbadapter \
 	libion \
@@ -172,7 +175,7 @@ PRODUCT_PACKAGES += \
 
 # ConfigStore
 PRODUCT_PACKAGES += \
-    disable_configstore
+	disable_configstore
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -398,10 +401,6 @@ PRODUCT_PACKAGES += \
 	wpa_supplicant.conf \
 	android.hardware.wifi@1.0-impl \
 	android.hardware.wifi@1.0-service.legacy
-
-# call Samsung LSI board support package
-$(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
-$(call inherit-product, hardware/samsung_slsi/exynos7420/exynos7420.mk)
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/universal7420-common/universal7420-common-vendor.mk)
