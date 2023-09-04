@@ -212,7 +212,7 @@ PRODUCT_COPY_FILES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
-	android.hardware.graphics.allocator@2.0-impl \
+	android.hardware.graphics.allocator@2.0-impl:64 \
 	android.hardware.graphics.allocator@2.0-service \
 	android.hardware.graphics.composer@2.1-service \
 	android.hardware.graphics.mapper@2.0-impl-2.1
@@ -343,7 +343,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-	android.hardware.sensors@1.0-impl.samsung \
+	android.hardware.sensors@1.0-impl.samsung:64 \
 	android.hardware.sensors@1.0-service
 
 # Soong namespaces
