@@ -29,7 +29,7 @@
 /dev/media1               0660   system     camera
 
 # seiren Audio
-/dev/seiren               0660   mediacodec mediadrm
+/dev/seiren               0660   system		audio
 
 #mixer
 /dev/video16              0660   system     audio
