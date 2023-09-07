@@ -99,7 +99,7 @@ vendor/firmware/setfile_imx240.bin
 # Cpboot daemon
 bin/cbd:vendor/bin/cbd
 
-# Graphics
+# Graphics - taken from A810FXXS2CTJ2
 vendor/lib/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_mali.so
 
@@ -124,7 +124,7 @@ lib64/libsensorlistener.so:vendor/lib64/libsensorlistener.so
 lib/libwrappergps.so:vendor/lib/libwrappergps.so
 lib64/libwrappergps.so:vendor/lib64/libwrappergps.so
 
-# GPS - Taken from G920FXXU6EVG1 stock firmware to fix GPS rollover bug
+# GPS - Taken from G920FXXU6EVG1 - to fix GPS rollover bug
 bin/gpsd:vendor/bin/gpsd
 bin/lhd:vendor/bin/lhd
 lib64/hw/gps.default.so:vendor/lib64/hw/gps.default.so
