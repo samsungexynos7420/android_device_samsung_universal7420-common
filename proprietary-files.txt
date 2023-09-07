@@ -1,6 +1,8 @@
 # All blobs are from zerofltexx stock (Nougat) unless stated
 
 # Audio
+etc/firmware/audience-es705-fw.bin
+etc/firmware/audience-es804-fw.bin
 etc/firmware/clearwater-dsp3-tx-nb.bin
 etc/firmware/clearwater-dsp3-tx-swb-interview.bin
 etc/firmware/clearwater-dsp3-tx-wb.bin
