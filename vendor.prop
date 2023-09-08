@@ -37,3 +37,5 @@ wifi.direct.interface=p2p-dev-wlan0
 ro.soc.manufacturer=Samsung
 ro.soc.model=Exynos 7420
 
+# VNDK
+ro.vndk.version=21
