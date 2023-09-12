@@ -159,9 +159,6 @@ etc/wifi/nvram_net.txt_wisol_a1:vendor/etc/wifi/nvram_net.txt_wisol_a1
 etc/wifi/nvram_net.txt_wisol_b85_a1:vendor/etc/wifi/nvram_net.txt_wisol_b85_a1
 etc/wifi/wpa_supplicant.conf:vendor/etc/wifi/wpa_supplicant.conf
 
-# AptX - from crosshatch - QP1A.190711.020
-product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-
 # Heart Rate monitor / SPO2
 lib64/libhr.so:vendor/lib64/libhr.so
 lib64/libagc_max.so:vendor/lib64/libagc_max.so
