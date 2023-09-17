@@ -127,14 +127,17 @@ TARGET_SCREEN_WIDTH := 1440
 
 # BSP
 PRODUCT_PACKAGES += \
-	memtrack.exynos5 \
+	memtrack.universal7420 \
 	gralloc.exynos5 \
-	hwcomposer.exynos5 \
+	hwcomposer.universal7420 \
 	libfimg \
 	libhwc2on1adapter \
 	libhwc2onfbadapter \
 	libion \
 	libion_exynos \
+	libcsc \
+	libexynosgscaler \
+	libexynosscaler \
 	libstagefrighthw \
 	libExynosOMX_Core \
 	libExynosOMX_Resourcemanager \
@@ -377,10 +380,6 @@ PRODUCT_PACKAGES += \
 	wpa_supplicant.conf \
 	android.hardware.wifi@1.0-impl \
 	android.hardware.wifi@1.0-service.legacy
-
-# call Samsung LSI board support package
-$(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
-$(call inherit-product, hardware/samsung_slsi/exynos7420/exynos7420.mk)
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/universal7420-common/universal7420-common-vendor.mk)
