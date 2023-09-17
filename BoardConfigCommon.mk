@@ -71,6 +71,14 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/ramdisk/etc/fstab.samsungexynos7420.reco
 # Display
 TARGET_SCREEN_DENSITY := 560
 
+# Dexpreopt
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= false
+    WITH_DEXPREOPT := true
+  endif
+endif
+
 # Fingerprint
 TARGET_SEC_FP_CALL_NOTIFY_ON_CANCEL := true
 TARGET_SEC_FP_CALL_CANCEL_ON_ENROLL_COMPLETION := true
