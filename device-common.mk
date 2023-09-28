@@ -105,8 +105,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
 	camera.exynos5 \
-	android.hardware.camera.provider@2.4-impl \
-	android.hardware.camera.provider@2.4-service
+	android.hardware.camera.provider@2.5-service
 
 # Camera-Shim
 PRODUCT_PACKAGES += \
