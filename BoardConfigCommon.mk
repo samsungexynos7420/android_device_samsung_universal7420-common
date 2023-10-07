@@ -38,32 +38,22 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 TARGET_NR_CPUS := 8
 
-# Kernel
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
-
 # Audio
 TARGET_AUDIOHAL_VARIANT := samsung
 AUDIOSERVER_MULTILIB := 32
 
-# LED
-RED_LED_PATH := "/sys/class/leds/led_r/brightness"
-GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
-BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
-BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
-
-# Binder
-TARGET_USES_64_BIT_BINDER := true
-
 # Bluetooth
-BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/configs/bluetooth/libbt_vndcfg.txt
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_SAMSUNG_BLUETOOTH := true
+BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/configs/bluetooth/libbt_vndcfg.txt
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+
+# Compatibility Matrix
+DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
@@ -90,9 +80,6 @@ TARGET_SEC_FP_USES_PERCENTAGE_SAMPLES := true
 # HIDL
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
-#  ION
-TARGET_USES_ION := true
-
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
@@ -112,13 +99,17 @@ TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 TARGET_KERNEL_CLANG_COMPILE := false
 BOARD_USES_FULL_RECOVERY_IMAGE := false
 TARGET_KERNEL_LLVM_BINUTILS := false
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+
+# LED
+RED_LED_PATH := "/sys/class/leds/led_r/brightness"
+GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
+BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
+BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
 # LMKD stats logging
 TARGET_LMKD_STATS_LOG := true
-
-# Mediaserver-shim
-TARGET_LD_SHIM_LIBS += \
-    /system/bin/mediaserver|/vendor/lib/libstagefright_shim.so
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/batt_slate_mode
@@ -128,20 +119,18 @@ TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE := true
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE := false
 
+# Mediaserver-shim
+TARGET_LD_SHIM_LIBS += \
+    /system/bin/mediaserver|/vendor/lib/libstagefright_shim.so
+
 # MEMFD
 TARGET_HAS_MEMFD_BACKPORT := true
 
 # Manifest
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
-# Compatibility Matrix
-DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
-
 # Networking
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
-
-# OpenGL
-USE_OPENGL_RENDERER := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -181,9 +170,10 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
 # Use these flags if the board has a ext4 partition larger than 2gb
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_USERIMAGES_USE_F2FS := true
 
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := system/vendor
@@ -199,6 +189,7 @@ BOARD_HAVE_SAMSUNG_WIFI          := true
 BOARD_WLAN_DEVICE                := bcmdhd
 WPA_SUPPLICANT_USE_HIDL          := true
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
+WPA_SUPPLICANT_USE_HIDL          := true
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
 BOARD_HOSTAPD_DRIVER             := NL80211
