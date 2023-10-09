@@ -101,6 +101,9 @@ BOARD_USES_FULL_RECOVERY_IMAGE := false
 TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+    
+BOARD_BOOTCONFIG += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # LED
 RED_LED_PATH := "/sys/class/leds/led_r/brightness"
