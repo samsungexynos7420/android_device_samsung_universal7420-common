@@ -101,6 +101,9 @@ TARGET_KERNEL_CLANG_COMPILE := false
 BOARD_USES_FULL_RECOVERY_IMAGE := false
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+    
+BOARD_BOOTCONFIG += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # LMKD stats logging
 TARGET_LMKD_STATS_LOG := true
