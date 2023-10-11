@@ -339,7 +339,8 @@ PRODUCT_PACKAGES += \
 
 # Ril - Shim
 PRODUCT_PACKAGES += \
-	libcutils_shim
+	libcutils_shim \
+	gpsd_shim
 
 # SamsungDoze
 PRODUCT_PACKAGES += \

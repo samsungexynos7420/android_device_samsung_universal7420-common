@@ -158,7 +158,9 @@ TARGET_LD_SHIM_LIBS += \
 	/vendor/lib/libsec-ril.so|/system/lib/libcutils_shim.so \
 	/vendor/lib/libsec-ril-dsds.so|/system/lib/libcutils_shim.so \
 	/vendor/lib64/libsec-ril.so|/system/lib64/libcutils_shim.so \
-	/vendor/lib64/libsec-ril-dsds.so|/system/lib64/libcutils_shim.so
+	/vendor/lib64/libsec-ril-dsds.so|/system/lib64/libcutils_shim.so \
+	/vendor/bin/gpsd|gpsd_shim.so \
+	/vendor/bin/lhd|gpsd_shim.so
 
 # Root extra folders
 BOARD_ROOT_EXTRA_FOLDERS += efs
