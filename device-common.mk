@@ -134,6 +134,10 @@ TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.3-service.samsung
+    
 # Wifi
 PRODUCT_PACKAGES += \
     hostapd \
