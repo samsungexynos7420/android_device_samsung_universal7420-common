@@ -112,10 +112,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
-    
+
 # Lights
 PRODUCT_PACKAGES += \
-	android.hardware.light@2.0-service.samsung
+    android.hardware.light@2.0-service.samsung
     
 # Media profile
 PRODUCT_COPY_FILES += \
@@ -140,8 +140,8 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-	android.hardware.sensors@1.0-impl \
-	android.hardware.sensors@1.0-service
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
 
 # Vibrator
 PRODUCT_PACKAGES += \
