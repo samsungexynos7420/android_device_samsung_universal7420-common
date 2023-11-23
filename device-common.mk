@@ -123,6 +123,11 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.gatekeeper@1.0-impl
 
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl.universal7420 \
+    android.hardware.gnss@1.0-service.universal7420
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
