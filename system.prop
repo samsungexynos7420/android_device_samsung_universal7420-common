@@ -1,5 +1,7 @@
-# Board
+# Boot device
+ro.boot.bootdevice=15570000.ufs
 
+# Board
 ro.chipname=exynos7420
 ro.arch=exynos7420
 
