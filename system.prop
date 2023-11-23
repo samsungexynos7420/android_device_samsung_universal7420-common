@@ -27,7 +27,6 @@ ro.ril.hsxpa=1
 ro.ril.telephony.mqanelements=6
 ro.ril.gprsclass=10
 
-
 # OMX
 media.sf.omx-plugin=libffmpeg_omx.so,libsomxcore.so
 persist.media.treble_omx=false
@@ -42,15 +41,19 @@ persist.sys.wfd.virtual=0
 ro.nfc.sec_hal=true 
 ro.nfc.fw_dl_on_boot=false
 
-# HWC
-debug.sf.latch_unsignaled=1
-
 # Graphics
+debug.hwc.winupdate=1
+debug.sf.disable_backpressure=1
+debug.sf.latch_unsignaled=1
+ro.hardware.egl=mali
 ro.opengles.version=196610 
 ro.sf.lcd_density=640 
 
 # Keystore
 ro.hardware.keystore=mdfpp
+
+# SLSI
+debug.slsi_platform=1
 
 # Audio
 af.fast_track_multiplier=1 
