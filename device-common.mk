@@ -90,6 +90,30 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     libbt-vendor
 
+# BSP
+PRODUCT_PACKAGES += \
+    gralloc.exynos5 \
+    hwcomposer.exynos5 \
+    memtrack.exynos5 \
+    libcsc \
+    libcec \
+    libfimg \
+    libexynosscaler \
+    libexynosgscaler \
+    libion_exynos \
+    libstagefrighthw \
+    libExynosOMX_Core \
+    libExynosOMX_Resourcemanager \
+    libOMX.Exynos.MPEG4.Encoder \
+    libOMX.Exynos.MPEG4.Decoder \
+    libOMX.Exynos.AVC.Encoder \
+    libOMX.Exynos.AVC.Decoder \
+    libOMX.Exynos.HEVC.Encoder\
+    libOMX.Exynos.HEVC.Decoder \
+    libOMX.Exynos.VP8.Decoder \
+    libOMX.Exynos.VP8.Encoder \
+    libOMX.Exynos.VP9.Decoder
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
@@ -134,9 +158,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
-    gralloc.exynos5 \
-    hwcomposer.exynos5 \
-    libfimg \
     libhwc2on1adapter \
     libion
     
@@ -176,7 +197,6 @@ PRODUCT_COPY_FILES += \
 
 # Memory
 PRODUCT_PACKAGES += \
-    memtrack.exynos5 \
     android.hardware.memtrack@1.0-impl
 
 # OMX
