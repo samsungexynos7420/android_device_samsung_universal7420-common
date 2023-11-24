@@ -209,6 +209,12 @@ PRODUCT_PACKAGES += \
 	android.hardware.nfc@1.0-impl \
 	android.hardware.nfc@1.0-service
 
+# NFC
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/nfc/libnfc-sec-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-hal.conf \
+	$(LOCAL_PATH)/configs/nfc/libnfc-sec.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec.conf \
+	$(LOCAL_PATH)/configs/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
+
 # OMX
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-impl \
