@@ -211,10 +211,10 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
-	/system/lib64/libexynoscamera.so|/system/lib64/libexynoscamera_shim.so \
-	/system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so \
-	/system/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so \
-	/system/lib64/libbauthserver.so|/vendor/lib64/libbauthtzcommon_shim.so
+	/vendor/lib64/libexynoscamera.so|/system/lib64/libexynoscamera_shim.so \
+	/vendor/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so \
+	/vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so \
+	/vendor/lib64/libbauthserver.so|/vendor/lib64/libbauthtzcommon_shim.so
 	/system/bin/mediaserver|/vendor/lib/libstagefright_shim.so
 
 # Wifi
