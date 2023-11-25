@@ -255,6 +255,19 @@ PRODUCT_PACKAGES += \
 	modemloader \
 	rild
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+	init.battery.rc \
+	init.power.rc \
+	init.samsung.rc \
+	init.samsungexynos7420.rc \
+	init.samsungexynos7420.usb.rc \
+	init.wifi.rc \
+	fstab.samsungexynos7420 \
+	init.baseband.rc \
+	init.gps.rc \
+	ueventd.samsungexynos7420.rc
+
 # RCS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
