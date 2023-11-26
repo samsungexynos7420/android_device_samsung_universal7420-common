@@ -59,7 +59,10 @@
         <item>"9,1"</item>
     </string-array>
 	
-	<string name="config_radio_access_family">GSM|WCDMA|LTE</string>
+	<string name="config_radio_access_family">GSM | WCDMA | LTE</string>
+
+     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
+    <bool name="config_unplugTurnsOnScreen">true</bool>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          USB interfaces.  If the device doesn't want to support tething over USB this should
