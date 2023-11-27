@@ -30,9 +30,9 @@ ro.ril.telephony.mqanelements=6
 ro.ril.gprsclass=10
 
 # OMX
-media.sf.omx-plugin=libffmpeg_omx.so,libsomxcore.so
-persist.media.treble_omx=false
 debug.stagefright.ccodec=0
+debug.stagefright.omx_default_rank=0
+debug.stagefright.omx_default_rank.sw-audio=1
 
 # Miracast (Wireless Display)
 wlan.wfd.hdcp=disable 
