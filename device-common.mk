@@ -298,7 +298,8 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libexynoscamera_shim
+    libbauthtzcommon_shim \
+    libexynoscamera_shim \
     libstagefright_shim
 
 # Vibrator
