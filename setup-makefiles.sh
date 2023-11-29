@@ -1,24 +1,14 @@
 #!/bin/bash
-# Copyright (C) 2020 The LineageOS Project
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
+# Copyright (C) 2017-2021 The LineageOS Project
 #
-# http://www.apache.org/licenses/LICENSE-2.0
+# SPDX-License-Identifier: Apache-2.0
 #
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
 
 set -e
 
-VENDOR=samsung
 DEVICE_COMMON=universal7420-common
-
-export INITIAL_COPYRIGHT_YEAR=2015
+VENDOR=samsung
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -31,7 +21,7 @@ if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
 fi
-source "$HELPER"
+source "${HELPER}"
 
 # Initialize the helper
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
@@ -44,9 +34,7 @@ write_makefiles "${MY_DIR}/proprietary-files.txt" true
 ###################################################################################################
 # CUSTOM PART START                                                                               #
 ###################################################################################################
-
-OUTDIR=vendor/$VENDOR/$DEVICE
-
+OUTDIR=vendor/$VENDOR/$DEVICE_COMMON
 (cat << EOF) >> $ANDROID_ROOT/$OUTDIR/Android.mk
 include \$(CLEAR_VARS)
 
@@ -69,7 +57,6 @@ EGL_64_SYMLINKS := \$(addprefix \$(TARGET_OUT_VENDOR)/lib64/,\$(EGL_LIBS))
 ALL_DEFAULT_INSTALLED_MODULES += \$(EGL_32_SYMLINKS) \$(EGL_64_SYMLINKS)
 
 EOF
-
 ###################################################################################################
 # CUSTOM PART END                                                                                 #
 ###################################################################################################
