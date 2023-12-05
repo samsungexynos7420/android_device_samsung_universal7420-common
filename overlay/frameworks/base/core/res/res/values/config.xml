@@ -111,16 +111,6 @@
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
-    <!-- Does the notification LED support multiple colors?
-         Used to decide if the user can change the colors
-    <bool name="config_multiColorNotificationLed">true</bool> -->
-
-    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option
-    <bool name="config_intrusiveBatteryLed">true</bool> -->
-
-    <!-- Does the battery LED support multiple colors? Used to decide if the user c   an change the colors
-    <bool name="config_multiColorBatteryLed">true</bool> -->
-
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N  1 zones as follows:
 
@@ -801,11 +791,9 @@
          * The device must be provisioned with HDCP keys (for protected content).
     -->
     <bool name="config_enableWifiDisplay">true</bool>
+    
     <!-- Our gralloc has support for protected buffers -->
     <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
-
-    <!-- Boolean to enable STK functionality on Samsung phones
-    <bool name="config_samsung_stk">true</bool> -->
     
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
@@ -858,14 +846,10 @@ Add a comment to this line
            1. Lenient threshold
            2. Custom threshold
     -->
-    <!-- <integer name="config_LTE_RSRP_threshold_type">2</integer> -->
+    <integer name="config_LTE_RSRP_threshold_type">2</integer>
 
     <!-- For performance and storage reasons, limit the number of fingerprints per user -->
     <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
-
-    <!-- If enabled, capacitive keys will only light up when pressed.
-         Otherwise, the buttons will light up whenever the user interacts with the device -->
-    <!-- <bool name="config_buttonLightOnKeypressOnly">true</bool> -->
     
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>

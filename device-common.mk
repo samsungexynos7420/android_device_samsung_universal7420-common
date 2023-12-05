@@ -108,11 +108,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	camera.exynos5 \
 	android.hardware.camera.provider@2.4-impl \
-	android.hardware.camera.provider@2.4-service
-
-# Camera-Shim
-PRODUCT_PACKAGES += \
-	libexynoscamera_shim
+	android.hardware.camera.provider@2.4-service	
 
 # Cgroups
 PRODUCT_COPY_FILES += \
@@ -147,10 +143,6 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
 	android.hardware.biometrics.fingerprint@2.3-service.samsung
-
-# Fingerprint-Shim
-PRODUCT_PACKAGES += \
-	libbauthtzcommon_shim
 
 # GNSS
 PRODUCT_PACKAGES += \
@@ -336,10 +328,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.renderscript@1.0-impl
 
-# Ril - Shim
-PRODUCT_PACKAGES += \
-	libcutils_shim
-
 # SamsungDoze
 PRODUCT_PACKAGES += \
 	SamsungDoze
@@ -349,16 +337,19 @@ PRODUCT_PACKAGES += \
 	android.hardware.sensors@1.0-impl.samsung:64 \
 	android.hardware.sensors@1.0-service
 
+# Shims
+PRODUCT_PACKAGES += \
+	libcutils_shim \
+	libstagefright_shim \
+	libexynoscamera_shim \
+	libbauthtzcommon_shim 
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
 	$(COMMON_PATH) \
 	hardware/google/interfaces \
 	hardware/google/pixel \
-	hardware/samsung/aidl/power-libperfmgr
-
-# Stagefright-shims
-PRODUCT_PACKAGES += \
-	libstagefright_shim
+	hardware/samsung/aidl/power-libperfmgr	
 
 # Touch
 PRODUCT_PACKAGES += \
