@@ -32,6 +32,7 @@ ro.arch=exynos7420
 ro.vendor.winupdate=1
 ro.hardware.egl=mali
 ro.opengles.version=196610
+debug.sf.enable_transaction_tracing=false
 
 # Keystore
 ro.hardware.keystore=mdfpp
