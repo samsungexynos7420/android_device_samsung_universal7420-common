@@ -1,2 +1,1 @@
 libOpenCL.so
-vulkan.exynos5.so
