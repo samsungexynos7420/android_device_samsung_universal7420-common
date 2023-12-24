@@ -60,7 +60,7 @@
         <item>"9,1"</item>
     </string-array>
 	
-	<string name="config_radio_access_family">GSM|WCDMA|LTE</string>
+	<string name="config_radio_access_family">GSM | WCDMA | LTE</string>
 	
     <!-- Array of ConnectivityManager.TYPE_xxxx values allowable for tethering -->
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
@@ -71,15 +71,6 @@
         <item>5</item>
         <item>7</item>
     </integer-array>
-
-    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
-    <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
-
-    <!-- Boolean indicating whether the wifi chipset has background scan support -->
-    <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
-
-    <!-- Wifi driver supports batched scan -->
-    <bool translatable="false" name="config_wifi_batched_scan_supported">true</bool>
 
     <!-- Flag indicating whether we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
@@ -774,10 +765,6 @@
         <item>lte:524288,1048576,8388608,262144,524288,4194304</item>
     </string-array>
 
-    <!-- Configure wifi tcp buffersizes in the form:
-         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
-    <string name="config_wifi_tcp_buffers" translatable="false">524288,2097152,4194304,262144,524288,1048576</string>
-
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
          Here are a few of them:
@@ -908,9 +895,6 @@ Add a comment to this line
         <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
         <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
 	</string-array>
-        
-    <!-- Indicates that AP mode MAC randomization is supported on this device -->
-    <bool translatable="false" name="config_wifi_ap_mac_randomization_supported">false</bool>
     
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
     in hardware. -->
