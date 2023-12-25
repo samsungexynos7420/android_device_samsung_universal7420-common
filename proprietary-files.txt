@@ -127,6 +127,10 @@ bin/gpsd:vendor/bin/gpsd
 bin/lhd:vendor/bin/lhd
 lib64/hw/gps.default.so:vendor/lib64/hw/gps.default.so
 
+# RIL - secnativefeature
+lib/libsecnativefeature.so:vendor/lib/libsecnativefeature.so
+lib64/libsecnativefeature.so:vendor/lib64/libsecnativefeature.so
+
 # Wi-Fi
 etc/wifi/bcmdhd_apsta.bin:vendor/etc/wifi/bcmdhd_apsta.bin
 etc/wifi/bcmdhd_apsta.bin_a1:vendor/etc/wifi/bcmdhd_apsta.bin_a1
