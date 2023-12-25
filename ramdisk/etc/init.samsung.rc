@@ -594,7 +594,7 @@ service charger /system/bin/lpm
     seclabel u:r:charger:s0
 
 # MobiCore startup
-service mobicore /vendor/bin/mcDriverDaemon -r /vendor/app/FFFFFFFF000000000000000000000001.drbin -r /vendor/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin -r /vendor/app/mcRegistry/ffffffffd00000000000000000000016.tlbin -r /vendor/app/mcRegistry/ffffffffd0000000000000000000001c.tlbin
+service mobicore /vendor/bin/mcDriverDaemon -r /vendor/app/FFFFFFFF000000000000000000000001.drbin -r /vendor/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin -r /vendor/app/mcRegistry/ffffffffd00000000000000000000016.tlbin
     class core
     user system
     group system
