@@ -65,18 +65,20 @@ vendor/firmware/bcm4358A3_V0083.0138_wisol.hcd|e3f2205f0afa2d269f1bad80e27806919
 lib/libaudioroute.so|46fcafe8de5c4fe078ad9e9e613bc260fd137106
 
 # Camera
-
 lib/hw/camera.exynos5.so:vendor/lib/hw/camera.exynos5.so
 lib64/hw/camera.exynos5.so:vendor/lib64/hw/camera.exynos5.so
-lib/libexynoscamera.so:vendor/lib/libexynoscamera.so
-lib64/libexynoscamera.so:vendor/lib64/libexynoscamera.so
-lib/libexynoscamera3.so:vendor/lib/libexynoscamera3.so
-lib64/libexynoscamera3.so:vendor/lib64/libexynoscamera3.so
 lib/libhwjpeg.so:vendor/lib/libhwjpeg.so
 lib64/libhwjpeg.so:vendor/lib64/libhwjpeg.so
 lib/libuniplugin.so:vendor/lib/libuniplugin.so
 lib64/libuniplugin.so:vendor/lib64/libuniplugin.so
 
+# Camera blobs - hexedited to work with newer "oreo" gralloc
+lib/libexynoscamera.so:vendor/lib/libexynoscamera.so|5fa1392c056768b55105b53d5b7e5bcc20965e99
+lib64/libexynoscamera.so:vendor/lib64/libexynoscamera.so|2310086588abe54e984841f7744a5a2ac43cab51
+lib/libexynoscamera3.so:vendor/lib/libexynoscamera3.so|aaebd317db7784573635c01f9c2fb9a5b357571d
+lib64/libexynoscamera3.so:vendor/lib64/libexynoscamera3.so|1ad609a8e831bf900eaff919c75a41a41e79ee18
+
+# Firmware
 vendor/firmware/companion_2p2_master_setfile.bin
 vendor/firmware/companion_2p2_mode_setfile.bin
 vendor/firmware/companion_fw_2p2_evt1.bin
@@ -102,10 +104,6 @@ bin/cbd:vendor/bin/cbd
 # Graphics - taken from A810FXXS2CTJ2
 vendor/lib/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_mali.so
-
-# IR
-lib/hw/consumerir.exynos5.so:vendor/lib/hw/consumerir.exynos5.so
-lib64/hw/consumerir.exynos5.so:vendor/lib64/hw/consumerir.exynos5.so
 
 # NFC
 etc/nfc/sec_s3fwrn5p_rfreg.bin
