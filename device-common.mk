@@ -307,7 +307,6 @@ PRODUCT_PACKAGES += \
 	libril \
 	libsecril-client \
 	libsecril-client-sap \
-	libsecnativefeature \
 	android.hardware.radio@1.0 \
 	android.hardware.radio.deprecated@1.0 \
 	modemloader \
