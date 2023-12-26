@@ -38,10 +38,6 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 TARGET_NR_CPUS := 8
 
-# Kernel
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
-
 # Audio
 TARGET_AUDIOHAL_VARIANT := samsung
 AUDIOSERVER_MULTILIB := 32
@@ -106,13 +102,11 @@ BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 TARGET_KERNEL_CLANG_COMPILE := false
 BOARD_USES_FULL_RECOVERY_IMAGE := false
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # LMKD stats logging
 TARGET_LMKD_STATS_LOG := true
-
-# Mediaserver-shim
-TARGET_LD_SHIM_LIBS += \
-    /system/bin/mediaserver|/vendor/lib/libstagefright_shim.so
 
 # MEMFD
 TARGET_HAS_MEMFD_BACKPORT := true
@@ -192,3 +186,6 @@ WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/etc/wifi/bcmdhd_sta.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/etc/wifi/bcmdhd_apsta.bin"
 WIFI_BAND                        := 802_11_ABG
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+
+# Inherit from the proprietary version
+include vendor/samsung/universal7420-common/BoardConfigVendor.mk
