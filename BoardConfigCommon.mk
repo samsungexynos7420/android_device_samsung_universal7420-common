@@ -138,13 +138,6 @@ include hardware/samsung_slsi-linaro/config/BoardConfig7420.mk
 BOARD_MODEM_TYPE := ss333
 BOARD_PROVIDES_LIBRIL := true
 
-# Ril - Shim
-TARGET_LD_SHIM_LIBS += \
-	/vendor/lib/libsec-ril.so|/vendor/lib/libcutils_shim.so \
-	/vendor/lib/libsec-ril-dsds.so|/vendor/lib/libcutils_shim.so \
-	/vendor/lib64/libsec-ril.so|/vendor/lib64/libcutils_shim.so \
-	/vendor/lib64/libsec-ril-dsds.so|/vendor/lib64/libcutils_shim.so
-
 # Root extra folders
 BOARD_ROOT_EXTRA_FOLDERS += efs
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
@@ -156,6 +149,15 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 # SECComp filters
 BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
+
+# Shims
+TARGET_LD_SHIM_LIBS += \
+	/vendor/lib/libsec-ril.so|/vendor/lib/libcutils_shim.so \
+	/vendor/lib/libsec-ril-dsds.so|/vendor/lib/libcutils_shim.so \
+	/vendor/lib64/libsec-ril.so|/vendor/lib64/libcutils_shim.so \
+	/vendor/lib64/libsec-ril-dsds.so|/vendor/lib64/libcutils_shim.so \
+	/vendor/lib/libexynoscamera.so|/vendor/lib/libexynoscamera_shim.so \
+	/vendor/lib64/libexynoscamera.so|/vendor/lib64/libexynoscamera_shim.so
 
 # Use these flags if the board has a ext4 partition larger than 2gb
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
