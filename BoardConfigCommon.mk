@@ -155,9 +155,10 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
 # Use these flags if the board has a ext4 partition larger than 2gb
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_USERIMAGES_USE_F2FS := true
 
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := system/vendor
