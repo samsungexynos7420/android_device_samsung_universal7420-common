@@ -172,6 +172,9 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
 # SELinux
+include device/lineage/sepolicy/exynos/sepolicy.mk
+include device/samsung_slsi/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Releasetools
