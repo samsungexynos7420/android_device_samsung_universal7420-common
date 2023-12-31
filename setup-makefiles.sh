@@ -18,8 +18,6 @@ set -e
 VENDOR=samsung
 DEVICE_COMMON=universal7420-common
 
-export INITIAL_COPYRIGHT_YEAR=2015
-
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
@@ -44,9 +42,7 @@ write_makefiles "${MY_DIR}/proprietary-files.txt" true
 ###################################################################################################
 # CUSTOM PART START                                                                               #
 ###################################################################################################
-
-OUTDIR=vendor/$VENDOR/$DEVICE
-
+OUTDIR=vendor/$VENDOR/$DEVICE_COMMON
 (cat << EOF) >> $ANDROID_ROOT/$OUTDIR/Android.mk
 include \$(CLEAR_VARS)
 
@@ -69,7 +65,6 @@ EGL_64_SYMLINKS := \$(addprefix \$(TARGET_OUT_VENDOR)/lib64/,\$(EGL_LIBS))
 ALL_DEFAULT_INSTALLED_MODULES += \$(EGL_32_SYMLINKS) \$(EGL_64_SYMLINKS)
 
 EOF
-
 ###################################################################################################
 # CUSTOM PART END                                                                                 #
 ###################################################################################################

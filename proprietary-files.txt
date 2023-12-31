@@ -1,5 +1,11 @@
 # All blobs are from zerofltexx stock (Nougat) unless stated
 
+# VNDK prebuilts
+-lib/libprotobuf-cpp-lite-v29.so:vendor/lib/libprotobuf-cpp-lite-v29.so
+-lib/libutils-v32.so:vendor/lib/libutils-v32.so
+-lib64/libprotobuf-cpp-lite-v29.so:vendor/lib64/libprotobuf-cpp-lite-v29.so
+-lib64/libutils-v32.so:vendor/lib64/libutils-v32.so
+
 # Audio
 etc/firmware/audience-es705-fw.bin
 etc/firmware/audience-es804-fw.bin
@@ -62,20 +68,19 @@ vendor/firmware/bcm4358A3_V0083.0138.hcd:vendor/firmware/bcm4358A3_V0083.0138_se
 vendor/firmware/bcm4358A3_V0083.0138_wisol.hcd|e3f2205f0afa2d269f1bad80e27806919c3f39f4
 
 # Prebuilt libaudioroute.so to work around https://android.googlesource.com/platform/system/media/+/fbbc93cb34e36b2b28e2e440e9f5e0c4d1472b8d
-lib/libaudioroute.so|46fcafe8de5c4fe078ad9e9e613bc260fd137106
+-lib/libaudioroute.so|46fcafe8de5c4fe078ad9e9e613bc260fd137106
 
 # Camera
-
-lib/hw/camera.exynos5.so:vendor/lib/hw/camera.exynos5.so
-lib64/hw/camera.exynos5.so:vendor/lib64/hw/camera.exynos5.so
-lib/libexynoscamera.so:vendor/lib/libexynoscamera.so
-lib64/libexynoscamera.so:vendor/lib64/libexynoscamera.so
-lib/libexynoscamera3.so:vendor/lib/libexynoscamera3.so
-lib64/libexynoscamera3.so:vendor/lib64/libexynoscamera3.so
-lib/libhwjpeg.so:vendor/lib/libhwjpeg.so
-lib64/libhwjpeg.so:vendor/lib64/libhwjpeg.so
-lib/libuniplugin.so:vendor/lib/libuniplugin.so
-lib64/libuniplugin.so:vendor/lib64/libuniplugin.so
+-lib/hw/camera.exynos5.so:vendor/lib/hw/camera.vendor.exynos5.so
+-lib64/hw/camera.exynos5.so:vendor/lib64/hw/camera.vendor.exynos5.so
+-lib/libexynoscamera.so:vendor/lib/libexynoscamera.so
+-lib64/libexynoscamera.so:vendor/lib64/libexynoscamera.so
+-lib/libexynoscamera3.so:vendor/lib/libexynoscamera3.so
+-lib64/libexynoscamera3.so:vendor/lib64/libexynoscamera3.so
+-lib/libhwjpeg.so:vendor/lib/libhwjpeg.so
+-lib64/libhwjpeg.so:vendor/lib64/libhwjpeg.so
+-lib/libuniplugin.so:vendor/lib/libuniplugin.so
+-lib64/libuniplugin.so:vendor/lib64/libuniplugin.so
 
 vendor/firmware/companion_2p2_master_setfile.bin
 vendor/firmware/companion_2p2_mode_setfile.bin
@@ -97,15 +102,15 @@ vendor/firmware/setfile_6b2.bin
 vendor/firmware/setfile_imx240.bin
 
 # Cpboot daemon
-bin/cbd:vendor/bin/cbd
+-bin/cbd:vendor/bin/cbd
 
 # Graphics - taken from A810FXXS2CTJ2
-vendor/lib/egl/libGLES_mali.so
-vendor/lib64/egl/libGLES_mali.so
+-lib/egl/libGLES_mali.so:vendor/lib/egl/libGLES_mali.so
+-lib64/egl/libGLES_mali.so:vendor/lib64/egl/libGLES_mali.so
 
 # IR
-lib/hw/consumerir.exynos5.so:vendor/lib/hw/consumerir.exynos5.so
-lib64/hw/consumerir.exynos5.so:vendor/lib64/hw/consumerir.exynos5.so
+-lib/hw/consumerir.exynos5.so:vendor/lib/hw/consumerir.exynos5.so
+-lib64/hw/consumerir.exynos5.so:vendor/lib64/hw/consumerir.exynos5.so
 
 # NFC
 etc/nfc/sec_s3fwrn5p_rfreg.bin
@@ -113,21 +118,21 @@ vendor/firmware/nfc/sec_s3fwrn5p_firmware.bin
 
 # Sensors
 bin/gps.cer:vendor/bin/gps.cer
-lib/hw/sensorhubs.universal7420.so:vendor/lib/hw/sensorhubs.universal7420.so
-lib64/hw/sensorhubs.universal7420.so:vendor/lib64/hw/sensorhubs.universal7420.so
-lib/hw/sensors.universal7420.so:vendor/lib/hw/sensors.universal7420.so
-lib64/hw/sensors.universal7420.so:vendor/lib64/hw/sensors.universal7420.so
-lib/libfloatingfeature.so:vendor/lib/libfloatingfeature.so
-lib64/libfloatingfeature.so:vendor/lib64/libfloatingfeature.so
-lib/libsensorlistener.so:vendor/lib/libsensorlistener.so
-lib64/libsensorlistener.so:vendor/lib64/libsensorlistener.so
-lib/libwrappergps.so:vendor/lib/libwrappergps.so
-lib64/libwrappergps.so:vendor/lib64/libwrappergps.so
+-lib/hw/sensorhubs.universal7420.so:vendor/lib/hw/sensorhubs.universal7420.so
+-lib64/hw/sensorhubs.universal7420.so:vendor/lib64/hw/sensorhubs.universal7420.so
+-lib/hw/sensors.universal7420.so:vendor/lib/hw/sensors.universal7420.so
+-lib64/hw/sensors.universal7420.so:vendor/lib64/hw/sensors.universal7420.so
+-lib/libfloatingfeature.so:vendor/lib/libfloatingfeature.so
+-lib64/libfloatingfeature.so:vendor/lib64/libfloatingfeature.so
+-lib/libsensorlistener.so:vendor/lib/libsensorlistener.so
+-lib64/libsensorlistener.so:vendor/lib64/libsensorlistener.so
+-lib/libwrappergps.so:vendor/lib/libwrappergps.so
+-lib64/libwrappergps.so:vendor/lib64/libwrappergps.so
 
 # GPS - Taken from G920FXXU6EVG1 - to fix GPS rollover bug
-bin/gpsd:vendor/bin/gpsd
-bin/lhd:vendor/bin/lhd
-lib64/hw/gps.default.so:vendor/lib64/hw/gps.default.so
+-bin/gpsd:vendor/bin/gpsd
+-bin/lhd:vendor/bin/lhd
+-lib64/hw/gps.default.so:vendor/lib64/hw/gps.default.so
 
 # Wi-Fi
 etc/wifi/bcmdhd_apsta.bin:vendor/etc/wifi/bcmdhd_apsta.bin
@@ -160,20 +165,20 @@ etc/wifi/nvram_net.txt_wisol_b85_a1:vendor/etc/wifi/nvram_net.txt_wisol_b85_a1
 etc/wifi/wpa_supplicant.conf:vendor/etc/wifi/wpa_supplicant.conf
 
 # Heart Rate monitor / SPO2
-lib64/libhr.so:vendor/lib64/libhr.so
-lib64/libagc_max.so:vendor/lib64/libagc_max.so
+-lib64/libhr.so:vendor/lib64/libhr.so
+-lib64/libagc_max.so:vendor/lib64/libagc_max.so
 
 # Widevine DRM (L3) - from greatlte
 bin/move_widevine_data.sh
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
-vendor/lib/libwvhidl.so
-vendor/lib/mediadrm/libwvdrmengine.so
+-vendor/lib/libwvhidl.so
+-vendor/lib/mediadrm/libwvdrmengine.so
 
 # LPM - from N975FXXU6ETLL
-bin/lpm|7a1e0b9854b6259e88cc74ab1e7f0c6b3a3827ab
-lib64/libmaet.so|ec9939dbe9576a9ab3c27c0300d82809ab630cc1
-lib64/libsxqk_skia.so|3ff0105b643964f4da14ed18c071a76b5868ae7c
+-bin/lpm|7a1e0b9854b6259e88cc74ab1e7f0c6b3a3827ab
+-lib64/libmaet.so|ec9939dbe9576a9ab3c27c0300d82809ab630cc1
+-lib64/libsxqk_skia.so|3ff0105b643964f4da14ed18c071a76b5868ae7c
 
 # LPM
 media/battery_error.spi
@@ -193,12 +198,13 @@ media/temperature_limit_usb.spi
 media/water_protection_usb.spi
 
 # Gatekeeper - from A810FXXS2CTJ2
-vendor/lib/hw/gatekeeper.exynos7420.so:vendor/lib/hw/gatekeeper.universal7420.so
-vendor/lib64/hw/gatekeeper.exynos7420.so:vendor/lib64/hw/gatekeeper.universal7420.so
+-lib/hw/gatekeeper.exynos7420.so:vendor/lib/hw/gatekeeper.universal7420.so
+-lib64/hw/gatekeeper.exynos7420.so:vendor/lib64/hw/gatekeeper.universal7420.so
 
 # Keymaster - from A810FXXS2CTJ2
-lib64/vendor.samsung.security.skeymaster@3.0.so:vendor/lib64/vendor.samsung.security.skeymaster@3.0.so
-vendor/lib64/libkeymaster_mdfpp.so
-vendor/lib64/libkeymaster_helper.so
-vendor/lib64/libskeymaster.so
-vendor/lib64/hw/keystore.mdfpp.so
+-lib64/vendor.samsung.security.skeymaster@3.0.so:vendor/lib64/vendor.samsung.security.skeymaster@3.0.so
+-vendor/lib64/libkeymaster_mdfpp.so
+-vendor/lib64/libkeymaster_helper.so
+-vendor/lib64/libskeymaster.so
+-vendor/lib64/hw/keystore.mdfpp.so
+
