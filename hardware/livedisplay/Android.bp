@@ -13,6 +13,7 @@
 // limitations under the License.
 
 cc_defaults {
+    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.universal7420.xml"],
     name: "livedisplay_samsung_universal7420_defaults",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
