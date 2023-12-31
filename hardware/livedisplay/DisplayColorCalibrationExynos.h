@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-#ifndef VENDOR_LINEAGE_LIVEDISPLAY_V2_0_DISPLAYCOLORCALIBRATIONEXYNOS_H
-#define VENDOR_LINEAGE_LIVEDISPLAY_V2_0_DISPLAYCOLORCALIBRATIONEXYNOS_H
+#ifndef VENDOR_LINEAGE_LIVEDISPLAY_V2_1_DISPLAYCOLORCALIBRATIONEXYNOS_H
+#define VENDOR_LINEAGE_LIVEDISPLAY_V2_1_DISPLAYCOLORCALIBRATIONEXYNOS_H
 
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
-#include <vendor/lineage/livedisplay/2.0/IDisplayColorCalibration.h>
+#include <vendor/lineage/livedisplay/2.1/IDisplayColorCalibration.h>
 
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 using ::android::hardware::hidl_array;
@@ -49,9 +49,9 @@ class DisplayColorCalibrationExynos : public IDisplayColorCalibration {
 };
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
 
-#endif  // VENDOR_LINEAGE_LIVEDISPLAY_V2_0_DISPLAYCOLORCALIBRATIONEXYNOS_H
+#endif  // VENDOR_LINEAGE_LIVEDISPLAY_V2_1_DISPLAYCOLORCALIBRATIONEXYNOS_H

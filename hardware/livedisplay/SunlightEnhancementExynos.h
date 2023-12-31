@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-#ifndef VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SUNLIGHTENHANCEMENTEXYNOS_H
-#define VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SUNLIGHTENHANCEMENTEXYNOS_H
+#ifndef VENDOR_LINEAGE_LIVEDISPLAY_V2_1_SUNLIGHTENHANCEMENTEXYNOS_H
+#define VENDOR_LINEAGE_LIVEDISPLAY_V2_1_SUNLIGHTENHANCEMENTEXYNOS_H
 
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
-#include <vendor/lineage/livedisplay/2.0/ISunlightEnhancement.h>
+#include <vendor/lineage/livedisplay/2.1/ISunlightEnhancement.h>
 
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 using ::android::hardware::hidl_array;
@@ -47,9 +47,9 @@ class SunlightEnhancementExynos : public ISunlightEnhancement {
 };
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
 
-#endif  // VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SUNLIGHTENHANCEMENTEXYNOS_H
+#endif  // VENDOR_LINEAGE_LIVEDISPLAY_V2_1_SUNLIGHTENHANCEMENTEXYNOS_H

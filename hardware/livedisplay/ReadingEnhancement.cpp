@@ -28,7 +28,7 @@ using android::base::WriteStringToFile;
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 static constexpr const char* kREPath = "/sys/class/mdnie/mdnie/accessibility";
@@ -57,7 +57,7 @@ Return<bool> ReadingEnhancement::setEnabled(bool enabled) {
 // Methods from ::android::hidl::base::V1_0::IBase follow.
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
