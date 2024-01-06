@@ -81,10 +81,11 @@ PRODUCT_PACKAGES += \
 
 # BSP
 PRODUCT_PACKAGES += \
-	memtrack.universal7420 \
-	gralloc.exynos7420 \
-	hwcomposer.universal7420 \
+	memtrack.exynos5 \
+	gralloc.exynos5 \
+	hwcomposer.exynos5 \
 	libcsc \
+	libfimg \
 	libexynosscaler \
 	libexynosgscaler \
 	libhwc2on1adapter \
@@ -416,6 +417,10 @@ PRODUCT_COPY_FILES += \
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
+# call Samsung LSI board support package
+$(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
+$(call inherit-product, hardware/samsung_slsi/exynos7420/exynos7420.mk)
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/universal7420-common/universal7420-common-vendor.mk)

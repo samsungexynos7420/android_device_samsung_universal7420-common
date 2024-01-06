@@ -144,7 +144,7 @@ BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
 TARGET_SOC := exynos7420
 TARGET_BOOTLOADER_BOARD_NAME := universal7420
-include hardware/samsung_slsi-linaro/config/BoardConfig7420.mk
+include $(COMMON_PATH)/configs/BoardConfig7420.mk
 
 # Radio
 BOARD_MODEM_TYPE := ss333
