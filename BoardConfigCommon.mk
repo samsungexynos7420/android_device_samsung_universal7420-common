@@ -64,7 +64,9 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/ramdisk/etc/fstab.samsungexynos7420.recovery
+BOARD_HAS_DOWNLOAD_MODE := true
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/ramdisk/etc/fstab.samsungexynos7420
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 
 # Display
 TARGET_SCREEN_DENSITY := 560
