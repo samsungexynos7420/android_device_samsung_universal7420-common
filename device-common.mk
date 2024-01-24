@@ -213,6 +213,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.light-service.samsung
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+	vendor.lineage.health-service.default
+
 # Media profile
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
