@@ -35,7 +35,7 @@ source "$HELPER"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "zerofltecan zeroltecan zerofltexx zeroltexx"
+write_headers "zerofltecan zeroltecan zerofltexx zeroltexx noblelte nobleltecan nobleltedd nobleltedv nobleltejv nobleltektt nobleltelgt noblelteskt nobleltespr nobleltetmo nobleltextc nobleltezt zenlte zenltecan zenltedd zenltedv zenltejv zenltektt zenltelgt zenlteskt zenltetmo zenltexx zenltezt"
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
