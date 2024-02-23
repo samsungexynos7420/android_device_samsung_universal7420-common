@@ -61,12 +61,16 @@ vendor/firmware/bcm4358A3_V0083.0138.hcd:vendor/firmware/bcm4358A3_V0083.0138_se
 vendor/firmware/bcm4358A3_V0083.0138.hcd:vendor/firmware/bcm4358A3_V0083.0138_semco3rd.hcd|e3f2205f0afa2d269f1bad80e27806919c3f39f4
 vendor/firmware/bcm4358A3_V0083.0138_wisol.hcd|e3f2205f0afa2d269f1bad80e27806919c3f39f4
 
+vendor/firmware/bcm4359B0_V0019.0000.hcd
+vendor/firmware/bcm4359B1_V0105.0106.hcd
+vendor/firmware/bcm4359B1_V0105.0106_wisol.hcd
+
 # Prebuilt libaudioroute.so to work around https://android.googlesource.com/platform/system/media/+/fbbc93cb34e36b2b28e2e440e9f5e0c4d1472b8d
 lib/libaudioroute.so|46fcafe8de5c4fe078ad9e9e613bc260fd137106
 
 # Camera
-lib/hw/camera.exynos5.so:vendor/lib/hw/camera.exynos5.so
-lib64/hw/camera.exynos5.so:vendor/lib64/hw/camera.exynos5.so
+lib/hw/camera.exynos5.so:vendor/lib/hw/camera.vendor.exynos5.so
+lib64/hw/camera.exynos5.so:vendor/lib64/hw/camera.vendor.exynos5.so
 lib/libhwjpeg.so:vendor/lib/libhwjpeg.so
 lib64/libhwjpeg.so:vendor/lib64/libhwjpeg.so
 lib/libuniplugin.so:vendor/lib/libuniplugin.so
@@ -108,6 +112,8 @@ vendor/lib64/egl/libGLES_mali.so
 # NFC
 etc/nfc/sec_s3fwrn5p_rfreg.bin
 vendor/firmware/nfc/sec_s3fwrn5p_firmware.bin
+vendor/firmware/nfc/sec_s3fwrn5s_firmware.bin
+vendor/firmware/nfc/sec_s3nrn81_firmware.bin
 
 # Sensors
 bin/gps.cer:vendor/bin/gps.cer
@@ -160,6 +166,26 @@ etc/wifi/nvram_net.txt_wisol:vendor/etc/wifi/nvram_net.txt_wisol
 etc/wifi/nvram_net.txt_wisol_a1:vendor/etc/wifi/nvram_net.txt_wisol_a1
 etc/wifi/nvram_net.txt_wisol_b85_a1:vendor/etc/wifi/nvram_net.txt_wisol_b85_a1
 etc/wifi/wpa_supplicant.conf:vendor/etc/wifi/wpa_supplicant.conf
+vendor/etc/wifi/.clminfo
+vendor/etc/wifi/bcmdhd_apsta.bin_b1
+vendor/etc/wifi/bcmdhd_apsta.bin_blob
+vendor/etc/wifi/bcmdhd_clm.blob
+vendor/etc/wifi/bcmdhd_ibss.bin_b1
+vendor/etc/wifi/bcmdhd_mfg.bin_b1
+vendor/etc/wifi/bcmdhd_mfg.bin_blob
+vendor/etc/wifi/bcmdhd_mfg2.bin_b1
+vendor/etc/wifi/bcmdhd_sta.bin_b1
+vendor/etc/wifi/bcmdhd_sta.bin_blob
+vendor/etc/wifi/indoorchannel.info
+vendor/etc/wifi/nvram.txt
+vendor/etc/wifi/nvram_mfg.txt_b0
+vendor/etc/wifi/nvram_mfg.txt_b1
+vendor/etc/wifi/nvram_mfg.txt_murata_b1
+vendor/etc/wifi/nvram_mfg.txt_wisol_b1
+vendor/etc/wifi/nvram_net.txt_b0
+vendor/etc/wifi/nvram_net.txt_b1
+vendor/etc/wifi/nvram_net.txt_murata_b1
+vendor/etc/wifi/nvram_net.txt_wisol_b1
 
 # AptX - from crosshatch - QP1A.190711.020
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
