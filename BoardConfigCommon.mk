@@ -147,7 +147,7 @@ BOARD_MODEM_TYPE := ss333
 BOARD_PROVIDES_LIBRIL := true
 
 # Root extra folders
-BOARD_ROOT_EXTRA_FOLDERS += efs
+BOARD_ROOT_EXTRA_FOLDERS += efs cpefs
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Properties
@@ -164,6 +164,7 @@ BOARD_SEPOLICY_TEE_FLAVOR := mobicore
 include device/samsung_slsi/sepolicy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SELINUX_IGNORE_NEVERALLOWS := true
+
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
