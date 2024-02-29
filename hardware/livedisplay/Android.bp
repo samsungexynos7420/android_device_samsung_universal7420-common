@@ -13,8 +13,7 @@
 // limitations under the License.
 
 cc_defaults {
-    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.universal7420.xml"],
-    name: "livedisplay_samsung_universal7420_defaults",
+    name: "livedisplay_samsung_zero_defaults",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
@@ -23,7 +22,7 @@ cc_defaults {
         "DisplayModes.cpp",
         "ReadingEnhancement.cpp",
         "SunlightEnhancementExynos.cpp",
-        "service.cpp",
+        "service_zero.cpp",
     ],
     shared_libs: [
         "libbase",
@@ -33,18 +32,41 @@ cc_defaults {
         "vendor.lineage.livedisplay@2.0",
         "vendor.lineage.livedisplay@2.1",
     ],
-}
-
-cc_binary {
-    name: "lineage.livedisplay@2.1-service.universal7420",
-    init_rc: ["lineage.livedisplay@2.1-service.universal7420.rc"],
-    defaults: ["livedisplay_samsung_universal7420_defaults"],
-    cflags: ["-DLIVES_IN_SYSTEM"],
-}
-
-cc_binary {
-    name: "vendor.lineage.livedisplay@2.1-service.universal7420",
-    init_rc: ["vendor.lineage.livedisplay@2.1-service.universal7420.rc"],
-    defaults: ["livedisplay_samsung_universal7420_defaults"],
     vendor: true,
+}
+
+cc_defaults {
+    name: "livedisplay_samsung_noble_defaults",
+    defaults: ["hidl_defaults"],
+    relative_install_path: "hw",
+    srcs: [
+        "DisplayColorCalibrationExynos.cpp",
+        "DisplayModes.cpp",
+        "ReadingEnhancement.cpp",
+        "SunlightEnhancementExynos.cpp",
+        "service_noble.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libhidlbase",
+        "libutils",
+        "vendor.lineage.livedisplay@2.0",
+        "vendor.lineage.livedisplay@2.1",
+    ],
+    vendor: true,
+}
+
+cc_binary {
+    name: "vendor.lineage.livedisplay@2.1-service.zero",
+    init_rc: ["vendor.lineage.livedisplay@2.1-service.zero.rc"],
+    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.zero.xml"],
+    defaults: ["livedisplay_samsung_zero_defaults"],
+}
+
+cc_binary {
+    name: "vendor.lineage.livedisplay@2.1-service.noble",
+    init_rc: ["vendor.lineage.livedisplay@2.1-service.noble.rc"],
+    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.noble.xml"],
+    defaults: ["livedisplay_samsung_noble_defaults"],
 }

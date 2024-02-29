@@ -208,10 +208,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	vendor.lineage.health-service.default
 
-# Livedisplay
-PRODUCT_PACKAGES += \
-	vendor.lineage.livedisplay@2.1-service.universal7420
-
 # Memory
 PRODUCT_PACKAGES += \
 	android.hardware.memtrack@1.0-impl \
