@@ -1,0 +1,25 @@
+# lhd.te
+
+allow lhd {
+    efs_file
+    sec_efs_file
+}:dir search;
+
+allow lhd {
+    sysfs_lhd
+    sysfs_sec_sensorhub
+}:dir search;
+
+allow lhd {
+    sysfs_lhd
+    sysfs_sec_sensorhub
+}:file rw_file_perms;
+
+allow lhd sysfs_sec_gps:lnk_file r_file_perms;
+allow lhd gps_data_file:fifo_file { open read write };
+allow lhd gps_data_file:file { lock open write };
+allow lhd sysfs:file { getattr open write };
+allow lhd gps_data_file:dir search;
+allow lhd netd:unix_stream_socket connectto;
+
+dontaudit lhd system_data_file:dir search;

@@ -1,0 +1,10 @@
+# cbd.te
+
+allow cbd sysfs_socinfo:file r_file_perms;
+allow cbd proc_net:file r_file_perms;
+allow cbd radio_prop:property_service set;
+allow cbd sysfs_modem:dir { open read search };
+allow cbd sysfs_modem:file { open read };
+
+# /dev/mipi-lli/lli_control
+allow cbd sysfs_mipi:file rw_file_perms;

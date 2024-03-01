@@ -1,0 +1,8 @@
+# ueventd.te
+
+allow ueventd emmcblk_device:blk_file { create getattr setattr };
+
+allow ueventd self:capability sys_nice;
+
+# Allow access to /proc/device-tree nodes
+r_dir_file(ueventd, proc_dt_firmware)

@@ -1,0 +1,220 @@
+####################################
+# Daemons
+#
+
+# /(vendor|system/vendor)/bin/sensorhubservice  u:object_r:sensorhubservice_exec:s0
+/(vendor|system/vendor)/bin/gpsd              u:object_r:gpsd_exec:s0
+/(vendor|system/vendor)/bin/lhd               u:object_r:lhd_exec:s0
+/(vendor|system/vendor)/bin/macloader         u:object_r:macloader_exec:s0
+/(vendor|system/vendor)/bin/wifiloader        u:object_r:wifiloader_exec:s0
+/(vendor|system/vendor)/bin/modemloader       u:object_r:modemloader_exec:s0
+
+# files in /system
+/system/bin/lpm                               u:object_r:charger_exec:s0
+/system/bin/move_widevine_data\.sh            u:object_r:move-widevine-data-sh_exec:s0
+
+####################################
+# Data Files
+
+# Biometrics
+/data/biometrics(/.*)?            u:object_r:fingerprintd_data_file:s0
+
+# Camera
+/data/vendor/camera(/.*)?         u:object_r:camera_vendor_data_file:s0
+
+# CAS
+/data/\.cas(/.*)?                 u:object_r:cas_data_file:s0
+
+# DRM
+/data/vendor/mediadrm(/.*)?       u:object_r:mediadrm_vendor_data_file:s0
+
+# GPS
+/data/system/gps(/.*)?            u:object_r:gps_data_file:s0
+
+# NFC
+/data/nfc(/.*)?                   u:object_r:nfc_data_file:s0
+/data/vendor/nfc(/.*)?            u:object_r:nfc_vendor_data_file:s0
+
+# Wi-fi
+/data/\.cid\.info                  u:object_r:wifi_data_file:s0
+/data/misc/conn/\.wifiver\.info    u:object_r:wifi_data_file:s0
+
+##########################
+# Devices
+#
+/dev/block/zram0             u:object_r:swap_block_device:s0
+
+/dev/m2m1shot_scaler[0-9]*   u:object_r:video_device:s0
+/dev/mali[0-9]*              u:object_r:gpu_device:s0
+/dev/media[0-3]*             u:object_r:camera_device:s0
+/dev/mtp_usb*                u:object_r:mtp_device:s0
+/dev/s5p-smem                u:object_r:secmem_device:s0
+/dev/rfkill                  u:object_r:rfkill_device:s0
+/dev/sec-nfc                 u:object_r:nfc_device:s0
+/dev/seiren                  u:object_r:seiren_device:s0
+/dev/stune(/.*)?             u:object_r:cgroup:s0
+/dev/v4l-subdev[0-9]*        u:object_r:video_device:s0
+/dev/vfsspi                  u:object_r:fingerprint_device:s0
+/dev/__cbd_msg_              u:object_r:mif_device:s0
+/dev/umts.*                  u:object_r:mif_device:s0
+/dev/ehci_power              u:object_r:mif_device:s0
+/dev/mipi-lli/lli_control    u:object_r:mif_device:s0
+
+####################################
+# Efs Files
+
+/cpefs(/.*)?                  u:object_r:sec_efs_file:s0
+
+/efs/cpdebug(.*)              u:object_r:cpdebug_efs_file:s0
+/efs/FactoryApp(/.*)?         u:object_r:app_efs_file:s0
+/efs/FactoryApp/baro_delta    u:object_r:baro_delta_factoryapp_efs_file:s0
+/efs/FactoryApp/factorymode   u:object_r:factorymode_factoryapp_efs_file:s0
+/efs/FactoryApp/fdata         u:object_r:radio_factoryapp_efs_file:s0
+/efs/FactoryApp/gyro_cal_data u:object_r:sensor_factoryapp_efs_file:s0
+/efs/FactoryApp/hist_nv       u:object_r:radio_factoryapp_efs_file:s0
+/efs/FactoryApp/prox_cal      u:object_r:sensor_factoryapp_efs_file:s0
+/efs/FactoryApp/test_nv       u:object_r:radio_factoryapp_efs_file:s0
+/efs/maxim(/.*)?              u:object_r:sec_efs_file:s0
+/efs/nv\.log                  u:object_r:bin_nv_data_efs_file:s0
+/efs/ota(/.*)?                u:object_r:ota_efs_file:s0
+/efs/recovery(/.*)?           u:object_r:sec_efs_file:s0
+/efs/sec_efs(/.*)?            u:object_r:sec_efs_file:s0
+/efs/SMS(/.*)?                u:object_r:sec_efs_file:s0
+/efs/ssm(.*)                  u:object_r:ssm_efs_file:s0
+/efs/TEE(/.*)?                u:object_r:gatekeeper_efs_file:s0
+/efs/wv\.keys                 u:object_r:cpk_efs_file:s0
+
+####################################
+# HIDL
+#
+
+/(vendor|system/vendor)/bin/hw/android\.hardware\.atrace@1\.0-service\.universal7420      u:object_r:hal_atrace_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@1\.0-service\.universal7420        u:object_r:hal_gnss_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.zero            u:object_r:hal_lineage_livedisplay_exynos_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.noble           u:object_r:hal_lineage_livedisplay_exynos_exec:s0
+
+####################################
+# Same-process HAL files and their dependencies
+#
+
+/(vendor|system/vendor)/lib(64)?/hw/android\.hardware\.renderscript@[0-9]\.[0-9]-impl\.so    u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/egl/libGLES_mali\.so       u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/vulkan\.[a-z0-9]*\.so      u:object_r:same_process_hal_file:s0
+
+####################################
+# Sysfs
+
+# Audio Codec
+/sys/devices/virtual/dsm/maxdsm_cal(/.*)?        u:object_r:sysfs_dsm:s0
+/sys/devices/virtual/dsm/max98506(/.*)?          u:object_r:sysfs_codec:s0
+
+# Block/Storage
+/sys/devices/[a-f0-9]+\.ufs/host0/power(/.*)?                                 u:object_r:sysfs_mmc:s0
+/sys/devices/[a-f0-9]+\.ufs/host0/target0:0:0/0:0:0:0/block/sda/queue(/.*)?   u:object_r:sysfs_io_sched_tuneable:s0
+/sys/devices/[0-9]+\.dwmmc[0-9]+/mmc_host/mmc[0-9]+/mmc[0-9]+:[a-z]+/block/mmcblk[0-9]+/queue(/.*)? u:object_r:sysfs_io_sched_tuneable:s0
+
+# Bluetooth
+/sys/devices/bluetooth.[0-9]+\/rfkill/rfkill0/state  u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/bluetooth.[0-9]+\/rfkill/rfkill0/type   u:object_r:sysfs_bluetooth_writable:s0
+/sys/class/rfkill/rfkill0/state              u:object_r:sysfs_bluetooth_writable:s0
+/sys/class/rfkill/rfkill0/type               u:object_r:sysfs_bluetooth_writable:s0
+
+# Camera
+/sys/class/camera(/.*)?                      u:object_r:sysfs_camera:s0
+
+# Cbd
+/sys/firmware/devicetree/base/model_info-system_rev    u:object_r:sysfs_socinfo:s0
+/sys/devices/10f24000.mipi-lli/lli_control             u:object_r:sysfs_mipi:s0
+
+# DevFreq
+/sys/devices/platform/exynos7-devfreq-int/devfreq/exynos7-devfreq-int(/.*)?     u:object_r:sysfs_devfreq:s0
+/sys/devices/platform/exynos7-devfreq-disp/devfreq/exynos7-devfreq-disp(/.*)?   u:object_r:sysfs_devfreq:s0
+/sys/devices/platform/exynos7-devfreq-mif/devfreq/exynos7-devfreq-mif(/.*)?     u:object_r:sysfs_devfreq:s0
+/sys/devices/platform/exynos7-devfreq-isp/devfreq/exynos7-devfreq-isp(/.*)?     u:object_r:sysfs_devfreq:s0
+
+# Fingerprint
+/sys/devices/virtual/fingerprint/fingerprint(/.*)?  u:object_r:sysfs_fingerprint:s0
+
+# GPS
+/sys/devices/soc0/machine                           u:object_r:sysfs_gps_writable:s0
+/sys/devices/soc0/revision                          u:object_r:sysfs_gps_writable:s0
+/sys/devices/139c0000.pinctrl/gpio/gpio137/value    u:object_r:sysfs_gps_writable:s0
+
+# Graphics/Panel
+/sys/devices/[0-9]+\.dsim/lcd/panel(/.*)?           u:object_r:sysfs_graphics:s0
+
+# Grip
+/sys/devices/virtual/input/input2(/.*)?             u:object_r:sysfs_grip:s0
+
+# GPU
+/sys/devices/[a-f0-9]+\.mali(/.*)?                  u:object_r:sysfs_mali:s0
+
+# HMT relay mode node
+/sys/devices/virtual/relay_on                       u:object_r:sysfs_hmt:s0
+
+# HRM
+/sys/devices/virtual/input/input4(/.*)?             u:object_r:sysfs_hrm:s0
+/sys/class/sensors/hrm_sensor/(/.*)?                u:object_r:sysfs_hrm:s0
+
+# IIO
+/sys/bus/iio/devices(/.*)?                                                            u:object_r:sysfs_iio:s0
+/sys/devices/[a-f0-9]+\.adc/iio:device[0-9](/.*)?                                     u:object_r:sysfs_iio:s0
+/sys/devices/[a-f0-9]+\.spi/spi_master/spi[0-9]+/spi[0-9]+\.0/iio:device[0-9]+(/.*)?  u:object_r:sysfs_spi_writeable:s0
+
+# Lights
+/sys/devices/[0-9]+\.dsim/backlight/panel(/.*)?                                 u:object_r:sysfs_backlight_writable:s0
+/sys/devices/[0-9]+\.hsi2c/i2c-[0-9]+/[0-9]+-[0-9]+/leds-max77833-rgb(/.*)?     u:object_r:sysfs_light:s0
+/sys/devices/[0-9]+\.hsi2c/i2c-[0-9]+/[0-9]+-[0-9]+/s2mpb02-led(/.*)?           u:object_r:sysfs_light:s0
+
+# mDNIe
+/sys/devices/[0-9]+\.dsim/lcd/panel/mdnie(/.*)                         u:object_r:sysfs_mdnie:s0 
+
+# MFC
+/sys/devices/[a-f0-9]+\.mfc0/video8(/.*)?                              u:object_r:sysfs_mfc:s0
+
+# MFD node
+/sys/module/sec_core/parameters(/.*)?                                  u:object_r:sysfs_sec_mfd:s0
+
+# MST node
+/sys/devices/virtual/mstldo(/.*)                                       u:object_r:sysfs_mst:s0
+
+# Power
+/sys/power/rtc_status                                                  u:object_r:sysfs_power:s0
+
+# Rild
+/sys/devices/virtual/misc/multipdp(/.*)                                u:object_r:sysfs_multipdp:s0
+
+# Rtc
+/sys/devices/[0-9]+\.hsi2c/i2c-[0-9]+/[0-9]+-[a-z0-9]+/s2m-rtc(/.*)    u:object_r:sysfs_rtc:s0
+
+# SEC
+/sys/devices/virtual/sec/sec_key(/.*)?            u:object_r:sysfs_sec_key:s0
+/sys/devices/virtual/sec/sec_touchkey(/.*)?       u:object_r:sysfs_sec_touchkey:s0
+/sys/devices/virtual/sec/tsp(/.*)?                u:object_r:sysfs_sec_tsp:s0
+/sys/devices/virtual/sec/ts(/.*)?                 u:object_r:sysfs_sec_ts:s0
+/sys/devices/virtual/sec/sec_barcode_emul(/.*)?   u:object_r:sysfs_sec_barcode_emul:s0
+/sys/devices/virtual/sec/sensorhub(/.*)?          u:object_r:sysfs_sec_sensorhub:s0
+/sys/devices/virtual/sec/led(/.*)?                u:object_r:sysfs_sec_led:s0
+/sys/devices/virtual/sec/gps(/.*)?                u:object_r:sysfs_sec_gps:s0
+/sys/devices/virtual/sec/wlan(/.*)?               u:object_r:sysfs_sec_wlan:s0 
+/sys/devices/virtual/sec/bsp(/.*)?                u:object_r:sysfs_sec_bsp:s0 
+/sys/devices/virtual/sec/motor(/.*)?              u:object_r:sysfs_sec_motor:s0 
+/sys/devices/virtual/sec/sdcard(/.*)?             u:object_r:sysfs_sec_sdcard:s0 
+/sys/devices/virtual/sec/sddata(/.*)?             u:object_r:sysfs_sec_sddata:s0 
+/sys/devices/virtual/sec/sdinfo(/.*)?             u:object_r:sysfs_sec_sdinfo:s0 
+/sys/devices/virtual/sec/sec_heavy_cpu(/.*)?      u:object_r:sysfs_sec_sec_heavy_cpu:s0 
+/sys/devices/virtual/sec/sec-pa-thermistor(/.*)?  u:object_r:sysfs_sec_pa_thermistor:s0 
+/sys/devices/virtual/sec/sec-ap-thermistor(/.*)?  u:object_r:sysfs_sec_ap_thermistor:s0 
+
+# SecureOS node
+/sys/devices/system/sec_os_ctrl(/.*)?             u:object_r:sysfs_sec_secureos:s0
+
+# SSP
+/sys/devices/virtual/sensors/ssp_sensor(/.*)?     u:object_r:sysfs_ssp:s0
+
+# Thermal
+/sys/devices/virtual/thermal(/.*)?                u:object_r:sysfs_thermal:s0
+
+# USB 
+/sys/devices/virtual/host_notify/usb_otg(/.*)?    u:object_r:sysfs_usb_otg:s0
+/sys/devices/virtual/usb_notify/usb_control(/.*)? u:object_r:sysfs_usb_otg:s0

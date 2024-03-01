@@ -1,0 +1,8 @@
+# hal_gatekeeper_default.te
+
+allow hal_gatekeeper_default efs_file:dir search;
+
+allow hal_gatekeeper_default gatekeeper_efs_file:dir search;
+allow hal_gatekeeper_default gatekeeper_efs_file:file rw_file_perms;
+
+allow hal_gatekeeper_default tee:unix_stream_socket connectto;

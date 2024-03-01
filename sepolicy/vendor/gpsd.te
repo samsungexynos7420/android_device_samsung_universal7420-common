@@ -1,0 +1,6 @@
+# gpsd.te
+allow gpsd gps_data_file:fifo_file { open read write };
+allow gpsd gps_data_file:file { lock open write };
+allow gpsd gps_data_file:dir search;
+
+dontaudit gpsd system_data_file:dir search;

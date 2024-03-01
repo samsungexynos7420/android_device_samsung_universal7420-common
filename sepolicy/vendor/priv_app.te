@@ -1,0 +1,3 @@
+# priv_app.te
+
+dontaudit priv_app sysfs_android_usb:file open;

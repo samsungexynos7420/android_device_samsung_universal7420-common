@@ -1,0 +1,11 @@
+# mediacodec.te
+
+allow mediacodec debugfs_ion:dir search;
+
+allow mediacodec {
+    sysfs_camera
+    sysfs_mfc
+    sysfs_v4l
+}:file r_file_perms;
+
+get_prop(mediacodec vendor_omx_prop)
