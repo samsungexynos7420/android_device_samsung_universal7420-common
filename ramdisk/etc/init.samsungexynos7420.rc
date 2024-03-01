@@ -46,7 +46,7 @@ on init
     write /proc/sys/vm/page-cluster 0
     
     # HACK: Appears to fix issues with laggy UI (mm issue?)
-    write /proc/sys/vm/min_free_kbytes 131072
+    write /proc/sys/vm/min_free_kbytes 210000
     
     # Set HW revision (should be ro.revision on note fe)
     setprop ro.boot.hardware.revision ${ro.boot.hw_rev}
