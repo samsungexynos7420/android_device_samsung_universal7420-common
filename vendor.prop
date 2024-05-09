@@ -42,6 +42,9 @@ telephony.lteOnCdmaDevice=0
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
 
+# Power HAL
+vendor.powerhal.disp.idle_support=false
+
 # SLSI
 debug.slsi_platform=1
 

@@ -293,6 +293,9 @@ on boot
 # Permissions for usb_lock
     chown system radio /sys/class/android_usb/android0/usb_lock
 
+# enable power hal 
+    setprop vendor.powerhal.init 1
+
     # FM Radio
     chmod 0640 /dev/fmradio
     chown system system /dev/fmradio
