@@ -23,7 +23,7 @@ persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
 # OMX
-debug.stagefright.ccodec=0
+debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 debug.stagefright.omx_default_rank.sw-audio=1
 
