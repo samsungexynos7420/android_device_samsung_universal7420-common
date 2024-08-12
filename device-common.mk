@@ -20,7 +20,7 @@ COMMON_PATH := device/samsung/universal7420-common
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-	device/samsung/universal7420-common/overlay/hardware/samsung/AdvancedDisplay    
+	device/samsung/universal7420-common/overlay/hardware/samsung/AdvancedDisplay
 
 # Adb
 PRODUCT_PRODUCT_PROPERTIES := \
@@ -229,7 +229,7 @@ PRODUCT_PACKAGES += \
 	com.android.nfc_extras \
 	android.hardware.nfc@1.0-impl \
 	android.hardware.nfc@1.0-service
-	
+
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/nfc/libnfc-sec-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-hal.conf \
 	$(COMMON_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
@@ -291,7 +291,7 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
 	android.hardware.power-service.samsung-libperfmgr
-	
+
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
@@ -404,7 +404,7 @@ PRODUCT_PACKAGES += \
 	wpa_supplicant.conf \
 	android.hardware.wifi@1.0-impl \
 	android.hardware.wifi@1.0-service.legacy
-	
+
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/wifi/cred.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/cred.conf \
 	$(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \

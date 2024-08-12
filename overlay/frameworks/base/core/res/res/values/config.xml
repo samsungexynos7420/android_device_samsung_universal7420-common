@@ -733,7 +733,7 @@
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
-	
+
     <!-- Whether UI for multi user should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
 
@@ -770,7 +770,7 @@
          * The device must be provisioned with HDCP keys (for protected content).
     -->
     <bool name="config_enableWifiDisplay">true</bool>
-	
+
     <!-- Our gralloc has support for protected buffers -->
     <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
     
@@ -873,7 +873,7 @@ Add a comment to this line
     <string-array name="config_deviceDisabledComponents" translatable="false">
         <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
         <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
-	</string-array>
+    </string-array>
     
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
     in hardware. -->
@@ -881,8 +881,8 @@ Add a comment to this line
     
     <!-- The device supports freeform window management -->
     <bool name="config_freeformWindowManagement">true</bool>
-	
-	<!-- Enables or disables haptic effect when the text insertion/selection handle is moved
+
+    <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
          manually by the user. Off by default, since the expected haptic feedback may not be
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
@@ -920,22 +920,22 @@ Add a comment to this line
          Choices are: FULL, NORMAL, OFF. -->
     <string name="db_wal_sync_mode" translatable="false">NORMAL</string>
 
-	 <!-- Whether device supports double tap to wake -->
+    <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
-	
-	<!-- Smart charging -->
+
+    <!-- Smart charging -->
     <bool name="config_smartChargingAvailable">true</bool>
     <integer name="config_smartChargingBatteryLevel">80</integer>
     <integer name="config_smartChargingBatteryResumeLevel">60</integer>
     <string name="config_smartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/charging_enabled</string>
     <string name="config_smartChargingSuspendValue" translatable="false">0</string>
     <string name="config_smartChargingResumeValue" translatable="false">1</string>
-	
-	 <!-- Configure wifi tcp buffersizes in the form:
+
+    <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,2097152,4194304,262144,524288,1048576</string>
-	
-	<!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
+
+    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
 
     <!-- Wifi driver supports batched scan -->
@@ -946,8 +946,8 @@ Add a comment to this line
 
     <!-- True if the firmware supports p2p MAC randomization -->
     <bool name="config_wifi_p2p_mac_randomization_supported">false</bool>
-	
-	<!--  Define Google play service package for FRP-->
+
+    <!--  Define Google play service package for FRP-->
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 	
 </resources>
