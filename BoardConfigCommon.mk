@@ -51,8 +51,8 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-# Display
-TARGET_SCREEN_DENSITY := 560
+# Compatibility Matrix
+DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
@@ -61,6 +61,9 @@ ifeq ($(HOST_OS),linux)
     WITH_DEXPREOPT := true
   endif
 endif
+
+# Display
+TARGET_SCREEN_DENSITY := 560
 
 # Filesystem
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -78,10 +81,7 @@ PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 BOARD_KERNEL_BASE := 0x10000000
 # BOARD_KERNEL_CMDLINE := commandline from boot.img by bootloader
 BOARD_KERNEL_PAGESIZE := 2048
@@ -94,16 +94,12 @@ BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_RAMDISK_USE_XZ := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
-BOARD_RAMDISK_USE_XZ := true    
-
-# MEMFD
-TARGET_HAS_MEMFD_BACKPORT := true
 
 # Manifest
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
-# Compatibility Matrix
-DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
+# Memfd
+TARGET_HAS_MEMFD_BACKPORT := true
 
 # LED
 RED_LED_PATH := "/sys/class/leds/led_r/brightness"
@@ -166,11 +162,11 @@ TARGET_LD_SHIM_LIBS += \
 # System prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 
-# Vendor separation
-TARGET_COPY_OUT_VENDOR := system/vendor
-
 # Vendor security patch level
 VENDOR_SECURITY_PATCH := 2018-06-01
+
+# Vendor separation
+TARGET_COPY_OUT_VENDOR := system/vendor
 
 # WFD
 BOARD_USES_WFD := true
