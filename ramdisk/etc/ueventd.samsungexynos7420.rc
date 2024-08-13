@@ -7,9 +7,6 @@
 /dev/video2               0660   system     camera
 /dev/video3               0660   system     camera
 /dev/video20              0660   system     system
-/dev/fimg2d               0666   system     graphics
-/dev/i2c-2                0660   system     system
-/dev/HPD                  0660   system     system
 
 # gscalers
 /dev/video23              0660   media      graphics
@@ -17,12 +14,21 @@
 
 /dev/video24              0660   media      graphics
 /dev/video27              0660   media      graphics
+/dev/video29              0660   media      graphics
+/dev/video30              0660   media      graphics
+# video31 is used for DECON Ext WB
+/dev/video31              0660   media      graphics
 
-# scalers
+# mscalers
 /dev/video50              0660   media      graphics
 /dev/video51              0660   media      graphics
 /dev/m2m1shot_scaler0     0660   cameraserver     graphics
 /dev/m2m1shot_scaler1     0660   cameraserver     cameraserver
+
+/dev/video55              0666   system     graphics
+/dev/fimg2d               0666   system     graphics
+/dev/i2c-2                0660   system     system
+/dev/HPD                  0660   system     system
 
 /dev/v4l-subdev*          0660   system     camera
 /dev/media0               0660   system     camera
@@ -41,12 +47,13 @@
 /dev/CEC                  0660   system     system
 
 # JPEG
-/dev/m2m1shot_jpeg	      0660   cameraserver      media
+/dev/m2m1shot_jpeg        0660   cameraserver      media
+/dev/video12              0660   cameraserver      media
 /dev/video13              0660   cameraserver      media
 /dev/video14              0660   cameraserver      media
 
 # mfc
-/dev/video6               0660   mediacodec     mediadrm
+/dev/video6               0660   mediacodec      mediadrm
 /dev/video7               0660   media      mediadrm
 /dev/video8               0660   media      mediadrm
 /dev/video9               0660   media      mediadrm
@@ -56,6 +63,8 @@
 /dev/video102             0660   cameraserver      cameraserver
 /dev/video103             0660   cameraserver      cameraserver
 /dev/video104             0660   cameraserver      cameraserver
+/dev/video105             0660   cameraserver      cameraserver
+/dev/video106             0660   cameraserver      cameraserver
 /dev/video109             0660   cameraserver      cameraserver
 /dev/video110             0660   cameraserver      cameraserver
 /dev/video111             0660   cameraserver      cameraserver
@@ -73,6 +82,31 @@
 /dev/video151             0660   cameraserver      cameraserver
 /dev/video152             0660   cameraserver      cameraserver
 /dev/video160             0660   cameraserver      cameraserver
+/dev/video161             0660   cameraserver      cameraserver
+/dev/video170             0660   cameraserver      cameraserver
+/dev/video171             0660   cameraserver      cameraserver
+/dev/video172             0660   cameraserver      cameraserver
+/dev/video173             0660   cameraserver      cameraserver
+/dev/video174             0660   cameraserver      cameraserver
+/dev/video180             0660   cameraserver      cameraserver
+/dev/video210             0660   cameraserver      cameraserver
+/dev/video211             0660   cameraserver      cameraserver
+/dev/video212             0660   cameraserver      cameraserver
+/dev/video213             0660   cameraserver      cameraserver
+/dev/video214             0660   cameraserver      cameraserver
+/dev/video215             0660   cameraserver      cameraserver
+/dev/video216             0660   cameraserver      cameraserver
+/dev/video217             0660   cameraserver      cameraserver
+/dev/video218             0660   cameraserver      cameraserver
+/dev/video219             0660   cameraserver      cameraserver
+/dev/video220             0660   cameraserver      cameraserver
+/dev/video221             0660   cameraserver      cameraserver
+/dev/video222             0660   cameraserver      cameraserver
+/dev/video223             0660   cameraserver      cameraserver
+/dev/video224             0660   cameraserver      cameraserver
+/dev/video225             0660   cameraserver      cameraserver
+/dev/video227             0660   cameraserver      cameraserver
+/dev/video231             0660   cameraserver      cameraserver
 /dev/media2               0660   media      media
 
 # MobiCore
@@ -129,8 +163,8 @@
 /dev/esoc-*             0660   system    radio
 
 # sensor sysfs properties
-/sys/devices/virtual/input/input*	poll_delay	0660	system	radio
-/sys/devices/virtual/input/input*	enable		0660	system	radio
+/sys/devices/virtual/input/input*    poll_delay    0660    system    radio
+/sys/devices/virtual/input/input*    enable        0660    system    radio
 /dev/input/event*	  0660   system		input
 
 # Sensorhub IIO
@@ -150,6 +184,8 @@
 /dev/bbd_sio              0660   system     system
 /dev/bbd_patch            0660   system     system
 /dev/ttyBCM*              0660   system     system
+
+/dev/rtc0                 0660   system     system
 
 # Reactivation lock
 /dev/block/platform/15570000.ufs/by-name/STEADY    0660    system    system
