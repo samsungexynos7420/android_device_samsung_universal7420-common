@@ -1,6 +1,6 @@
 # mediaserver.te
 
-# /dev/seiren, /dev/s5p-smem, /dev/m2m1shot_scaler
+# /dev/seiren, /dev/s5p-smem, /dev/m2m1shot_scaler, /dev/m2m1shot_jpeg
 allow mediaserver {
     camera_device
     seiren_device

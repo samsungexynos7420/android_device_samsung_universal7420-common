@@ -6,6 +6,7 @@ persist.vendor.camera.           u:object_r:vendor_camera_prop:s0
 vendor.hal.camera.               u:object_r:vendor_camera_prop:s0
 
 # HWC
+ro.vendor.winupdate              u:object_r:vendor_hwc_prop:s0
 vendor.ddk.set.afbc              u:object_r:vendor_hwc_prop:s0
 
 # modemloader
@@ -18,6 +19,10 @@ ro.modemloader.done              u:object_r:modemloader_prop:s0
 persist.nfc.log.index            u:object_r:vendor_nfc_prop:s0
 vendor.nfc.fw.                   u:object_r:vendor_nfc_prop:s0 
 persist.vendor.nfc.log.index     u:object_r:vendor_nfc_prop:s0
+
+# OMX
+ro.vendor.cscsupported           u:object_r:vendor_omx_prop:s0
+ro.vendor.debug.omx.             u:object_r:vendor_omx_prop:s0
 
 # Radio
 persist.ril.interfaceconf.failed u:object_r:radio_prop:s0

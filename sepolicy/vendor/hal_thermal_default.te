@@ -1,4 +1,4 @@
 # hal_thermal_default.te
-#audit2allow
+
 allow hal_thermal_default sysfs_thermal:file r_file_perms;
 

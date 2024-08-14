@@ -12,6 +12,7 @@ allow kernel {
     efs_file 
     sensor_efs_file
     wifi_efs_file
+    sysfs_battery
 }:dir r_dir_perms;
 
 allow kernel {
@@ -20,6 +21,7 @@ allow kernel {
     efs_file
     sensor_efs_file
     sensor_factoryapp_efs_file
+    sysfs_batteryinfo
 }:file rw_file_perms;
 
 # /data/misc/conn/.wifiver.info
@@ -31,6 +33,7 @@ allow kernel sysfs_devices_system_cpu:file setattr;
 allow kernel {
     sysfs_sec_key
     sysfs_ssp
+    sysfs_batteryinfo
 }:dir search;
 
 allow kernel {
@@ -43,9 +46,6 @@ allow kernel tmpfs:dir search;
 
 allow kernel kernel:capability chown;
 allow kernel self:capability { chown mknod sys_module};
-allow kernel sysfs_battery:dir search;
 allow kernel self:capability { dac_override dac_read_search };
 allow kernel self:system module_request;
-allow kernel sysfs_batteryinfo:dir search;
-allow kernel sysfs_batteryinfo:file read;
-allow kernel sysfs_batteryinfo:file open;
+

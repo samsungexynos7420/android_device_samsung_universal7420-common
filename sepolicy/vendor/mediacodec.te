@@ -14,3 +14,4 @@ allow mediacodec sysfs:file read;
 allow mediacodec sysfs_v4l:dir search;
 allow mediacodec hal_power_hwservice:hwservice_manager find;
 
+get_prop(mediacodec vendor_omx_prop)
