@@ -362,6 +362,10 @@ PRODUCT_PACKAGES += \
 	android.hardware.sensors@1.0-impl.samsung:64 \
 	android.hardware.sensors@1.0-service
 
+# Sensor shim
+PRODUCT_PACKAGES += \
+	sensor_shim
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
 	$(COMMON_PATH) \
