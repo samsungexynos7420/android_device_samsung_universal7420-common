@@ -40,7 +40,7 @@ debug.sf.enable_transaction_tracing=false
 ro.surface_flinger.enable_frame_rate_override=false
 
 # Keystore
-ro.hardware.keystore=mdfpp
+# ro.hardware.keystore=mdfpp
 
 # Ril
 ro.debug_level=0x494d
