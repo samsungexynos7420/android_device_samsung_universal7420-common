@@ -17,7 +17,6 @@
 COMMON_PATH := device/samsung/universal7420-common
 
 BUILD_BROKEN_DUP_RULES := true
-BUILD_TOP := $(shell pwd)
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
