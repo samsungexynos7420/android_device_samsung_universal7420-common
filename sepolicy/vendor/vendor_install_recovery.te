@@ -1,0 +1,4 @@
+# vendor_install_recovery.te
+
+allow vendor_install_recovery block_device:blk_file rw_file_perms;
+allow vendor_install_recovery block_device:file rw_file_perms;
