@@ -118,6 +118,7 @@ lib64/libwrappergps.so:vendor/lib64/libwrappergps.so
 bin/gpsd:vendor/bin/hw/gpsd
 bin/lhd:vendor/bin/hw/lhd
 lib64/hw/gps.default.so:vendor/lib64/hw/gps.universal7420.so
+lib64/hw/flp.default.so:vendor/lib64/hw/flp.default.so
 
 # RIL - secnativefeature
 lib/libsecnativefeature.so:vendor/lib/libsecnativefeature.so
