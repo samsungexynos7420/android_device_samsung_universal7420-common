@@ -34,12 +34,22 @@ allow init hidl_base_hwservice:hwservice_manager add;
 
 unix_socket_connect(init, property, rild)
 
-#audit2allow
+# GPS
 allow init gps_data_file:fifo_file write;
 allow init hal_gnss_hwservice:hwservice_manager { add find };
+
+# Proc
+allow init proc_simslot_count:file rw_file_perms;
+allow init proc_reset_reason:file { rw_file_perms setattr };
+allow init proc_vm:file rw_file_perms;
+allow init proc_sec:file { rw_file_perms setattr };
+
+# Allow access to /proc/device-tree nodes
+r_dir_file(init, proc_dt_firmware)
+
+#audit2allow
 allow init hwservicemanager:binder { call transfer };
 allow init kernel:system module_request;
-allow init proc_simslot_count:file { getattr open read };
 allow init sysfs_batteryinfo:file setattr;
 allow init sysfs_wifi_writable:file { open write };
 allow init system_server:binder { call transfer };
