@@ -119,6 +119,7 @@ genfscon sysfs /devices/13650000.hsi2c/i2c-1/1-0066/max77843-fuelgauge       u:o
 genfscon sysfs /devices/13690000.hsi2c/i2c-7/7-0061/power_supply    u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/13670000.hsi2c/i2c-5/5-006c/power_supply    u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/13670000.hsi2c/i2c-4/4-006c/power_supply    u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/14e30000.hsi2c/i2c-8/8-0061/power_supply    u:object_r:sysfs_batteryinfo:s0
 
 genfscon sysfs /kernel/gpu                                          u:object_r:sysfs_power_writable:s0
 
