@@ -45,9 +45,9 @@ genfscon sysfs /devices/virtual/audio/earjack       u:object_r:sysfs_jack:s0
 genfscon sysfs /devices/virtual/audio/codec         u:object_r:sysfs_codec:s0
 
 # Camera
-genfscon sysfs /devices/virtual/camera              u:object_r:sysfs_camera:s0
-genfscon sysfs /devices/152e0000.mfc0/video6/name   u:object_r:sysfs_camera:s0
-genfscon sysfs /devices/152e0000.mfc0/video7/name   u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/virtual/camera                          u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/152e0000.mfc0/video4linux/video6/name   u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/152e0000.mfc0/video4linux/video7/name   u:object_r:sysfs_camera:s0
 
 # CPU/Scheduler devices
 genfscon sysfs /power/cpufreq_table                                 u:object_r:sysfs_devices_system_cpu:s0
