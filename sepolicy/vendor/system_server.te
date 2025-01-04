@@ -12,6 +12,7 @@ allow system_server sensor_device:chr_file rw_file_perms;
 allow system_server {
     app_efs_file
     efs_file
+    mobicore_data_file
     wifi_efs_file
 }:dir r_dir_perms;
 
@@ -19,6 +20,7 @@ allow system_server {
     app_efs_file
     baro_delta_factoryapp_efs_file
     efs_file
+    mobicore_data_file
     sensor_efs_file
     sensor_factoryapp_efs_file
     wifi_efs_file
