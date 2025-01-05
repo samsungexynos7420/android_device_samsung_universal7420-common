@@ -67,25 +67,10 @@
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
 
-    <!-- Indicate whether the lid state impacts the accessibility of
-         the physical keyboard.  0 means it doesn't, 1 means it is accessible
-         when the lid is open, 2 means it is accessible when the lid is
-         closed.  The default is 0. -->
-    <integer name="config_lidKeyboardAccessibility">1</integer>
-
-    <!-- Indicate whether the lid state impacts the accessibility of
-         the navigation buttons.  0 means it doesn't, 1 means it is accessible
-         when the lid is open, 2 means it is accessible when the lid is
-         closed.  The default is 0. -->
-    <integer name="config_lidNavigationAccessibility">1</integer>
-
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
          The default is false. -->
     <bool name="config_lidControlsSleep">true</bool>
-
-    <!-- Indicate whether the SD card is accessible without removing the battery. -->
-    <bool name="config_batterySdCardAccessibility">true</bool>
 
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
     <integer name="config_shutdownBatteryTemperature">600</integer>
