@@ -1,5 +1,8 @@
 # tee.te
-allow tee system_data_file:dir rw_dir_perms;
+
+# /system/app/mcRegistry/
+r_dir_file(tee, mobicore_data_file)
+
 allow tee apk_data_file:dir rw_dir_perms;
-allow tee system_data_file:file rw_file_perms;
+
 
