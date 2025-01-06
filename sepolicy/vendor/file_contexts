@@ -128,6 +128,9 @@
 /sys/devices/virtual/dsm/maxdsm_cal(/.*)?        u:object_r:sysfs_dsm:s0
 /sys/devices/virtual/dsm/max98505(/.*)?          u:object_r:sysfs_codec:s0
 
+# Audio Earsmart IC
+/sys/class/earsmart(/.*)?                        u:object_r:sysfs_earsmart:s0
+
 # Block/Storage
 /sys/devices/[a-f0-9]+\.ufs/host0/power(/.*)?                                 u:object_r:sysfs_mmc:s0
 /sys/devices/[a-f0-9]+\.ufs/host0/target0:0:0/0:0:0:0/block/sda/queue(/.*)?   u:object_r:sysfs_io_sched_tuneable:s0

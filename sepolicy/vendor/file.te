@@ -82,6 +82,7 @@ type sysfs_v4l, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_vmscan, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_usb_otg, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_usb_supply, sysfs_type, fs_type, mlstrustedobject;
+type sysfs_earsmart, fs_type, sysfs_type, mlstrustedobject;
 
 # socket types
 type gps_socket, file_type;
