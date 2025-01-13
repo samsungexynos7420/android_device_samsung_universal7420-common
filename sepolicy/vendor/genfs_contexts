@@ -139,7 +139,8 @@ genfscon sysfs /devices/15570000.ufs/host0    u:object_r:sysfs_scsi_host:s0
 
 # Touchkey
 genfscon sysfs /devices/14e70000.hsi2c/i2c-3/3-0020/input           u:object_r:sysfs_sec_touchkey:s0
-genfscon sysfs /devices/i2c.31/i2c-9/9-0020/input        u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c.31/i2c-9/9-0020/input         u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c.31/i2c-10/10-0010/input        u:object_r:sysfs_sec_touchkey:s0
 genfscon sysfs /devices/virtual/sec/sec_touchkey      u:object_r:sysfs_sec_touchkey:s0
 
 # Touchscreen
