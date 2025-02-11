@@ -8,3 +8,4 @@ r_dir_file(audioserver, efs_file);
 r_dir_file(audioserver, sec_efs_file);
 
 allow audioserver audio_service:service_manager find;
+allow audioserver bootanim:binder call;
