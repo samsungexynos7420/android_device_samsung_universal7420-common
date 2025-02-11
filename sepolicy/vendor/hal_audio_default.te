@@ -3,11 +3,15 @@
 allow hal_audio_default {
     efs_file
     sec_efs_file
+    sysfs_earsmart
 }:dir search;
 
 allow hal_audio_default sec_efs_file:file r_file_perms;
 
 allow hal_audio_default rild:unix_stream_socket connectto;
+
+allow hal_audio_default sysfs_earsmart:file rw_file_perms;
+allow hal_audio_default sysfs_earsmart:lnk_file read;
 
 # Allow hal to take wakelock
 wakelock_use(hal_audio_default)

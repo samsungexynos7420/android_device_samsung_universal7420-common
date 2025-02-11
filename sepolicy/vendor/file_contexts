@@ -130,6 +130,7 @@
 
 # Audio Earsmart IC
 /sys/class/earsmart(/.*)?                        u:object_r:sysfs_earsmart:s0
+/sys/devices/virtual/earsmart(/.*)?              u:object_r:sysfs_earsmart:s0
 
 # Block/Storage
 /sys/devices/[a-f0-9]+\.ufs/host0/power(/.*)?                                 u:object_r:sysfs_mmc:s0
