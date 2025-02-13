@@ -33,6 +33,17 @@ enum model_variants {
 	SPRINT = 4      // P/R4/0/8/9
 };
 
+enum models {
+	UNKNOWN = -1,
+	FLAT = 0,
+	EDGE = 1,
+	EDGEPLUS = 2,
+	ACTIVE = 3,
+	NOTE5 = 5,
+	W2016 = 6,
+	A8 = 8
+};
+
 static enum model_variants __model_variants = UNDEFINED;
 
 static enum model_variants model_variants_read() {
@@ -81,7 +92,8 @@ exit:
 }
 
 static bool hasEarsmart() {
-	switch (__model_variants) {
+	enum model_variants temp = model_variants_read();
+	switch (temp) {
 		case TMOBILE:
 		case CANADA:
 		case SPRINT:
