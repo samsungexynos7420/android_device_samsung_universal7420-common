@@ -164,8 +164,14 @@ PRODUCT_PACKAGES += \
 # GPS and Sensor cfg
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.conf \
-	$(COMMON_PATH)/configs/sensors/gps.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.xml \
+	$(COMMON_PATH)/configs/sensors/gps.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.xml
+ifneq ($(filter noblelte zenlte,$(TARGET_DEVICE)),)
+PRODUCT_COPY_FILES += \
+	$(COMMON_PATH)/configs/sensors/lhd.conf_n5:$(TARGET_COPY_OUT_SYSTEM)/etc/lhd.conf
+else
+PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/sensors/lhd.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/lhd.conf
+endif
 
 # Graphics
 PRODUCT_PACKAGES += \
