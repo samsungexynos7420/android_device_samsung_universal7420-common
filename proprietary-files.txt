@@ -3,7 +3,6 @@
 # Audio
 etc/firmware/audience-es705-fw.bin
 etc/firmware/clearwater-dsp3-tx-nb.bin
-etc/firmware/clearwater-dsp3-tx-swb-interview.bin
 etc/firmware/clearwater-dsp3-tx-wb.bin
 etc/firmware/clearwater-dsp4-rx-anc-nb.bin
 etc/firmware/clearwater-dsp4-rx-anc-wb.bin
@@ -18,17 +17,6 @@ etc/firmware/clearwatera-dsp4-rx-anc-nb.wmfw
 etc/firmware/clearwatera-dsp4-rx-anc-wb.wmfw
 etc/firmware/clearwatera-dsp5-dsm.wmfw
 etc/firmware/clearwatera-dsp6-ez2-control.wmfw
-etc/firmware/clearwaterc-dsp1-trace.wmfw
-etc/firmware/clearwaterc-dsp2-tx-nb.wmfw
-etc/firmware/clearwaterc-dsp2-tx-swb.wmfw
-etc/firmware/clearwaterc-dsp2-tx-wb.wmfw
-etc/firmware/clearwaterc-dsp3-tx-nb.wmfw
-etc/firmware/clearwaterc-dsp3-tx-swb.wmfw
-etc/firmware/clearwaterc-dsp3-tx-wb.wmfw
-etc/firmware/clearwaterc-dsp4-rx-anc-nb.wmfw
-etc/firmware/clearwaterc-dsp4-rx-anc-wb.wmfw
-etc/firmware/clearwaterc-dsp5-dsm.wmfw
-etc/firmware/clearwaterc-dsp6-ez2-control.wmfw
 etc/firmware/florida-dsp1-edac.bin
 etc/firmware/florida-dsp1-edac.wmfw
 etc/firmware/florida-dsp2-tx-fb-meeting.bin
