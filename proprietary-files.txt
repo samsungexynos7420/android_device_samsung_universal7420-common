@@ -101,6 +101,10 @@ vendor/lib64/hw/nfc_nci.universal7420.so|347836411179d98a47c7de7bf9e92ac00c5a742
 etc/nfc/sec_s3fwrn5p_rfreg.bin
 vendor/firmware/nfc/sec_s3fwrn5p_firmware.bin
 
+# NFC for note 5
+etc/nfc/sec_s3fwrn5s_rfreg.bin
+vendor/firmware/nfc/sec_s3fwrn5s_firmware.bin
+
 # Sensors
 bin/gps.cer:vendor/bin/gps.cer
 lib/hw/sensorhubs.universal7420.so:vendor/lib/hw/sensorhubs.universal7420.so
