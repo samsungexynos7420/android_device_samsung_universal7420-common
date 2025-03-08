@@ -245,8 +245,15 @@ PRODUCT_PACKAGES += \
 	android.hardware.nfc@1.0-impl \
 	android.hardware.nfc@1.0-service
 
+# NFC config files
+ifneq ($(filter noblelte,$(TARGET_DEVICE)),)
 PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/configs/nfc/libnfc-sec-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-hal.conf \
+	$(COMMON_PATH)/configs/nfc/libnfc-sec-hal_n5.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-hal.conf 
+else
+PRODUCT_COPY_FILES += \
+	$(COMMON_PATH)/configs/nfc/libnfc-sec-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-hal.conf 
+endif
+PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
 	$(COMMON_PATH)/configs/nfc/nfcee_access.xml:$(TARGET_COPY_OUT_VENDOR)/etc/nfcee_access.xml
 
