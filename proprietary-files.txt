@@ -118,6 +118,9 @@ lib64/libsensorlistener.so:vendor/lib64/libsensorlistener.so
 lib/libwrappergps.so:vendor/lib/libwrappergps.so
 lib64/libwrappergps.so:vendor/lib64/libwrappergps.so
 
+# sensorhub patch - from note 5
+bin/bcm_sensorhub_a2.patch
+
 # GPS - Taken from G920FXXU6EVG1 - to fix GPS rollover bug
 bin/gpsd:vendor/bin/hw/gpsd
 bin/lhd:vendor/bin/hw/lhd
