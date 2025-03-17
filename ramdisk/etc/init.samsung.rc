@@ -195,6 +195,13 @@ on boot
 
     chmod 0660 /sys/class/sec_touchkey/input/enabled
     chown system system /sys/class/sec/sec_touchkey/input/enabled
+	
+	chmod 0660 /sys/class/sec_touchkey/touchkeys_enabled
+    chown system system /sys/class/sec/sec_touchkey/touchkeys_enabled
+	
+	chown system system /sys/class/sec/tsp/input/touchkeys_enabled
+    chmod 0660 /sys/class/sec/tsp/input/touchkeys_enabled
+	
     chmod 664 /sys/class/sec/sec_touchkey/input/enabled
     chown system radio /sys/class/sec/sec_touchkey/brightness
 

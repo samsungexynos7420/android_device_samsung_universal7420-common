@@ -610,6 +610,9 @@ on fs
 
     chmod 0660 /sys/class/sec_touchkey/input/enabled
     chown system system /sys/class/sec/sec_touchkey/input/enabled
+	chmod 0660 /sys/class/sec_touchkey/touchkeys_enabled
+    chown system system /sys/class/sec/sec_touchkey/touchkeys_enabled
+	
     chown system radio /sys/class/sec/sec_touchkey/brightness
 
     chmod 0660 /sys/class/sec/sec_epen/input/enabled
