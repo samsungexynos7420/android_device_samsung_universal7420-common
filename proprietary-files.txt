@@ -97,35 +97,31 @@ lib64/egl/libGLES_mali.so:vendor/lib64/egl/libGLES_mali.so
 vendor/lib/hw/nfc_nci.universal7420.so|c6b2292323b827f3261ba33956604b90de8a29cd
 vendor/lib64/hw/nfc_nci.universal7420.so|347836411179d98a47c7de7bf9e92ac00c5a742a
 
-# NFC
+# NFC for S6/S6e
 etc/nfc/sec_s3fwrn5p_rfreg.bin
 vendor/firmware/nfc/sec_s3fwrn5p_firmware.bin
 
-# NFC for note 5
+# NFC for Note 5 / S6 edge+
 etc/nfc/sec_s3fwrn5s_rfreg.bin
 vendor/firmware/nfc/sec_s3fwrn5s_firmware.bin
 
 # Sensors
-bin/gps.cer:vendor/bin/gps.cer
-lib/hw/sensorhubs.universal7420.so:vendor/lib/hw/sensorhubs.universal7420.so
-lib64/hw/sensorhubs.universal7420.so:vendor/lib64/hw/sensorhubs.universal7420.so
-lib/hw/sensors.universal7420.so:vendor/lib/hw/sensors.universal7420.so
-lib64/hw/sensors.universal7420.so:vendor/lib64/hw/sensors.universal7420.so
 lib/libfloatingfeature.so:vendor/lib/libfloatingfeature.so
 lib64/libfloatingfeature.so:vendor/lib64/libfloatingfeature.so
 lib/libsensorlistener.so:vendor/lib/libsensorlistener.so
 lib64/libsensorlistener.so:vendor/lib64/libsensorlistener.so
-lib/libwrappergps.so:vendor/lib/libwrappergps.so
-lib64/libwrappergps.so:vendor/lib64/libwrappergps.so
 
 # sensorhub patch - from note 5
 bin/bcm_sensorhub_a2.patch
 
 # GPS - Taken from G920FXXU6EVG1 - to fix GPS rollover bug
+bin/gps.cer:vendor/bin/gps.cer
 bin/gpsd:vendor/bin/hw/gpsd
 bin/lhd:vendor/bin/hw/lhd
 lib64/hw/gps.default.so:vendor/lib64/hw/gps.universal7420.so
 lib64/hw/flp.default.so:vendor/lib64/hw/flp.default.so
+lib/libwrappergps.so:vendor/lib/libwrappergps.so
+lib64/libwrappergps.so:vendor/lib64/libwrappergps.so
 
 # RIL - secnativefeature
 lib/libsecnativefeature.so:vendor/lib/libsecnativefeature.so
