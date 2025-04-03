@@ -73,9 +73,6 @@ vendor/firmware/mfc_fw.bin
 vendor/firmware/seiren_fw_dram.bin
 vendor/firmware/seiren_fw_sram.bin
 
-# Cpboot daemon
-bin/cbd:vendor/bin/cbd
-
 # Graphics
 lib/egl/libGLES_mali.so:vendor/lib/egl/libGLES_mali.so
 lib64/egl/libGLES_mali.so:vendor/lib64/egl/libGLES_mali.so

@@ -297,6 +297,7 @@ PRODUCT_COPY_FILES += \
 
 # Radio
 PRODUCT_PACKAGES += \
+	cbd \
 	android.hardware.radio@1.2 \
 	android.hardware.radio@1.3 \
 	android.hardware.radio@1.4 \
@@ -355,7 +356,8 @@ PRODUCT_SOONG_NAMESPACES += \
 	$(COMMON_PATH) \
 	hardware/google/interfaces \
 	hardware/google/pixel \
-	hardware/samsung/aidl/power-libperfmgr
+	hardware/samsung/aidl/power-libperfmgr \
+	hardware/samsung_slsi-linaro/exynos/cpboot
 
 # Stagefright-shims
 PRODUCT_PACKAGES += \

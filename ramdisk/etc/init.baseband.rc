@@ -68,10 +68,10 @@ on property:ril.clatd.v4-rmnet7=up
     write /sys/class/net/v4-rmnet7/queues/rx-0/rps_cpus 2
     
 # CP Boot Daemon (CBD)
-service cpboot-daemon /vendor/bin/cbd -d -t ss333 -b s -m l -P platform/15570000.ufs/by-name/RADIO
+service cpboot-daemon /vendor/bin/cbd -d -t ss333 -b s -m l -P platform/15570000.ufs/by-name/RADIO -n /efs
     class main
     user root
-    group radio cache inet misc audio sdcard_r sdcard_rw log shell
+    group radio cache inet misc audio sdcard_r sdcard_rw log shell system
 
 on property:persist.sys.cpboot=disable
     stop cpboot-daemon
