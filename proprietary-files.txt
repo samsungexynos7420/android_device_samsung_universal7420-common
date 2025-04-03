@@ -194,3 +194,6 @@ vendor/etc/plmn_delta_usacdma.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 
+# WiFi
+vendor/bin/hw/mfgloader
+

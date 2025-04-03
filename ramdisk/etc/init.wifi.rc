@@ -75,7 +75,11 @@ on boot
 
 # tiburona
 # start for WiFi MFG (TestMode)
-
+service mfgloader /system/vendor/bin/hw/mfgloader
+    class main
+    disabled
+    oneshot
+	
 service wlandutservice /system/bin/wlandutservice
     class main
     user system
