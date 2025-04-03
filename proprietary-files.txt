@@ -82,11 +82,11 @@ vendor/lib/hw/nfc_nci.universal7420.so|c6b2292323b827f3261ba33956604b90de8a29cd
 vendor/lib64/hw/nfc_nci.universal7420.so|347836411179d98a47c7de7bf9e92ac00c5a742a
 
 # NFC for S6/S6e
-etc/nfc/sec_s3fwrn5p_rfreg.bin
+vendor/etc/nfc/sec_s3fwrn5p_rfreg.bin
 vendor/firmware/nfc/sec_s3fwrn5p_firmware.bin
 
 # NFC for Note 5 / S6 edge+
-etc/nfc/sec_s3fwrn5s_rfreg.bin
+vendor/etc/nfc/sec_s3fwrn5s_rfreg.bin
 vendor/firmware/nfc/sec_s3fwrn5s_firmware.bin
 
 # Sensors
