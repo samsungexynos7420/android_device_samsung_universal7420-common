@@ -63,13 +63,6 @@ LOCAL_MODULE_PATH       := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE            := init.wifi.rc
-LOCAL_MODULE_CLASS      := ETC
-LOCAL_SRC_FILES         := etc/init.wifi.rc
-LOCAL_MODULE_PATH       := $(TARGET_OUT_VENDOR_ETC)/init/hw
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE		:= init.samsungexynos7420.rc
 LOCAL_MODULE_CLASS	:= ETC
 LOCAL_SRC_FILES		:= etc/init.samsungexynos7420.rc

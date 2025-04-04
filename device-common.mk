@@ -321,7 +321,6 @@ PRODUCT_PACKAGES += \
 	init.recovery.samsungexynos7420.rc \
 	init.samsungexynos7420.rc \
 	init.samsungexynos7420.usb.rc \
-	init.wifi.rc \
 	fstab.samsungexynos7420 \
 	init.baseband.rc \
 	init.gps.rc \
