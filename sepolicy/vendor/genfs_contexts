@@ -121,6 +121,7 @@ genfscon sysfs /devices/13690000.hsi2c/i2c-7/7-0061/power_supply    u:object_r:s
 genfscon sysfs /devices/13670000.hsi2c/i2c-5/5-006c/power_supply    u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/13670000.hsi2c/i2c-4/4-006c/power_supply    u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/14e30000.hsi2c/i2c-8/8-0061/power_supply    u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/13690000.hsi2c/i2c-8/8-0061/power_supply    u:object_r:sysfs_batteryinfo:s0
 
 genfscon sysfs /kernel/gpu                                          u:object_r:sysfs_power_writable:s0
 
@@ -141,6 +142,7 @@ genfscon sysfs /devices/15570000.ufs/host0    u:object_r:sysfs_scsi_host:s0
 genfscon sysfs /devices/14e70000.hsi2c/i2c-3/3-0020/input           u:object_r:sysfs_sec_touchkey:s0
 genfscon sysfs /devices/i2c.31/i2c-9/9-0020/input         u:object_r:sysfs_sec_touchkey:s0
 genfscon sysfs /devices/i2c.31/i2c-10/10-0010/input        u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c.31/i2c-10/10-0020/input        u:object_r:sysfs_sec_touchkey:s0
 genfscon sysfs /devices/virtual/sec/sec_touchkey      u:object_r:sysfs_sec_touchkey:s0
 
 # Touchscreen
