@@ -77,10 +77,6 @@ vendor/firmware/seiren_fw_sram.bin
 lib/egl/libGLES_mali.so:vendor/lib/egl/libGLES_mali.so
 lib64/egl/libGLES_mali.so:vendor/lib64/egl/libGLES_mali.so
 
-# NFC - A810FXXU2CRL1 (O)
-vendor/lib/hw/nfc_nci.universal7420.so|c6b2292323b827f3261ba33956604b90de8a29cd
-vendor/lib64/hw/nfc_nci.universal7420.so|347836411179d98a47c7de7bf9e92ac00c5a742a
-
 # NFC for S6/S6e
 vendor/etc/nfc/sec_s3fwrn5p_rfreg.bin
 vendor/firmware/nfc/sec_s3fwrn5p_firmware.bin

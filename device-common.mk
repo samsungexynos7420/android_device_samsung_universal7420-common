@@ -230,8 +230,7 @@ PRODUCT_PACKAGES += \
 	NfcNci \
 	Tag \
 	com.android.nfc_extras \
-	android.hardware.nfc@1.0-impl \
-	android.hardware.nfc@1.0-service
+	android.hardware.nfc@1.2-service.exynos7420
 
 # OMX
 PRODUCT_PACKAGES += \
