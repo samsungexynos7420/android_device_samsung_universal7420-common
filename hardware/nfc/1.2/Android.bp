@@ -22,8 +22,6 @@ cc_binary {
         "liblog",
         "libutils",
         "libhidlbase",
-        "libhidltransport",
-        "libhwbinder",
         "libcrypto",
     ],
 }

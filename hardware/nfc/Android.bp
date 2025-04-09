@@ -51,7 +51,6 @@ cc_library_shared {
         "libhardware",
         "libhardware_legacy",
         "libhidlbase",
-        "libhidltransport",
         "liblog",
         "libutils",
         "libcrypto",
