@@ -1,8 +1,8 @@
 cc_binary {
-    name: "android.hardware.nfc@1.2-service.sec",
+    name: "android.hardware.nfc@1.2-service.exynos7420",
     defaults: ["hidl_defaults"],
     proprietary: true,
-    init_rc: ["android.hardware.nfc@1.2-service.sec.rc"],
+    init_rc: ["android.hardware.nfc@1.2-service.exynos7420.rc"],
     relative_install_path: "hw",
     srcs: [
         "SecNfcService.cpp",
