@@ -1,0 +1,2 @@
+eebea45e3713478845696f4a6e9f6ad435aa00625e6b0ef64bcab1e6307b1dc4 vendor.sec.hardware.nfc@1.1::types
+6fadfb1c6afc89c7cbad94b34664385645ca3b6ce7a327aa7665d2e46b592ac9 vendor.sec.hardware.nfc@1.1::ISecNfc
