@@ -98,12 +98,6 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_RAMDISK_USE_XZ := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 
-# Manifest
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
-
-# Memfd
-TARGET_HAS_MEMFD_BACKPORT := true
-
 # LED
 RED_LED_PATH := "/sys/class/leds/led_r/brightness"
 GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
@@ -112,6 +106,12 @@ BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
 # LMKD stats logging
 TARGET_LMKD_STATS_LOG := true
+
+# Manifest
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
+
+# Memfd
+TARGET_HAS_MEMFD_BACKPORT := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072

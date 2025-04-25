@@ -22,7 +22,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 	device/samsung/universal7420-common/overlay/hardware/samsung/AdvancedDisplay
 
-# Adb
+# ADB
 PRODUCT_PRODUCT_PROPERTIES := \
 	persist.adb.nonblocking_ffs=0 \
 	ro.adb.nonblocking_ffs=0
@@ -73,10 +73,6 @@ PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
 	$(COMMON_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
 
-# BFQ I/O Scheduler
-PRODUCT_PACKAGES += \
-	libbfqio
-
 # Bluetooth
 PRODUCT_PACKAGES += \
 	android.hardware.bluetooth@1.0-impl:64 \
@@ -122,7 +118,7 @@ PRODUCT_PACKAGES += \
 	android.hardware.camera.provider@2.4-impl \
 	android.hardware.camera.provider@2.4-service
 
-# Camera-Shim
+# Camera shim
 PRODUCT_PACKAGES += \
 	libexynoscamera_shim
 
@@ -144,17 +140,26 @@ PRODUCT_HOST_PACKAGES += \
 PRODUCT_PACKAGES += \
 	vendor.lineage.fastcharge@1.0-service.samsung
 
+# Filesystem tools for resizing system partitions
+PRODUCT_PACKAGES += \
+	e2fsck_static \
+	resize2fs_static
+
 # Fingerprint
 PRODUCT_PACKAGES += \
 	android.hardware.biometrics.fingerprint@2.1-service.samsung
 
-# Fingerprint-Shim
+# Fingerprint shim
 PRODUCT_PACKAGES += \
 	libbauthtzcommon_shim
 
 # FlipFlap
 PRODUCT_PACKAGES += \
 	FlipFlap
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+	android.hardware.gatekeeper@1.0-service.software
 
 # GNSS
 PRODUCT_PACKAGES += \
@@ -167,10 +172,6 @@ PRODUCT_PACKAGES += \
 	android.hardware.graphics.allocator@2.0-service \
 	android.hardware.graphics.composer@2.1-service \
 	android.hardware.graphics.mapper@2.0-impl-2.1
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-	android.hardware.gatekeeper@1.0-service.software
 
 # Health
 PRODUCT_PACKAGES += \
@@ -331,11 +332,6 @@ PRODUCT_PACKAGES += \
 	PresencePolling \
 	RcsService
 
-# Filesystem tools for resizing system partitions
-PRODUCT_PACKAGES += \
-	e2fsck_static \
-	resize2fs_static
-
 # RenderScript
 PRODUCT_PACKAGES += \
 	android.hardware.renderscript@1.0-impl
@@ -357,7 +353,7 @@ PRODUCT_SOONG_NAMESPACES += \
 	hardware/samsung/aidl/power-libperfmgr \
 	hardware/samsung_slsi-linaro/exynos/cpboot
 
-# Stagefright-shims
+# Stagefright shim
 PRODUCT_PACKAGES += \
 	libstagefright_shim
 
