@@ -48,7 +48,7 @@
 /data/misc/radio(/.*)?            u:object_r:radio_data_file:s0
 
 # Wi-fi
-/data/\.cid\.info                  u:object_r:wifi_data_file:s0
+/data/misc/conn/\.cid\.info        u:object_r:wifi_data_file:s0
 /data/misc/conn/\.wifiver\.info    u:object_r:wifi_data_file:s0
 
 ##########################
