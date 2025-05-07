@@ -21,9 +21,6 @@ BUILD_BROKEN_DUP_RULES := true
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
-# Ant+
-BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
