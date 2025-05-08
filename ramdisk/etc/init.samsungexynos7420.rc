@@ -663,8 +663,6 @@ service watchdogd /sbin/watchdogd 10 20
     class core
     seclabel u:r:watchdogd:s0
 
-on property:sys.boot_completed=1
-    setprop sys.io.scheduler bfq
-    
+on property:sys.boot_completed=1    
     #Reinit lmkd to reconfigure lmkd properties
     setprop lmkd.reinit 1  
