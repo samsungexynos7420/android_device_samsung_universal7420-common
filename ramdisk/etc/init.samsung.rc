@@ -331,7 +331,9 @@ on boot
    chown system radio /sys/class/power_supply/battery/normal_mode_bypass
    chown system radio /sys/class/power_supply/battery/factory_voltage_regulation
    chown system radio /sys/class/power_supply/battery/factory_mode_disable
-   chown media sdcard_rw /sys/class/power_supply/battery/store_mode
+   chown system radio /sys/class/power_supply/battery/store_mode
+   chown system radio /sys/module/sec_battery/parameters/store_mode_max
+   chown system radio /sys/module/sec_battery/parameters/store_mode_min
    chown sdcard_rw sdcard_rw /sys/class/power_supply/battery/call
    chown sdcard_rw sdcard_rw /sys/class/power_supply/battery/video
    chown sdcard_rw sdcard_rw /sys/class/power_supply/battery/music
