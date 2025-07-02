@@ -380,7 +380,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-	android.hardware.thermal@2.0-service.samsung
+	android.hardware.thermal-service.samsung \
+	thermal_symlinks.samsung
 
 # USB
 PRODUCT_PACKAGES += \
