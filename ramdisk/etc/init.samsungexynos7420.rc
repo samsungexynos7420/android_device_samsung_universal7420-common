@@ -34,7 +34,13 @@ on init
     restorecon_recursive /mnt/secure/staging
 ## Samsung ODE <<<
 
+# See storage config details at http://source.android.com/tech/storage/
+    mkdir /mnt/shell/emulated 0700 shell shell
+    mkdir /storage/emulated 0555 root root
+
     # Support legacy paths
+    symlink /sdcard /mnt/sdcard
+    export EXTERNAL_STORAGE /sdcard
     symlink /sdcard /storage/sdcard0
     symlink /storage/usbdisk /mnt/usbdisk
 
@@ -176,7 +182,6 @@ on post-fs-data
     mkdir /data/nfc/param 0700 nfc nfc
     mkdir /data/bcmnfc 0700 nfc nfc
     mkdir /data/bcmnfc/param 0700 nfc nfc
-    mkdir /efs/sec_efs/nfc 0500 nfc nfc
 
     # sec_efs_file
     mkdir /efs/sec_efs 0775 radio system
@@ -200,6 +205,15 @@ on post-fs-data
     chmod 0644 /efs/h2k.dat
     chmod 0644 /efs/cpk/h2k.dat
     chown system system /efs/drm/h2k
+
+# icd
+    chown system system /dev/icd
+    chmod 0644 /dev/icd
+    chown system system /dev/icdr
+    chmod 0644 /dev/icdr
+    chown system system /dev/tzic
+    restorecon /dev/icd
+    restorecon /dev/icdr
 
     #SideSync
     chown system system /dev/android_ssusbcon
@@ -299,11 +313,16 @@ on boot
     chmod 0640 /dev/fmradio
     chown system system /dev/fmradio
 
+#MST HW Support
+    setprop ro.mst.support 1
+
     # Fastcharge switch
     chown system radio /sys/class/sec/switch/afc_disable
 
 on fs
     mount_all /vendor/etc/fstab.samsungexynos7420  --early
+    setprop ro.crypto.fuse_sdcard true
+
     # Enable swap
     swapon_all /vendor/etc/fstab.samsungexynos7420
     

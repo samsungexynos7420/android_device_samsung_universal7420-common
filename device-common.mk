@@ -95,6 +95,7 @@ PRODUCT_PACKAGES += \
 	memtrack.universal7420 \
 	gralloc.exynos7420 \
 	hwcomposer.universal7420 \
+	libcec \
 	libcsc \
 	libfimg \
 	libexynosscaler \
