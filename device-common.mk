@@ -31,11 +31,6 @@ PRODUCT_PRODUCT_PROPERTIES := \
 PRODUCT_COPY_FILES += \
 	$(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# Adb
-PRODUCT_PRODUCT_PROPERTIES := \
-    persist.adb.nonblocking_ffs=0 \
-    ro.adb.nonblocking_ffs=0
-
 # AdvancedDisplay (MDNIE)
 PRODUCT_PACKAGES += \
 	AdvancedDisplay
