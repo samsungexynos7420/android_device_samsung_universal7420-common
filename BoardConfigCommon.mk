@@ -172,7 +172,6 @@ TARGET_LD_SHIM_LIBS += \
 	/vendor/lib64/libexynoscamera.so|/vendor/lib64/libexynoscamera_shim.so \
 	/vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so \
 	/vendor/lib64/libbauthserver.so|/vendor/lib64/libbauthtzcommon_shim.so \
-	/system/bin/mediaserver|/vendor/lib/libstagefright_shim.so \
 	/vendor/bin/hw/gpsd|sensor_shim.so \
 	/vendor/bin/hw/lhd|sensor_shim.so
 
