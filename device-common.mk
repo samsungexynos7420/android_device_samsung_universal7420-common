@@ -302,10 +302,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-	android.hardware.power-service.samsung-libperfmgr
-
-PRODUCT_COPY_FILES += \
-	$(COMMON_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+	android.hardware.power-service.universal7420
 
 # Radio
 PRODUCT_PACKAGES += \

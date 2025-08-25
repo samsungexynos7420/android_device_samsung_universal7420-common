@@ -1,0 +1,4 @@
+service vendor.power /vendor/bin/hw/android.hardware.power-service.universal7420
+    class hal
+    user system
+    group system
