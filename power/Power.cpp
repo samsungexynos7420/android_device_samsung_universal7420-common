@@ -273,7 +273,7 @@ void initialize() {
     set(cpuInteractivePaths.at(1) + "/io_is_busy", "0");
     set(cpuInteractivePaths.at(1) + "/min_sample_time", "40000");
     set(cpuInteractivePaths.at(1) + "/multi_cluster0_min_freq", "1200000");
-    set(cpuInteractivePaths.at(1) + "/multi_enter_loas", "360");
+    set(cpuInteractivePaths.at(1) + "/multi_enter_load", "360");
     set(cpuInteractivePaths.at(1) + "/multi_enter_time", "79000");
     set(cpuInteractivePaths.at(1) + "/multi_exit_load", "240");
     set(cpuInteractivePaths.at(1) + "/multi_exit_time", "299000");
