@@ -51,12 +51,8 @@ extern bool setDeviceSpecificMode(Mode type, bool enabled);
 extern "C" {
 	void initialize();
 	void findInputNodes();
-	void checkVoltage();
-	void setPowerSaveValues();
 	void sendBoostpulse();
 	void sendBoost(int duration_us);
-	int powerSaveMode;
-	int curr_voltage;
 	bool initialized;
 	bool touchkeys_blocked;
 	std::string sec_touchkey;
@@ -314,28 +310,6 @@ void findInputNodes() {
             }
         }
     }
-}
-
-void checkVoltage() {
-	std::fstream myfile("/sys/class/power_supply/max77843-fuelgauge/voltage_now", std::ios_base::in);
-	myfile >> curr_voltage;
-	LOG(INFO) << "Current Voltage: " << curr_voltage << "mV";
-	if (powerSaveMode != 1) {
-		if (curr_voltage > 3400) {
-		set(cpuSysfsPaths.front() + "/cpufreq/scaling_max_freq", "1300000");
-		set(cpuSysfsPaths.back() + "/cpufreq/scaling_max_freq", "1900000");
-		LOG(INFO) << "Current Voltage (" << curr_voltage << "mV) is higher than 3400mV." << " Set default values: 1.9GHz + 1.3GHz";
-		} else if (curr_voltage <= 3400) {
-			set(cpuSysfsPaths.front() + "/cpufreq/scaling_max_freq", "1300000");
-			set(cpuSysfsPaths.back() + "/cpufreq/scaling_max_freq", "1500000");
-			LOG(INFO) << "Current Voltage (" << curr_voltage << "mV) is less than or equal to 3400mV." << " Set power saving values: 1.5GHz + 1.3GHz";
-		}
-	}
-}
-
-void setPowerSaveValues() {
-	set(cpuSysfsPaths.front() + "/cpufreq/scaling_max_freq", "1300000");
-	set(cpuSysfsPaths.back() + "/cpufreq/scaling_max_freq", "1500000");
 }
 
 void sendBoostpulse() {
