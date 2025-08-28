@@ -307,14 +307,16 @@ PRODUCT_COPY_FILES += \
 # Radio
 PRODUCT_PACKAGES += \
 	cbd \
-	android.hardware.radio@1.2 \
-	android.hardware.radio@1.3 \
+	libsecril-client \
 	android.hardware.radio@1.4 \
-	android.hardware.radio.config@1.0 \
-	android.hardware.radio.config@1.1 \
 	android.hardware.radio.config@1.2 \
+	android.hardware.radio.config@1.2.vendor \
 	android.hardware.radio.deprecated@1.0 \
+	android.hardware.radio.deprecated@1.0.vendor \
 	libxml2 \
+	libxml2.vendor \
+	libsqlite.vendor \
+	libnetutils.vendor \
 	libprotobuf-cpp-full 
 
 # Copy stock APN config as lineage one seams to be quite broken and outdated
