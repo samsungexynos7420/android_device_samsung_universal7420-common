@@ -326,15 +326,14 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-	init.battery.rc \
-	init.power.rc \
-	init.samsung.rc \
-	init.recovery.samsungexynos7420.rc \
-	init.samsungexynos7420.rc \
-	init.samsungexynos7420.usb.rc \
 	fstab.samsungexynos7420 \
 	init.baseband.rc \
 	init.gps.rc \
+	init.power.rc \
+	init.recovery.samsungexynos7420.rc \
+	init.samsung.rc \
+	init.samsungexynos7420.rc \
+	init.samsungexynos7420.usb.rc \
 	ueventd.samsungexynos7420.rc
 
 # RCS
