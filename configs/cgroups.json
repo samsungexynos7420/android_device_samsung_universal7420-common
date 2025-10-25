@@ -2,10 +2,16 @@
   "Cgroups": [
     {
       "Controller": "schedtune",
-      "Path": "/dev/cpuset",
+      "Path": "/dev/stune",
       "Mode": "0755",
       "UID": "system",
       "GID": "system"
     }
-  ]
+  ],
+  "Cgroups2": {
+    "Path": "/dev/cg2_bpf",
+    "Mode": "0600",
+    "UID": "root",
+    "GID": "root"
+  }
 }
