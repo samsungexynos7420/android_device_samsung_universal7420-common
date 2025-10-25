@@ -7,5 +7,11 @@
       "UID": "system",
       "GID": "system"
     }
-  ]
+  ],
+  "Cgroups2": {
+    "Path": "/dev/cg2_bpf",
+    "Mode": "0600",
+    "UID": "root",
+    "GID": "root"
+  }
 }
