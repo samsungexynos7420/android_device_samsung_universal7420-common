@@ -307,8 +307,7 @@ on fs
     
     # Start HW service manager early
     start hwservicemanager
-    
-    setprop sys.usb.ffs.aio_compat 1
+
     setprop sys.usb.mtp.device_type 2
 
     write /proc/sys/vm/swappiness 100
