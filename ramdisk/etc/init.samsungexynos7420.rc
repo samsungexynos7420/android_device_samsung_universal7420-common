@@ -329,8 +329,6 @@ on fs
     # Start HW service manager early
     start hwservicemanager
 
-    setprop sys.usb.mtp.device_type 3
-
     write /proc/sys/vm/swappiness 100
 
 # Permissions for TouchScreen
