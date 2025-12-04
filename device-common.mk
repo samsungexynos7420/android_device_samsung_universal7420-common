@@ -21,11 +21,6 @@ DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 	device/samsung/universal7420-common/overlay/hardware/samsung/AdvancedDisplay
-
-# ADB
-PRODUCT_PRODUCT_PROPERTIES := \
-	persist.adb.nonblocking_ffs=0 \
-	ro.adb.nonblocking_ffs=0
 	
 # Additional native libraries
 PRODUCT_COPY_FILES += \
