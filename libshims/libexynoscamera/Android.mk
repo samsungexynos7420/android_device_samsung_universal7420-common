@@ -18,7 +18,7 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := \
     CameraParameters.cpp
 
-LOCAL_SHARED_LIBRARIES := libhardware libgui libui
+LOCAL_SHARED_LIBRARIES := libhardware libgui_vendor libui
 
 LOCAL_MODULE := libexynoscamera_shim
 LOCAL_MODULE_TAGS := optional

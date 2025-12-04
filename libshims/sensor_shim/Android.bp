@@ -8,7 +8,7 @@ cc_library_shared {
 
     shared_libs: [
         "liblog",
-        "libsensor",
+        "libsensor_vendor",
         "libutils",
     ],
 }
