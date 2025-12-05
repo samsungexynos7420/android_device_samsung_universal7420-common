@@ -34,6 +34,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.atrace@1.0-service.universal7420
 
+# APEX
+OVERRIDE_PRODUCT_COMPRESSED_APEX := false
+
 # Audio
 PRODUCT_PACKAGES += \
 	audio.primary.universal7420_32 \
