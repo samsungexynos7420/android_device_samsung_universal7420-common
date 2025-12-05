@@ -83,7 +83,10 @@ PRODUCT_PACKAGES += \
 	libhwc2onfbadapter \
 	libion \
 	libion_exynos \
+	libminijail_32 \
 	libstagefrighthw \
+	libstagefright_softomx \
+	libstagefright_softomx_plugin \
 	libExynosOMX_Core \
 	libExynosOMX_Resourcemanager \
 	libOMX.Exynos.MPEG4.Encoder \
