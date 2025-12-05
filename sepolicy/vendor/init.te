@@ -14,8 +14,6 @@ allow init sec_efs_file:dir mounton;
 # Allow to reboot to recovery
 allow init ota_block_device:blk_file rw_file_perms;
 
-allow init iorapd_data_file:file getattr;
-
 allow init sysfs_scsi_host:dir relabelfrom;
 allow init sysfs_scsi_host:file relabelfrom;
 
