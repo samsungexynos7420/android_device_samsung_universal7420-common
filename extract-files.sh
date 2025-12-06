@@ -97,4 +97,12 @@ mv $BLOB_ROOT/proprietary/vendor/lib64/libsec-ril.so.patched $BLOB_ROOT/propriet
 "${PATCHELF}" --replace-needed libutils.so libutils-v32.so $BLOB_ROOT/vendor/lib64/libexynoscamera.so
 "${PATCHELF}" --replace-needed libutils.so libutils-v32.so $BLOB_ROOT/vendor/lib64/libexynoscamera3.so
 
+# Replace libhidlbase with libhidlbase-v32
+"${PATCHELF}" --replace-needed libhidlbase.so libhidlbase-v32.so $BLOB_ROOT/vendor/lib64/libskeymaster.so
+"${PATCHELF}" --replace-needed libhidlbase.so libhidlbase-v32.so $BLOB_ROOT/vendor/lib64/vendor.samsung.security.skeymaster@3.0.so
+
+# Remove libhidltransport
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/libskeymaster.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/vendor.samsung.security.skeymaster@3.0.so
+
 "${MY_DIR}/setup-makefiles.sh"
