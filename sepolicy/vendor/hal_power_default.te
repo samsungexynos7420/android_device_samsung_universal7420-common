@@ -24,3 +24,8 @@ allow hal_power_default{
 }:file rw_file_perms;
 
 allow hal_power_default sysfs_sec_tsp:lnk_file read;
+allow hal_power_default property_socket:sock_file write;
+allow hal_power_default init:unix_stream_socket { connectto };
+allow hal_power_default device:file rw_file_perms;
+set_prop(hal_power_default, vendor_default_prop)
+get_prop(hal_power_default, vendor_default_prop)
