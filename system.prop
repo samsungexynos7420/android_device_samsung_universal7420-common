@@ -21,6 +21,20 @@ dalvik.vm.dex2oat64.enabled=true
 ro.opengles.version=196610
 ro.hardware.egl=mali
 
+# HWUI
+ro.hwui.texture_cache_size=88
+ro.hwui.layer_cache_size=58
+ro.hwui.path_cache_size=16
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.shape_cache_size=4
+ro.hwui.gradient_cache_size=2
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=4096
+ro.hwui.text_large_cache_height=2048
+
 # HWC
 ro.vendor.winupdate=1
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
