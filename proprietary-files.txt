@@ -107,6 +107,7 @@ lib64/hw/gps.default.so:vendor/lib64/hw/gps.universal7420.so
 lib64/hw/flp.default.so:vendor/lib64/hw/flp.default.so
 lib/libwrappergps.so:vendor/lib/libwrappergps.so
 lib64/libwrappergps.so:vendor/lib64/libwrappergps.so
+vendor/lib64/libsensor-mod.so
 
 # Heart Rate monitor / SPO2
 lib64/libhr.so:vendor/lib64/libhr.so
