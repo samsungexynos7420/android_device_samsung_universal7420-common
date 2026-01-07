@@ -107,6 +107,7 @@ lib64/hw/gps.default.so:vendor/lib64/hw/gps.universal7420.so
 lib64/hw/flp.default.so:vendor/lib64/hw/flp.default.so
 lib/libwrappergps.so:vendor/lib/libwrappergps.so
 lib64/libwrappergps.so:vendor/lib64/libwrappergps.so
+vendor/lib64/libsensor-mod.so
 
 # AptX - from crosshatch - QP1A.190711.020
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
