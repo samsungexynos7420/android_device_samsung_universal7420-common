@@ -156,9 +156,10 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 
 # SEPolicy
-include device/lineage/sepolicy/exynos/sepolicy.mk
 BOARD_SEPOLICY_TEE_FLAVOR := mobicore
+include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SELINUX_IGNORE_NEVERALLOWS := true
 
@@ -167,8 +168,7 @@ TARGET_LD_SHIM_LIBS += \
 	/vendor/lib/libexynoscamera.so|/vendor/lib/libexynoscamera_shim.so \
 	/vendor/lib64/libexynoscamera.so|/vendor/lib64/libexynoscamera_shim.so \
 	/vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so \
-	/vendor/lib64/libbauthserver.so|/vendor/lib64/libbauthtzcommon_shim.so \
-	/system/bin/mediaserver|/vendor/lib/libstagefright_shim.so
+	/vendor/lib64/libbauthserver.so|/vendor/lib64/libbauthtzcommon_shim.so
 
 # System prop
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
