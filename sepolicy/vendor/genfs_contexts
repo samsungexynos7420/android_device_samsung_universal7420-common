@@ -148,10 +148,17 @@ genfscon sysfs /devices/i2c.31/i2c-9/9-0010/input         u:object_r:sysfs_sec_t
 genfscon sysfs /devices/i2c.31/i2c-9/9-0020/input         u:object_r:sysfs_sec_touchkey:s0
 genfscon sysfs /devices/i2c.31/i2c-10/10-0010/input        u:object_r:sysfs_sec_touchkey:s0
 genfscon sysfs /devices/i2c.31/i2c-10/10-0020/input        u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c.32/i2c-8/8-0010/input         u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c.32/i2c-8/8-0020/input         u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c.32/i2c-9/9-0010/input         u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c.32/i2c-9/9-0020/input         u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c.32/i2c-10/10-0010/input        u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c.32/i2c-10/10-0020/input        u:object_r:sysfs_sec_touchkey:s0
 genfscon sysfs /devices/virtual/sec/sec_touchkey      u:object_r:sysfs_sec_touchkey:s0
 
 # Touchscreen
 genfscon sysfs /class/dt2w                                          u:object_r:sysfs_touchscreen_writable:s0
+genfscon sysfs /devices/sec/tsp/input/enabled                       u:object_r:sysfs_touchscreen_writable:s0
 
 # USB lun device
 genfscon sysfs /devices/15400000.usb/15400000.dwc3/gadget/lun0      u:object_r:sysfs_android_usb:s0
