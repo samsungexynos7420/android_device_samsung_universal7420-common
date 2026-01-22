@@ -325,6 +325,7 @@ PRODUCT_PACKAGES += \
 	init.gps.rc \
 	init.power.rc \
 	init.recovery.samsungexynos7420.rc \
+	mobicore.rc \
 	init.samsung.rc \
 	init.samsungexynos7420.rc \
 	init.samsungexynos7420.usb.rc \
