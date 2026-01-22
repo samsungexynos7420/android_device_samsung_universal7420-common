@@ -42,9 +42,10 @@ on init
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
-    export EXTERNAL_STORAGE /sdcard
     symlink /sdcard /storage/sdcard0
     symlink /storage/usbdisk /mnt/usbdisk
+
+    export EXTERNAL_STORAGE /sdcard
 
     symlink /data/app /factory
     
