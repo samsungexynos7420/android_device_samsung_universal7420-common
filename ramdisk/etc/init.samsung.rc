@@ -69,9 +69,6 @@ on fs
     setprop ro.product.model ${ro.boot.product.model}
 
 on post-fs
-    # mobicore
-    setprop sys.mobicoredaemon.enable stopped
-
     # Samsung ODE >>>
     mount tmpfs tmpfs /mnt/secure private rec
     # Samsung ODE <<<
@@ -94,11 +91,6 @@ on post-fs-data
 
     # sec_efs_file
     mkdir /efs/sec_efs 0775 radio system
-
-    # mobicore
-    mkdir /data/app/mcRegistry 0775 system system
-    mkdir /data/app/mcRegistry/TbStorage 0700 system system
-    mkdir /efs/TEE  0770 radio system
     
     # FINGERPRINT - Legacy path
     mkdir /data/biometrics 0770 system system
@@ -111,13 +103,6 @@ on post-fs-data
     mkdir /efs/sec_efs/nfc 0700 nfc nfc
     mkdir /efs/nfc 0700 nfc nfc
 
-    # mobicore
-    export MC_AUTH_TOKEN_PATH /efs
-    mkdir /efs/TEE  0770 radio system
-    chmod 0660 /dev/t-base-tui
-    chown system system /dev/t-base-tui
-    start mobicore
-
     mkdir /efs/prov 0770 system system
     mkdir /efs/prov_data 0770 system system
 
@@ -126,10 +111,6 @@ on post-fs-data
     restorecon --recursive /cpefs
     restorecon --recursive /sys/kernel/debug/tracing/trace_marker
 # ] SEC_SELINUX_PORTING_COMMON
-
-    # mobicore
-    mkdir /data/vendor/mcRegistry 0775 system system
-    mkdir /data/misc/mcRegistry 0775 system system
 
 on boot
 
@@ -543,11 +524,6 @@ on boot
     chmod 0644 /efs/cpk/h2k.dat
     chown system system /efs/drm/h2k
 
-on nonencrypted
-    # mobicore
-    mkdir /data/vendor/mcRegistry 0775 system system
-    mkdir /data/misc/mcRegistry 0775 system system
-
 on charger
     chmod 0664 /sys/class/power_supply/battery/batt_temp_table
     chown system radio /sys/class/power_supply/battery/batt_temp_table
@@ -572,10 +548,6 @@ on charger
     mkdir /efs/lpm 0775 system system
     class_start sec-charger
 
-on property:vold.decrypt=trigger_restart_framework
-    mkdir /data/vendor/mcRegistry 0775 system system
-    mkdir /data/misc/mcRegistry 0775 system system
-
 # LPM
 service charger /system/bin/lpm
     class sec-charger
@@ -583,13 +555,6 @@ service charger /system/bin/lpm
     group system radio graphics input    
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
-
-# MobiCore startup
-service mobicore /vendor/bin/mcDriverDaemon -r /vendor/app/mcRegistry/FFFFFFFF000000000000000000000001.drbin -r /vendor/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin -r /vendor/app/mcRegistry/ffffffffd00000000000000000000016.tlbin -r /vendor/app/mcRegistry/ffffffffd0000000000000000000001c.tlbin
-    class core
-    user system
-    group system
-    disabled
 
 # HWC data
 on property:sys.boot_completed=1
