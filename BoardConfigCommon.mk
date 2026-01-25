@@ -152,9 +152,6 @@ TARGET_RECOVERY_DEVICE_DIRS += $(COMMON_PATH)
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
-# SECComp filters
-BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
-
 # SEPolicy
 BOARD_SEPOLICY_TEE_FLAVOR := mobicore
 include device/lineage/sepolicy/exynos/sepolicy.mk
