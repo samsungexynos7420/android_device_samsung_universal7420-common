@@ -1,4 +1,5 @@
-# allow bootanim system_data_file:dir search;
 typeattribute bootanim mlstrustedobject;
+
+allow bootanim system_data_file:dir search;
 
 permissive bootanim;

@@ -9,3 +9,6 @@ r_dir_file(audioserver, sec_efs_file);
 
 allow audioserver audio_service:service_manager find;
 allow audioserver bootanim:binder call;
+
+allow audioserver vendor_default_prop:file { getattr open read };
+
