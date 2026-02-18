@@ -98,7 +98,6 @@ BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_RAMDISK_USE_XZ := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
-TARGET_KERNEL_CLANG_COMPILE := true
 
 # LED
 RED_LED_PATH := "/sys/class/leds/led_r/brightness"
