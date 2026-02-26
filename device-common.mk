@@ -162,7 +162,7 @@ PRODUCT_PACKAGES += \
 	android.hardware.gnss@1.0-service.universal7420
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/gps/gps.conf:system/etc/gps.conf
+    $(COMMON_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.conf
 
 # Graphics
 PRODUCT_PACKAGES += \
