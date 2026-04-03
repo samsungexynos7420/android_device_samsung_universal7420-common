@@ -1,4 +1,10 @@
-# Exynos 7420 common device tree
-Common device tree for Exynos 7420 devices <br>
+# Exynos 7420 Common Device Tree
+Common device tree for supported Exynos 7420 devices <br>
 
-Based off the Exynos7420 source code found at https://github.com/Exynos7420/android_device_samsung_universal7420-common/tree/lineage-18.1 with various improvements
+- Samsung Galaxy S6 (zeroflte) - G920 (F,S,K,I,L,W8)
+- Samsung Galaxy S6 Edge (zerolte) - G925 (F,S,K,I,L,W8)
+- Samsung Galaxy S6 Edge+ (zenlte) - G928 (F,C,S,K,I,L,W8)
+- Samsung Galaxy Note5 (noble) - G920 (C,S,K,I,L,W8)  
+
+If your device isn't listed it isn't supported. Any pull requests adding support
+for more models or devices is welcome
