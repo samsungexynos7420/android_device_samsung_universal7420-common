@@ -75,7 +75,7 @@ TARGET_SCREEN_WIDTH := 1440
 # BSP
 PRODUCT_PACKAGES += \
 	memtrack.universal7420 \
-	gralloc.exynos7420 \
+	gralloc.exynos5 \
 	hwcomposer.universal7420 \
 	libcsc \
 	libfimg \
