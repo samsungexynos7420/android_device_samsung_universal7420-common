@@ -66,6 +66,8 @@ typedef enum {
 #define FW_BASE_ADDRESS_N5 (0x5000)  // secure F/W download (N5)
 #define FW_DATA_PAYLOAD_MAX (256)
 
+#define NFC_HAL_DO_NOT_USE_BOOTLOADER
+
 typedef enum {
   FW_ENTER_UPDATE_MODE = 1,
   FW_W4_FW_RSP = 0x10,
