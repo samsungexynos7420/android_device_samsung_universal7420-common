@@ -91,10 +91,12 @@ int check_force_fw_update_mode() {
 /* END [H15052701] */
 
 void nfc_hal_open_sm(tNFC_HAL_MSG *msg) {
+#ifndef NFC_HAL_DO_NOT_USE_BOOTLOADER
   tNFC_FW_PKT *fw_pkt = &msg->fw_packet;
   tNFC_HAL_FW_INFO *fw = &nfc_hal_info.fw_info;
   tNFC_HAL_FW_BL_INFO *bl = &fw->bl_info;
   size_t ret;
+#endif
 
   switch (msg->event) {
     case HAL_EVT_OPEN:
