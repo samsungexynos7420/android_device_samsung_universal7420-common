@@ -7,6 +7,7 @@ allow netd gpsd:udp_socket rw_socket_perms;
 
 allow netd {
     gpsd
+    lhd
     init
 }:tcp_socket rw_socket_perms;
 
@@ -16,3 +17,4 @@ allow netd sysfs_net:file w_file_perms;
 allow netd self:capability sys_module;
 
 allow netd gpsd:fd use;
+allow netd lhd:fd use;
