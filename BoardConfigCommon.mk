@@ -163,9 +163,7 @@ SELINUX_IGNORE_NEVERALLOWS := true
 # Shims
 TARGET_LD_SHIM_LIBS += \
 	/vendor/lib/libexynoscamera.so|/vendor/lib/libexynoscamera_shim.so \
-	/vendor/lib64/libexynoscamera.so|/vendor/lib64/libexynoscamera_shim.so \
-	/vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so \
-	/vendor/lib64/libbauthserver.so|/vendor/lib64/libbauthtzcommon_shim.so
+	/vendor/lib64/libexynoscamera.so|/vendor/lib64/libexynoscamera_shim.so
 
 # System prop
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
