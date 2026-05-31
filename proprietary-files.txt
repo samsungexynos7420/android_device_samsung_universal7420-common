@@ -92,7 +92,7 @@ lib/libsensorlistener.so:vendor/lib/libsensorlistener.so
 lib64/libsensorlistener.so:vendor/lib64/libsensorlistener.so
 
 # sensorhub patch - from note 5
-bin/bcm_sensorhub_a2.patch
+bin/bcm_sensorhub_a2.patch:vendor/bin/bcm_sensorhub_a2.patch
 
 # Gatekeeper - from A810FXXS2CTJ2
 vendor/lib/hw/gatekeeper.exynos7420.so:vendor/lib/hw/gatekeeper.universal7420.so
