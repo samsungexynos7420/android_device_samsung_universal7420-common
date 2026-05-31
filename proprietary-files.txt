@@ -69,6 +69,18 @@ lib64/libuniplugin.so:vendor/lib64/libuniplugin.so
 # Exynos Media Format Codec firmware
 vendor/firmware/mfc_fw.bin
 
+# Fingerprint
+vendor/lib/libbauthserver.so|44a50a1ece377b02a59b4e665da63131786ad4b5
+vendor/lib64/libbauthserver.so|23182b6e3b4ece1c316970062240e835b443994a
+vendor/lib/libbauthtzcommon.so|e760de5884653834ee0ebc222c8cff719f62ff52
+vendor/lib64/libbauthtzcommon.so|4e5ab9fa1ba9866e689ed5a107cb9a89d71776f5
+vendor/lib/libegis_fp_normal_sensor_test.so|5b5e9be399595c35900a0a5da027bdf79b467180
+vendor/lib64/libegis_fp_normal_sensor_test.so|4f764afbe003be5661428718bbf68d66da69bc71
+vendor/lib/libgf_in_system_lib.so|e7bd0dda30be72fc760de542d53a6cc67d73def4
+vendor/lib64/libgf_in_system_lib.so|7f880a26a053468faca6e3ba0e022c49a7c25b3c
+vendor/lib/libsynaFpSensorTestNwd.so|bf731c89f66bc886a874b8c0113ccd0607ccaf48
+vendor/lib64/libsynaFpSensorTestNwd.so|23a7cf5d3e6eb5d5176bf2edbf3c39f03148ca31
+
 # Seiren Audio Firmware
 vendor/firmware/seiren_fw_dram.bin
 vendor/firmware/seiren_fw_sram.bin
