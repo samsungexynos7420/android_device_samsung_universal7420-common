@@ -69,7 +69,8 @@ lib64/libuniplugin.so:vendor/lib64/libuniplugin.so
 # Exynos Media Format Codec firmware
 vendor/firmware/mfc_fw.bin
 
-# Fingerprint
+# Fingerprint - Taken from A810FXXS2CTJ2 firmware
+# libbauthtzcommon hex patched to always return 0 at BAuth_Hat_OP()
 vendor/lib/libbauthserver.so|44a50a1ece377b02a59b4e665da63131786ad4b5
 vendor/lib64/libbauthserver.so|23182b6e3b4ece1c316970062240e835b443994a
 vendor/lib/libbauthtzcommon.so|afb8f74cf68ea7ab5d1115127fef10c7e139cf9e
