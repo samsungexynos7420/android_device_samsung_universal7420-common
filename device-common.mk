@@ -143,6 +143,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.biometrics.fingerprint@2.3-service.samsung
 
+# Fingerprint shim
+PRODUCT_PACKAGES += \
+	libbauthtzcommon_shim
+
 # FlipFlap
 PRODUCT_PACKAGES += \
 	FlipFlap
