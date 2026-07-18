@@ -1,5 +1,4 @@
 import /vendor/etc/init/hw/init.samsungexynos7420.usb.rc
-import /vendor/etc/init/hw/init.wifi.rc
 import /vendor/etc/init/hw/init.baseband.rc
 import /vendor/etc/init/hw/init.gps.rc
 import /vendor/etc/init/hw/init.samsung.rc
