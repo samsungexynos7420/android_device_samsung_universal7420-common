@@ -79,7 +79,14 @@ on post-fs
     # Bluetooth
     chown root log /proc/bluetooth/uart/log
 
+    #change permissions on kmsg & sysrq-trigger so bugreports can grab kthread stacks
+    chown root system /proc/kmsg
+
 on post-fs-data
+    # KNOX_NAP
+    chmod 0660 /dev/ncm_dev
+    chown system system /dev/ncm_dev
+
 # [ SEC_SELINUX_PORTING_COMMON
     # sec_efs_file
     mkdir /efs/sec_efs 0775 radio system
@@ -109,11 +116,10 @@ on post-fs-data
 # [ SEC_SELINUX_PORTING_COMMON
     restorecon --recursive /efs
     restorecon --recursive /cpefs
-    restorecon --recursive /sys/kernel/debug/tracing/trace_marker
+    restorecon /sys/kernel/debug/tracing/trace_marker
 # ] SEC_SELINUX_PORTING_COMMON
 
 on boot
-
     # KNOX KAP
     chown system system /dev/knox_kap
     chmod 0660 /dev/knox_kap
@@ -122,9 +128,13 @@ on boot
     chmod 0660 /dev/usb_mtp_gadget
     chown system mtp /dev/usb_mtp_gadget
     mkdir /dev/socket/mtp 0770 system mtp
+
     # terminal mode
     chmod 0660 /sys/class/android_usb/android0/terminal_version
     chown system system /sys/class/android_usb/android0/terminal_version
+
+    # Permissions for recovery_cause
+    chown system system /sys/class/sec/sec_debug/recovery_cause
 
     # NPS permission
     mkdir /dev/socket/nps 0770 system system
