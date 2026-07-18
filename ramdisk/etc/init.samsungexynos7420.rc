@@ -61,17 +61,6 @@ on post-fs
 on post-fs-data
 #     mkdir /data/media 0770 media_rw media_rw
     setprop vold.post_fs_data_done 1
-    
-    # [ SEC_SELINUX_PORTING_COMMON
-    # sec_efs_file
-    mkdir /efs/sec_efs 0775 radio system
-# ] SEC_SELINUX_PORTING_COMMON
-
-# [ SEC_SELINUX_PORTING_COMMON
-    restorecon --recursive /efs
-    restorecon --recursive /cpefs
-    restorecon /sys/kernel/debug/tracing/trace_marker
-# ] SEC_SELINUX_PORTING_COMMON
 
 # Permissions for audio
     chown system radio /sys/class/audio/earjack/select_jack
@@ -277,9 +266,6 @@ on boot
 
 # CS socket
     mkdir /dev/socket/cs_socket 0770 system system
-
-# MSP FactoryApp
-    mkdir /efs/FactoryApp 0775 system system
 
 # permissions for bluetooth.
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
