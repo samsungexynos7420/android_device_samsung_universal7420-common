@@ -109,7 +109,6 @@
             "Name": "GPUMaxFreq",
             "Path": "/sys/kernel/gpu/gpu_max_clock",
             "Values": [
-                "772",
                 "700",
                 "600",
                 "544"
@@ -413,7 +412,7 @@
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "GPUMaxFreq",
             "Duration": 0,
-            "Value": "772"
+            "Value": "700"
         },
         {
             "PowerHint": "LOW_POWER",
