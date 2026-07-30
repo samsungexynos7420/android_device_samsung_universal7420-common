@@ -143,6 +143,7 @@
                 "45",
                 "63",
                 "65",
+                "90",
                 "120"
             ],
             "DefaultIndex": 1,
@@ -257,7 +258,7 @@
             "PowerHint": "LAUNCH",
             "Node": "IPATemp",
             "Duration": 1000,
-            "Value": "120"
+            "Value": "90"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
