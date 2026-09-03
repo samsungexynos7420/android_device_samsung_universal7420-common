@@ -24,6 +24,13 @@ on boot
     chown bluetooth system /sys/power/cluster0_core_hotplug_in
     chmod 0664 /sys/power/cluster0_core_hotplug_in
 
+    chown system system /sys/power/cpuhotplug/enabled
+    chown system system /sys/power/cpuhotplug/min_online_cpu
+    chown system system /sys/power/cpuhotplug/max_online_cpu
+    chmod 0664 /sys/power/cpuhotplug/enabled
+    chmod 0664 /sys/power/cpuhotplug/min_online_cpu
+    chmod 0664 /sys/power/cpuhotplug/max_online_cpu
+
     chown radio system /sys/power/ipa/control_temp
     chmod 0664 /sys/power/ipa/control_temp
     chown radio system /sys/power/ipa/hotplug_out_threshold
