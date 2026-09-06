@@ -74,6 +74,8 @@ genfscon sysfs /devices/13970000.hdmi        u:object_r:sysfs_graphics:s0
 # Hall
 genfscon sysfs /devices/certify_hall.29/input  u:object_r:sysfs_hall:s0
 genfscon sysfs /devices/hall.28/input          u:object_r:sysfs_hall:s0
+genfscon sysfs /devices/certify_hall/input     u:object_r:sysfs_hall:s0
+genfscon sysfs /devices/hall/input             u:object_r:sysfs_hall:s0
 
 # Input booster
 genfscon sysfs /class/input_booster/level   u:object_r:sysfs_input:s0
@@ -85,6 +87,8 @@ genfscon sysfs /devices/gpio_keys.30/input/input16                              
 genfscon sysfs /devices/gpio_keys.30/input/input15                                u:object_r:sysfs_input:s0
 genfscon sysfs /devices/gpio_keys.31/input/input16                                u:object_r:sysfs_input:s0
 genfscon sysfs /devices/gpio_keys.31/input/input15                                u:object_r:sysfs_input:s0
+genfscon sysfs /devices/gpio_keys/input/input15                                   u:object_r:sysfs_input:s0
+genfscon sysfs /devices/gpio_keys/input/input16                                   u:object_r:sysfs_input:s0
 genfscon sysfs /devices/14e10000.hsi2c/i2c-4/4-0049/input                         u:object_r:sysfs_input:s0
 genfscon sysfs /devices/14e10000.hsi2c/i2c-7/7-0049/input                         u:object_r:sysfs_input:s0
 genfscon sysfs /devices/14e10000.hsi2c/i2c-6/6-0049/input                         u:object_r:sysfs_input:s0
@@ -112,6 +116,7 @@ genfscon sysfs /devices/battery.55/power_supply                              u:o
 genfscon sysfs /devices/battery.54/power_supply                              u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/battery.53/power_supply                              u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/battery.52/power_supply                              u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/battery/power_supply                                 u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/13650000.hsi2c/i2c-1/1-0066/max77833-charger         u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/13650000.hsi2c/i2c-1/1-0066/max77833-fuelgauge       u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/13650000.hsi2c/i2c-1/1-0066/max77843-charger         u:object_r:sysfs_batteryinfo:s0
@@ -154,6 +159,12 @@ genfscon sysfs /devices/i2c.32/i2c-9/9-0010/input         u:object_r:sysfs_sec_t
 genfscon sysfs /devices/i2c.32/i2c-9/9-0020/input         u:object_r:sysfs_sec_touchkey:s0
 genfscon sysfs /devices/i2c.32/i2c-10/10-0010/input        u:object_r:sysfs_sec_touchkey:s0
 genfscon sysfs /devices/i2c.32/i2c-10/10-0020/input        u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c@20/i2c-8/8-0010/input         u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c@20/i2c-8/8-0020/input         u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c@20/i2c-9/9-0010/input         u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c@20/i2c-9/9-0020/input         u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c@20/i2c-10/10-0010/input       u:object_r:sysfs_sec_touchkey:s0
+genfscon sysfs /devices/i2c@20/i2c-10/10-0020/input       u:object_r:sysfs_sec_touchkey:s0
 genfscon sysfs /devices/virtual/sec/sec_touchkey      u:object_r:sysfs_sec_touchkey:s0
 
 # Touchscreen
@@ -169,5 +180,6 @@ genfscon sysfs /devices/virtual/android_usb/android0                u:object_r:s
 # video4linux
 genfscon sysfs /devices/fimc_is_companion.38/video4linux            u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/fimc_is_companion.37/video4linux            u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/fimc_is_companion@14020000/video4linux      u:object_r:sysfs_v4l:s0
 
 genfscon sysfs /kernel/mm/vmscan/mem_boost_mode                     u:object_r:sysfs_vmscan:s0
