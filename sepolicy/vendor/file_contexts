@@ -4,7 +4,6 @@
 
 /(vendor|system/vendor)/bin/sensorhubservice  u:object_r:sensorhubservice_exec:s0
 /(vendor|system/vendor)/bin/wifiloader        u:object_r:wifiloader_exec:s0
-/(vendor|system/vendor)/bin/modemloader       u:object_r:modemloader_exec:s0
 
 # files in /system
 /system/bin/lpm                               u:object_r:charger_exec:s0
