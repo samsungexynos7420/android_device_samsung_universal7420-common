@@ -13,4 +13,6 @@ allow gpsd gps_data_file:dir rw_dir_perms;
 allow gpsd gps_data_file:file create_file_perms;
 allow gpsd gps_data_file:fifo_file create_file_perms;
 
+allow gpsd hal_system_suspend_service: service_manager find;
+
 dontaudit gpsd system_data_file:dir search;
